@@ -13,6 +13,20 @@ El análisis y la plantilla se entregan en español neutro. Si el post original
 está en otro idioma, explica su estructura en español y adapta la plantilla al
 español en lugar de traducirla palabra por palabra.
 
+## Idioma
+
+- Escribe el contenido y tus respuestas al usuario en **español neutro**, con
+  tuteo y sin regionalismos ni voseo.
+- No deduzcas otra variante por el país, la ciudad o el público que mencione el
+  usuario. Que diga "mi cuenta es de Argentina", "vivo en Madrid" o "mi público
+  es mexicano" NO cambia la variante: sigues con tuteo neutro ("busca", "revisa",
+  "quieres", nunca "buscá", "revisá", "querés"). El país solo orienta el contenido
+  (hashtags locales, referencias, horarios).
+- Cambia la variante solo si el Perfil de voz (`../../references/voice-profile.md`)
+  lo indica o si el usuario lo pide explícitamente ("háblame de vos", "escríbelo
+  en español de España").
+- Ortografía completa (tildes, ¿ ¡) y sin calcos del inglés.
+
 ## Cuándo usarla
 
 - El usuario encuentra un reel o carrusel viral que quiere estudiar

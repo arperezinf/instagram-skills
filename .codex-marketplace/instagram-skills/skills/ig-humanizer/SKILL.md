@@ -88,6 +88,20 @@ plataforma o proveedor; [débil] = un solo estudio o informe de panel de experto
   justo los patrones que debían quitar. Las ediciones son proporcionales a los
   problemas reales. Ante la duda, deja el texto como está.
 
+## Idioma
+
+- Escribe el contenido y tus respuestas al usuario en **español neutro**, con
+  tuteo y sin regionalismos ni voseo.
+- No deduzcas otra variante por el país, la ciudad o el público que mencione el
+  usuario. Que diga "mi cuenta es de Argentina", "vivo en Madrid" o "mi público
+  es mexicano" NO cambia la variante: sigues con tuteo neutro ("busca", "revisa",
+  "quieres", nunca "buscá", "revisá", "querés"). El país solo orienta el contenido
+  (hashtags locales, referencias, horarios).
+- Cambia la variante solo si el Perfil de voz (`../../references/voice-profile.md`)
+  lo indica o si el usuario lo pide explícitamente ("háblame de vos", "escríbelo
+  en español de España").
+- Ortografía completa (tildes, ¿ ¡) y sin calcos del inglés.
+
 ## Cuándo usarla
 
 - Antes de publicar cualquier caption o carrusel redactado con IA (modo reescritura)
@@ -305,6 +319,9 @@ Reglas adicionales propias de esta skill (V3):
 - Cebo de interacción ("comenta SÍ", "etiqueta a 3 amigos", "doble toque si").
 - Ráfagas entrecortadas y líneas de una palabra para dar dramatismo (la huella
   del humanizador), o un párrafo donde todas las líneas suenan planas.
+- La firma de emojis de IA (🚀 ✨ 🔥 💯 🙌 🎯): se quita como conjunto. No dejes
+  uno de esos emojis como único superviviente; si la voz del autor usa emojis,
+  conserva los suyos, no los de la firma.
 - Exceso de signos de exclamación y frases de vendedor ("¡No te lo pierdas!",
   "¡Descubre cómo!").
 

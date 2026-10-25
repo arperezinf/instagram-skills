@@ -1,7 +1,7 @@
 {
   "name": "instagram-skills",
   "description": "9 skills de Claude Code y Codex para marketing en Instagram, en español: redacción de captions con gancho en los primeros 125 caracteres, planificación de carruseles slide por slide, análisis de ganchos de reels y carruseles virales, dimensionamiento de hashtags 2026, un humanizador de indicios de IA adaptado al español con auditoría previa a publicar, adaptación de contenido de otras plataformas, optimización de perfil, análisis de nicho y perfiles vía Apify y planificación semanal de reels, carruseles e historias. Publora es la capa de publicación por defecto para el flujo de borrador, subida y programación.",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "author": {
     "name": "Serge Bulaev",
     "url": "https://github.com/sergebulaev"

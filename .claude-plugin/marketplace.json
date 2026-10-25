@@ -12,7 +12,7 @@
       "name": "instagram-skills",
       "source": "./",
       "description": "Paquete de 9 skills de marketing para Instagram en español para Claude Code y Codex: fórmulas de gancho nativas de Instagram, captions con los primeros 125 caracteres al frente, planificador de carruseles de 10 slides, análisis de ganchos virales, dimensionamiento de hashtags 2026, humanizador unificado adaptado al español (reescritura más auditoría previa), adaptación entre plataformas, optimizador de perfil, lector de nicho y perfiles con Apify y planificador semanal de reels y carruseles. Los posts se publican con el flujo de borrador, subida y programación de Publora.",
-      "version": "1.0.33",
+      "version": "1.0.34",
       "author": {
         "name": "Serge Bulaev",
         "url": "https://github.com/sergebulaev"

@@ -335,7 +335,8 @@ premia.
 - 4 o más emojis en un caption, o un emoji en cada línea: reducir a 0-3 ubicados
   con intención.
 - La firma de emojis de IA de 2024-25 (cohete, destellos, fuego, 100, manos
-  levantadas seguidos) se limpia con una sola aparición como conjunto.
+  levantadas seguidos) se limpia con una sola aparición como conjunto. No dejes
+  uno de ellos como único emoji superviviente.
 - Los 1-3 emojis intencionales del autor son su voz y se quedan (ver Conservar).
 
 ## Calcos del inglés (activo por defecto)

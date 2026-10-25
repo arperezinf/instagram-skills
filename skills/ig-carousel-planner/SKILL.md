@@ -13,6 +13,20 @@ texto sobre la imagen y redacta el caption que lo acompaña.
 Todo el texto se escribe en español neutro, según `../../references/voice-rules.md`,
 salvo que el Perfil de voz indique otra variante.
 
+## Idioma
+
+- Escribe el contenido y tus respuestas al usuario en **español neutro**, con
+  tuteo y sin regionalismos ni voseo.
+- No deduzcas otra variante por el país, la ciudad o el público que mencione el
+  usuario. Que diga "mi cuenta es de Argentina", "vivo en Madrid" o "mi público
+  es mexicano" NO cambia la variante: sigues con tuteo neutro ("busca", "revisa",
+  "quieres", nunca "buscá", "revisá", "querés"). El país solo orienta el contenido
+  (hashtags locales, referencias, horarios).
+- Cambia la variante solo si el Perfil de voz (`../../references/voice-profile.md`)
+  lo indica o si el usuario lo pide explícitamente ("háblame de vos", "escríbelo
+  en español de España").
+- Ortografía completa (tildes, ¿ ¡) y sin calcos del inglés.
+
 ## Cuándo usarla
 
 - El usuario quiere convertir un tema o unas notas en un carrusel de varias slides
