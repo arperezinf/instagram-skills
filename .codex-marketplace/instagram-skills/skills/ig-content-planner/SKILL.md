@@ -1,130 +1,152 @@
 ---
 name: ig-content-planner
-description: "Generate a weekly Instagram content plan from a theme, audience, and content pillars. Produces a per-day mix of Reels, carousels, single images, and stories, each with a hook formula, angle, posting time, and primary goal, plus a weekly saves-and-shares goal (the 2026 lever), a story cadence, and a balance check across saves, shares, comments, and follows. Use to plan a week instead of ad-hoc posting. Not for drafting one caption (use ig-caption-writer) or one carousel (use ig-carousel-planner)."
+description: "Genera en español un plan semanal de Instagram a partir de un tema, una audiencia y pilares de contenido. Produce una mezcla diaria de reels, carruseles, imágenes e historias, cada uno con fórmula de gancho, enfoque, horario y objetivo, más una meta semanal de guardados y compartidos (la palanca 2026), un ritmo de historias y un control de equilibrio entre objetivos. No para redactar un caption (usa ig-caption-writer) ni un carrusel (usa ig-carousel-planner)."
 ---
 
-# Instagram Content Planner
+# Planificador de contenido para Instagram
 
-Produce a weekly Instagram plan built around a pillar discipline and the
-format mix Instagram rewards: Reels for reach, carousels for saves, stories for
-the relationship. The plan sets a weekly saves-and-shares goal, because sends per
-reach and saves are the 2026 levers.
+Produce un plan semanal de Instagram basado en una disciplina de pilares y en la
+mezcla de formatos que premia Instagram: reels para el alcance, carruseles para
+los guardados, historias para la relación. El plan fija una meta semanal de
+guardados y compartidos, porque los envíos por alcance y los guardados son las
+palancas de 2026.
 
-## When to use
+El plan y todos los enfoques se escriben en español neutro, salvo que el Perfil
+de voz indique otra variante.
 
-- User asks "plan my week on Instagram" or "what should I post this week"
-- User wants to escape ad-hoc posting and establish a rhythm
-- Before a launch week (the plan aligns a product pillar)
+## Cuándo usarla
 
-## Input
+- El usuario pide "planifica mi semana en Instagram" o "¿qué publico esta semana?"
+- El usuario quiere dejar de publicar improvisando y establecer un ritmo
+- Antes de una semana de lanzamiento (el plan alinea un pilar de producto)
 
-- **Theme** (optional): e.g. "launching our design course"
-- **Audience description:** e.g. "junior designers, career switchers"
-- **Pillar mix** (optional): defaults to 40% Educational / 30% Story /
-  20% Engagement / 10% Promotion
-- **Posting cadence** (optional): defaults to 4-5 feed posts/week + daily stories
-- **Voice samples** (optional): past captions for voice calibration
+## Entrada
 
-## Output
+- **Tema** (opcional): por ejemplo "lanzamiento de nuestro curso de diseño"
+- **Descripción de la audiencia:** por ejemplo "diseñadores junior, personas que
+  cambian de carrera"
+- **Mezcla de pilares** (opcional): por defecto 40% Educativo / 30% Historia /
+  20% Interacción / 10% Promoción
+- **Ritmo de publicación** (opcional): por defecto 4-5 posts de feed por semana
+  + historias diarias
+- **Zona horaria de la audiencia** (opcional pero recomendada)
+- **Muestras de voz** (opcional): captions anteriores para calibrar la voz
 
-A markdown plan with:
+## Salida
 
-### 7-day calendar
+Un plan en markdown con:
 
-| Day | Format | Pillar | Formula | 1-line angle | Goal | Time |
+### Calendario de 7 días
+
+| Día | Formato | Pilar | Fórmula | Enfoque en una línea | Objetivo | Horario |
 |---|---|---|---|---|---|---|
-| Mon | Reel | Educational | IG9 Pattern-Interrupt | "you post Reels at the worst time" | shares | 12:00 PM |
-| Tue | Carousel | Educational | IG5 Listicle | "7 portfolio mistakes" | saves | 11:30 AM |
-| Wed | Story set | Engagement | poll + question | "which layout wins?" | comments | 7:00 PM |
-| Thu | Carousel | Story | IG6 Before/After | "my first $0 to first $4k" | follows | 11:00 AM |
-| Fri | Single image | Engagement | IG3 Relatable | "opening Canva for one graphic" | comments | 1:00 PM |
-| Sat | Reel | Educational | IG10 How-I Teardown | "how I edit a Reel in 20 min" | saves | 10:00 AM |
-| Sun | Story set | Promotion | reshare + link | "course doors open" | follows | 6:00 PM |
+| Lun | Reel | Educativo | IG9 Rompe el patrón | "publicas tus reels en el peor horario" | compartidos | 12:00 |
+| Mar | Carrusel | Educativo | IG5 Lista | "7 errores de portafolio" | guardados | 11:30 |
+| Mié | Serie de historias | Interacción | encuesta + pregunta | "¿qué diseño gana?" | comentarios | 19:00 |
+| Jue | Carrusel | Historia | IG6 Antes/después | "de mis primeros 0 USD a los primeros 4.000 USD" | seguidores | 11:00 |
+| Vie | Imagen única | Interacción | IG3 Identificable | "abrir Canva para un solo diseño" | comentarios | 13:00 |
+| Sáb | Reel | Educativo | IG10 Cómo lo hice | "cómo edito un reel en 20 minutos" | guardados | 10:00 |
+| Dom | Serie de historias | Promoción | republicación + link | "abrimos inscripciones" | seguidores | 18:00 |
 
-(The skill fills real angles from the theme. Stories run daily underneath the
-feed posts.)
+(La skill completa los enfoques reales a partir del tema; los números del
+ejemplo son ilustrativos. Las historias se publican todos los días, además de
+los posts del feed).
 
-### Weekly saves goal
+### Meta semanal de guardados
 
-- Set a concrete **saves + shares target** for the week (the primary lever).
-  Default heuristic: at least 3 of the week's feed posts are save-bait formats
-  (IG1, IG5, IG6, IG8, IG10) and at least 2 are send-bait (IG2, IG7, IG9).
-- Track saves and shares as the headline metric, not likes.
+- Fija una **meta concreta de guardados + compartidos** para la semana (la
+  palanca principal). Heurística por defecto: al menos 3 de los posts de feed de
+  la semana son formatos que invitan a guardar (IG1, IG5, IG6, IG8, IG10) y al
+  menos 2 invitan a enviar (IG2, IG7, IG9).
+- Mide guardados y compartidos como métrica principal, no los "me gusta".
 
-### Daily story cadence
+### Ritmo diario de historias
 
-- 2-4 story frames/day: behind-the-scenes, a poll or question sticker, and at
-  least one reshare of a recent feed post (a send-equivalent signal that pushes
-  the post to followers who missed it).
-- Stories deepen the follower relationship; they do not chase non-follower reach.
+- 2-4 cuadros de historia por día: detrás de escena, un sticker de encuesta o
+  pregunta y al menos una republicación de un post reciente del feed (una señal
+  equivalente a un envío que lleva el post a seguidores que no lo vieron).
+- Las historias profundizan la relación con los seguidores; no persiguen alcance
+  entre no seguidores.
 
-### Weekly balance check
+### Control de equilibrio semanal
 
-- [ ] Format mix: at least 2 Reels (reach), at least 2 carousels (saves), stories daily
-- [ ] At least 3 save-bait posts and 2 send-bait posts
-- [ ] At least 1 real first-person story post (build trust, earn follows)
-- [ ] No pillar over 50% of the week's feed posts
-- [ ] No formula repeated more than twice in the week
-- [ ] Promotion pillar 1-2 posts max
-- [ ] Goal mix spread across saves, shares, comments, follows
+- [ ] Mezcla de formatos: al menos 2 reels (alcance), al menos 2 carruseles (guardados), historias diarias
+- [ ] Al menos 3 posts que invitan a guardar y 2 que invitan a enviar
+- [ ] Al menos 1 post de historia real en primera persona (genera confianza y seguidores)
+- [ ] Ningún pilar supera el 50% de los posts de feed de la semana
+- [ ] Ninguna fórmula se repite más de dos veces en la semana
+- [ ] Pilar de promoción: 1-2 posts como máximo
+- [ ] Objetivos repartidos entre guardados, compartidos, comentarios y seguidores
 
-## Goal mix (balance the week)
+## Mezcla de objetivos (equilibrar la semana)
 
-Every formula earns a primary signal. A week that is all save-bait or all
-relatable reads as engineered. Spread the goals:
+Cada fórmula consigue una señal principal. Una semana hecha solo de cebo de
+guardado o solo de contenido identificable se lee como fabricada. Reparte los
+objetivos:
 
-| Goal | Formulas | Weekly target |
+| Objetivo | Fórmulas | Meta semanal |
 |---|---|---|
-| Saves | IG1, IG5, IG6, IG8, IG10 | at least 3 (the headline lever) |
-| Shares | IG2, IG7, IG9 | at least 2 |
-| Comments | IG3, IG4 | at least 1 |
-| Follows | IG4, IG6, IG8 | at least 1 |
+| Guardados | IG1, IG5, IG6, IG8, IG10 | al menos 3 (la palanca principal) |
+| Compartidos | IG2, IG7, IG9 | al menos 2 |
+| Comentarios | IG3, IG4 | al menos 1 |
+| Seguidores | IG4, IG6, IG8 | al menos 1 |
 
-## Rules
+## Reglas
 
-- **Consistency beats frequency.** 4-5 quality feed posts/week with daily stories
-  beats a daily dump of filler. Do not pad to hit a count.
-- **Reels for reach, carousels for saves, stories for the relationship.** Use the
-  right surface for the job.
-- **Reels can run more often** than carousels without fatigue, because each
-  reaches a fresh non-follower audience.
-- **Best windows:** weekdays 11 AM-1 PM and 7-9 PM local, plus Sunday evening.
-  Check the user's own insights when available.
-- **Promotion pillar max 1-2 posts/week.** Overuse buries reach.
-- **One formula per slot, varied across the week.** Do not stack three IG5 carousels.
+- **La constancia le gana a la frecuencia.** 4-5 posts de feed de calidad por
+  semana con historias diarias rinden más que un volcado diario de relleno. No
+  rellenes para llegar a una cantidad.
+- **Reels para el alcance, carruseles para los guardados, historias para la
+  relación.** Usa la superficie correcta para cada tarea.
+- **Los reels se pueden publicar más seguido** que los carruseles sin saturar,
+  porque cada uno llega a una audiencia nueva de no seguidores.
+- **Horarios:** las franjas de referencia publicadas (días de semana 11-13 h y
+  19-21 h, más el domingo por la tarde-noche) provienen de datos de audiencias
+  de EE. UU. Para audiencias hispanohablantes no hay datos equivalentes en este
+  paquete: usa la zona horaria de la audiencia, toma esas franjas solo como
+  punto de partida y recomienda ajustarlas con las estadísticas de Instagram del
+  usuario. Nunca presentes un horario como dato medido si no lo es.
+- **Pilar de promoción: máximo 1-2 posts por semana.** Usarlo de más entierra el
+  alcance.
+- **Una fórmula por espacio, variada a lo largo de la semana.** No apiles tres
+  carruseles IG5.
 
-## Formula -> pillar mapping
+## Fórmula -> pilar
 
-| Pillar | Preferred formulas |
+| Pilar | Fórmulas preferidas |
 |---|---|
-| Educational | IG5 Listicle, IG8 Framework, IG10 How-I Reel, IG1 Number-First |
-| Story | IG4 Confession, IG6 Before/After |
-| Engagement | IG3 Relatable, IG9 Pattern-Interrupt Reel, story stickers |
-| Promotion | IG6 (results that imply the product), IG1 (your own data) |
+| Educativo | IG5 Lista, IG8 Marco de trabajo, IG10 Reel "cómo lo hice", IG1 Número adelante |
+| Historia | IG4 Confesión, IG6 Antes/después |
+| Interacción | IG3 Identificable, IG9 Reel que rompe el patrón, stickers de historias |
+| Promoción | IG6 (resultados que implican el producto), IG1 (tus propios datos) |
 
-## Steps
+## Pasos
 
-1. Gather inputs. Ask for theme, audience, pillar preferences if not provided.
-2. Validate the pillar mix sums to 100%; warn if any pillar is over 50%.
-3. For each day, pick: format (Reel/carousel/image/story), pillar, formula (do
-   not over-repeat), angle, posting time (audience timezone), goal.
-4. Set the weekly saves + shares goal and the daily story cadence.
-5. Run the weekly balance check and the goal-mix check; flag anything missing.
-6. Return as markdown, plus optional JSON for import.
+1. Reúne los datos. Pide tema, audiencia, zona horaria y preferencias de pilares
+   si no se indicaron.
+2. Verifica que la mezcla de pilares sume 100%; advierte si algún pilar supera
+   el 50%.
+3. Para cada día, elige: formato (reel/carrusel/imagen/historia), pilar,
+   fórmula (sin repetir de más), enfoque, horario (en la zona horaria de la
+   audiencia, formato de 24 horas) y objetivo.
+4. Fija la meta semanal de guardados + compartidos y el ritmo diario de historias.
+5. Ejecuta el control de equilibrio semanal y el de mezcla de objetivos; señala
+   lo que falte.
+6. Devuélvelo en markdown, más un JSON opcional para importar.
 
-## Example
+## Ejemplo
 
-See `references/example-week.md` for a filled-in 7-day plan.
+Ver `references/example-week.md` para un plan de 7 días completo.
 
-## Files
+## Archivos
 
-- `SKILL.md` - this file
-- `references/example-week.md` - worked 7-day plan
-- `references/pillars-framework.md` - the Instagram pillar discipline explained
+- `SKILL.md` - este archivo
+- `references/example-week.md` - plan de 7 días completo
+- `references/pillars-framework.md` - la disciplina de pilares de Instagram explicada
 
-## Related skills
+## Skills relacionadas
 
-- `ig-caption-writer` - draft each single-image caption from the plan
-- `ig-carousel-planner` - draft each carousel from the plan
-- `ig-hashtag-strategist` - rotate sized hashtag sets across the week
-- `ig-hook-extractor` - study competitors' posts while planning
+- `ig-caption-writer` - redacta el caption de cada imagen única del plan
+- `ig-carousel-planner` - redacta cada carrusel del plan
+- `ig-hashtag-strategist` - rota sets de hashtags dimensionados a lo largo de la semana
+- `ig-hook-extractor` - estudia posts de la competencia mientras planificas

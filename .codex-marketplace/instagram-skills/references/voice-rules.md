@@ -1,104 +1,146 @@
-# Voice Rules for Instagram
+# Reglas de voz para Instagram
 
-These are the canonical voice rules for the whole bundle. Every skill inherits
-them. Skill-local "Hard rules" sections only add format-specific overrides
-(caption length, slide counts, hashtag sizing) and point back here.
+Estas son las reglas de voz canónicas de todo el paquete. Todas las skills las
+heredan. Las secciones locales de "Reglas estrictas" de cada skill solo agregan
+excepciones propias del formato (largo del caption, cantidad de slides, tamaño
+de hashtags) y remiten a este archivo.
 
-## Hard rules
+## Idioma
 
-1. **Em dashes (`—`) capped at about 1 per 100 words** (1-2 per caption, at
-   most 1 per carousel slide). The character is no longer a tell (2026 models
-   use fewer than humans, and 29% of human captions in our corpus contain one);
-   the density is. Replace the excess with a comma, colon, parentheses or a
-   line break, never a period. No en dashes (`–`) between clauses, no double
-   dashes (`--`).
-2. **Use `..` or a line break** as a soft pause when you would reach for a
-   second em dash. Reads human and matches how people actually caption on
+- **Todo el contenido se escribe en español neutro**, con tuteo ("guarda este
+  post", "escríbeme"), sin regionalismos ni modismos locales, salvo que el
+  Perfil de voz del usuario (`voice-profile.md`) indique otra variante.
+- **Respeta la ortografía del español**: tildes, signos de apertura (¿ ¡) y
+  comillas. Omitir tildes no es un registro casual, se lee como descuido.
+- **No traduzcas palabra por palabra desde el inglés.** Evita calcos como
+  "aplicar" por "postularse", "librería" por "biblioteca", "remover" por
+  "quitar", "en orden a" o "es por eso que" en exceso.
+- **Los anglicismos propios de Instagram se aceptan** cuando son los que usa la
+  gente: reel, post, carrusel, story/historia, feed, hashtag, link en la bio,
+  hook (o gancho). No fuerces traducciones que nadie usa.
+
+## Reglas estrictas
+
+1. **Rayas (`—`) limitadas a aproximadamente 1 cada 100 palabras** (1-2 por
+   caption, como máximo 1 por slide de carrusel). En español la raya se usa en
+   incisos y diálogos, así que no es un indicio de IA por sí sola; lo es la
+   densidad. Reemplaza el exceso por coma, dos puntos, paréntesis o salto de
+   línea, nunca por punto. Sin guiones (`-`) ni dobles guiones (`--`) entre
+   oraciones.
+2. **Usa `..` o un salto de línea** como pausa suave cuando estarías por poner
+   una segunda raya. Se lee humano y coincide con cómo escribe la gente en
    Instagram.
-3. **Capitalize personal names, company names, product names** (Stripe, Canva,
-   Figma). Lowercase a brand name and it reads as careless.
-4. **Sentence starts can be lowercase.** Lowercase openers are native to the
-   Instagram caption register. Names inside are always capitalized.
-5. **Specific numbers beat adjectives.** "saved 11 hours a week" beats "saved
-   tons of time". "$4,200 in 30 days" beats "made good money".
-6. **One idea per caption.** A caption that argues three points reads as a blog
-   post. Pick the one that earns the save.
-7. **Don't hard-sell.** Instagram buries overtly promotional captions. Teach or
-   tell a story, then point to the next step once.
+3. **Escribe con mayúscula nombres de personas, empresas y productos** (Stripe,
+   Canva, Figma). Una marca en minúscula se lee como descuido.
+4. **Las oraciones pueden empezar en minúscula** en captions de tono casual; es
+   propio del registro de Instagram. Los nombres propios siempre van con
+   mayúscula. Si el Perfil de voz pide un registro formal, usa mayúscula inicial.
+5. **Los números concretos le ganan a los adjetivos.** "ahorré 11 horas por
+   semana" es mejor que "ahorré muchísimo tiempo". "4.200 USD en 30 días" es
+   mejor que "gané buen dinero". Usa el punto como separador de miles y la coma
+   decimal, salvo que el Perfil de voz indique otra convención.
+6. **Una idea por caption.** Un caption que defiende tres puntos se lee como
+   artículo de blog. Elige la que justifica el guardado.
+7. **No vendas a la fuerza.** Instagram entierra los captions abiertamente
+   promocionales. Enseña o cuenta una historia y luego señala el siguiente paso
+   una sola vez.
 
-## Vocabulary markers (density-scored)
+## Marcadores de vocabulario (se puntúan por densidad)
 
-Count these per paragraph. One is English; two is borderline (flag it in the report, leave the words);
-three in one paragraph reads as AI and the whole paragraph gets rewritten (see `ig-humanizer` V3).
-The durable 2026 set (significant, crucial, notably, particularly,
-comprehensive, insights, robust, leverage, foster, landscape, nuanced,
-streamline, elevate, empower) counts alongside the older corporate words:
-- leverage, utilize, facilitate, streamline, robust, seamless, delve, navigate,
-  unlock, harness, foster, cultivate, elevate, empower, dive in
-- fundamentally, essentially, ultimately, crucially, notably
-- landscape, ecosystem, paradigm, realm, tapestry, journey
+Cuéntalos por párrafo. Uno es español normal; dos es zona gris (márcalo en el
+informe y deja las palabras); tres en un mismo párrafo se lee como IA y el
+párrafo completo se reescribe (ver `ig-humanizer` V3).
 
-## Always forbidden (single hit, regardless of density)
+Marcadores típicos del texto generado por IA en español:
+- **Verbos inflados:** potenciar, impulsar, optimizar, fomentar, aprovechar al
+  máximo, desbloquear, catapultar, empoderar, elevar, maximizar, transformar,
+  revolucionar, sumergirse, adentrarse, explorar (en sentido figurado),
+  navegar (en sentido figurado), abordar
+- **Adjetivos de relleno:** crucial, fundamental, esencial, clave, vital,
+  significativo, integral, robusto, innovador, disruptivo, holístico, valioso,
+  increíble, poderoso, sin igual
+- **Adverbios y conectores:** fundamentalmente, esencialmente, en definitiva,
+  en última instancia, cabe destacar, es importante destacar, sin lugar a dudas,
+  además (al inicio de cada párrafo), asimismo, por otro lado
+- **Sustantivos abstractos:** panorama, ecosistema, paradigma, ámbito, sinergia,
+  viaje (en sentido figurado), camino, universo, mundo de (en "el mundo del
+  marketing")
 
-These are scrubbed on sight. They are reveal bridges, negative parallelism,
-dead phrases or performed sincerity, not vocabulary:
-- "It's not just X, it's Y"
-- "In today's fast-paced world", "in the digital age"
-- "game-changer", "deep dive", "level up", "next level", "must-have"
-- "link in bio" used as filler (only when there is a real link and a real reason)
-- Sincerity announcements as an opener or pivot: "let me be honest", "I'll be
-  real", "honestly?", "real talk", "not gonna lie", "unpopular opinion:" on a
-  take that is actually popular. State the fact flat instead.
+## Siempre prohibido (basta una aparición, sin importar la densidad)
 
-## Instagram-native style
+Se eliminan en cuanto aparecen. Son puentes de revelación, paralelismos
+negativos, frases muertas o sinceridad actuada, no simple vocabulario:
+- "No se trata solo de X, se trata de Y" / "No es solo X, es Y"
+- "En el mundo acelerado de hoy", "en la era digital", "en un mundo cada vez
+  más competitivo"
+- "un antes y un después", "cambia las reglas del juego", "llevarlo al
+  siguiente nivel", "imprescindible", "sumérgete en", "descubre el poder de"
+- "Link en la bio" como relleno (solo cuando hay un link real y una razón real)
+- Anuncios de sinceridad al inicio o como giro: "seamos sinceros", "te voy a
+  ser honesto", "¿honestamente?", "hablemos claro", "no te voy a mentir",
+  "opinión impopular:" sobre una opinión que en realidad es popular. Di el hecho
+  sin anunciarlo.
+- Cierres de manual: "¡Espero que te sirva!", "¡Y tú qué opinas? ¡Déjamelo en
+  los comentarios!", "Recuerda que…" como remate moralizante.
 
-- **The first line is the whole job.** Instagram hides everything after ~125
-  characters behind "more". If line 1 does not earn the tap, the rest is unread.
-- **Line breaks are punctuation.** White space between short lines controls
-  pacing and makes a caption skimmable. A wall of text gets scrolled past.
-- **Emoji are part of the register, used with restraint.** 0-3 in a caption,
-  placed to break up text or mark a list, never sprinkled. A caption dusted with
-  12 emoji reads as a spam account or AI.
-- **Hashtags are sizing, not volume.** 3-5 well-sized tags beat 30 random ones
-  in 2026 (see `hashtag-strategy.md`). Put them at the end of the caption or in
-  the first comment, never mid-sentence.
+## Estilo nativo de Instagram
 
-## Length
+- **La primera línea es todo el trabajo.** Instagram oculta todo lo que sigue a
+  los ~125 caracteres detrás de "más". Si la línea 1 no consigue el toque, el
+  resto no se lee.
+- **Los saltos de línea son puntuación.** El espacio en blanco entre líneas
+  cortas marca el ritmo y hace que el caption se pueda leer de un vistazo. Un
+  bloque de texto se pasa de largo.
+- **Los emojis son parte del registro, usados con moderación.** 0-3 por caption,
+  ubicados para cortar texto o marcar una lista, nunca espolvoreados. Un caption
+  con 12 emojis se lee como cuenta de spam o como IA.
+- **Los hashtags son dimensionamiento, no volumen.** En 2026, 3-5 etiquetas bien
+  dimensionadas le ganan a 30 al azar (ver `hashtag-strategy.md`). Ponlos al
+  final del caption o en el primer comentario, nunca a mitad de una oración.
+  Para audiencias hispanohablantes prioriza hashtags en español.
 
-- **Caption cap: 2,200 characters.** Only the first ~125 show before "more", so
-  front-load the hook. Most strong captions land between 150 and 1,500 chars;
-  long is fine when it teaches or tells a story worth the scroll.
-- **A carousel caption can be short** because the slides carry the payload. A
-  single-image post leans harder on the caption.
-- **Reels caption: keep it tight.** The video is the hook; the caption adds
-  context and the save/share reason in a line or two.
+## Largo
 
-## Structure
+- **Límite del caption: 2.200 caracteres.** Solo los primeros ~125 se ven antes
+  de "más", así que el gancho va adelante. El español ocupa alrededor de un 20%
+  más que el inglés: recorta palabras antes que perder el gancho. La mayoría de
+  los buenos captions quedan entre 150 y 1.500 caracteres; uno largo está bien
+  cuando enseña o cuenta una historia que vale la pena.
+- **El caption de un carrusel puede ser corto** porque las slides llevan el
+  contenido. Un post de una sola imagen depende más del caption.
+- **Caption de reel: breve.** El video es el gancho; el caption agrega contexto
+  y la razón para guardar o compartir en una o dos líneas.
 
-- **Front-load the hook** into the first line (before the fold). State the
-  payoff, the tension, or the number up front.
-- **End on a landing, not a dead prompt.** "What do you think?" is dead. A
-  specific question, a save prompt that names the reason ("save this for your
-  next launch"), or a sharp closing line all beat it.
-- **Carousels:** slide 1 is the hook, the last slide is the payoff plus the
-  save/follow ask. See `hook-formulas.md` and the carousel planner.
+## Estructura
 
-## Anti-patterns
+- **Gancho adelante**, en la primera línea (antes del corte). Plantea el
+  beneficio, la tensión o el número desde el principio.
+- **Cierra con un aterrizaje, no con una pregunta muerta.** "¿Qué opinas?" está
+  muerta. Una pregunta concreta, una invitación a guardar que nombra la razón
+  ("guárdalo para tu próximo lanzamiento") o una frase de cierre filosa le ganan.
+- **Carruseles:** la slide 1 es el gancho; la última es la recompensa más el
+  pedido de guardar o seguir. Ver `hook-formulas.md` y el planificador de
+  carruseles.
 
-- Caption that restates the obvious ("Marketing is so important these days").
-- Generic engagement bait ("double tap if you agree", "comment YES").
-- Overused openers: "Let's talk about..", "Here's the thing..", "POV:" on
-  something that is not a POV.
-- Stacked or hollow rule of three ("faster, cheaper, better"); one natural
-  triple with concrete items is fine.
-- A first line that needs line 2 to make sense (the fold eats it).
-- 20+ hashtags stuffed at the top of the caption.
-- ALL CAPS lines for intensity. Carry intensity with word choice.
+## Antipatrones
 
-## Algorithmic note
+- Caption que repite lo obvio ("El marketing es muy importante hoy en día").
+- Cebo genérico de interacción ("doble toque si estás de acuerdo", "comenta SÍ").
+- Aperturas gastadas: "Hablemos de..", "Te cuento algo..", "POV:" sobre algo que
+  no es un punto de vista.
+- Tríadas apiladas o huecas ("más rápido, más barato, mejor"); una enumeración
+  natural de tres elementos concretos está bien.
+- Una primera línea que necesita la línea 2 para entenderse (el corte se la come).
+- Más de 20 hashtags amontonados al inicio del caption.
+- Líneas en MAYÚSCULAS para dar intensidad. La intensidad va en la elección de
+  palabras.
+- Exceso de signos de exclamación (¡¡¡!!!) y de diminutivos afectados.
 
-Instagram's 2026 ranking leans on **sends per reach** (shares to friends and to
-your own story) and **saves** as the strongest signals that content is worth
-spreading, ahead of likes. Before posting, check: does this give a viewer a
-reason to send it to one specific friend, or to save it for later? If it only
-earns a passive like, sharpen it.
+## Nota sobre el algoritmo
+
+En 2026 el ranking de Instagram se apoya en **envíos por alcance** (compartidos
+a amigos y a la propia historia) y en **guardados** como las señales más fuertes
+de que un contenido vale la pena difundirse, por encima de los "me gusta". Antes
+de publicar, verifica: ¿esto le da a quien lo ve una razón para enviárselo a un
+amigo concreto o para guardarlo para después? Si solo consigue un "me gusta"
+pasivo, afínalo.

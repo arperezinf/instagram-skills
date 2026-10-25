@@ -1,125 +1,142 @@
 ---
 name: ig-carousel-planner
-description: "Plan an Instagram carousel slide by slide, up to 10 slides, with a hook slide that opens a loop, value slides that front-load the payoff, and a payoff slide that earns the save and follow. Picks a 2026 carousel formula (listicle, before/after, myth-buster, framework) by goal (saves, shares, follows), drafts each slide's text plus the caption, then publishes the images you supply via Publora. Use to structure a multi-slide carousel. Not for single-image captions (use ig-caption-writer)."
+description: "Planifica en español un carrusel de Instagram slide por slide, hasta 10, con una slide de gancho que abre un bucle, slides de valor que adelantan la recompensa y una slide final que consigue guardado y seguimiento. Elige una fórmula 2026 (lista, antes/después, derriba mitos, marco de trabajo) por objetivo, redacta el texto de cada slide y el caption, y publica tus imágenes vía Publora. No para captions de una sola imagen (usa ig-caption-writer)."
 ---
 
-# Instagram Carousel Planner
+# Planificador de carruseles para Instagram
 
-Plan a carousel that gets swiped to the end and saved. The whole game is slide 1
-(the swipe-earning hook) and the last slide (the saveable payoff). This skill
-maps every slide, writes the on-image text, and drafts the caption that frames
-it.
+Planifica un carrusel que se deslice hasta el final y se guarde. Todo el juego
+está en la slide 1 (el gancho que consigue el deslizamiento) y en la última (la
+recompensa que se guarda). Esta skill arma el mapa de cada slide, escribe el
+texto sobre la imagen y redacta el caption que lo acompaña.
 
-## When to use
+Todo el texto se escribe en español neutro, según `../../references/voice-rules.md`,
+salvo que el Perfil de voz indique otra variante.
 
-- User wants to turn a topic or notes into a multi-slide carousel
-- User has a list, a framework, or a transformation to teach
-- User wants a slide-by-slide structure, not just a caption
+## Cuándo usarla
 
-## Formulas this skill uses (carousel shapes)
+- El usuario quiere convertir un tema o unas notas en un carrusel de varias slides
+- El usuario tiene una lista, un marco de trabajo o una transformación para enseñar
+- El usuario quiere una estructura slide por slide, no solo un caption
 
-| Code | Formula | Primary goal | Best for |
+## Fórmulas que usa esta skill (formas de carrusel)
+
+| Código | Fórmula | Objetivo principal | Ideal para |
 |---|---|---|---|
-| IG5 | Listicle Carousel | saves | a numbered teaching list, one item per slide |
-| IG6 | Before/After Transformation | saves, follows | proof of a result with the steps between |
-| IG7 | Myth-Buster | shares | correcting beliefs your niche holds |
-| IG8 | Steal-This Framework | saves | a named, repeatable framework |
+| IG5 | Carrusel de lista | guardados | una lista educativa numerada, un elemento por slide |
+| IG6 | Transformación antes/después | guardados, seguidores | prueba de un resultado con los pasos intermedios |
+| IG7 | Derriba mitos | compartidos | corregir creencias de tu nicho |
+| IG8 | Marco de trabajo para copiar | guardados | un marco con nombre y repetible |
 
-Full skeletons in `../../references/hook-formulas.md`.
+Esqueletos completos en `../../references/hook-formulas.md`.
 
-## Slide architecture (the 10-slide spine)
+## Arquitectura de slides (la columna de 10 slides)
 
-A carousel is 2-10 slides (API limit). The reliable spine:
+Un carrusel tiene 2-10 slides (límite de la API). La columna confiable:
 
-| Slide | Role |
+| Slide | Función |
 |---|---|
-| **1 (hook)** | the promise + an open loop ("most miss #4"). Earns the swipe. Big text, one idea. |
-| **2-3** | the strongest value, front-loaded (swipe-through decays with depth). |
-| **4 to N-1** | one point per slide, each standing alone, each readable in 2 seconds. |
-| **N (payoff)** | the one-slide summary (the saveable artifact) + one clear ask (save / follow). |
+| **1 (gancho)** | la promesa + un bucle abierto ("la mayoría se pierde la #4"). Consigue el deslizamiento. Texto grande, una idea. |
+| **2-3** | el valor más fuerte, adelantado (el deslizamiento cae con la profundidad). |
+| **4 a N-1** | una idea por slide, cada una se entiende sola y se lee en 2 segundos. |
+| **N (recompensa)** | el resumen en una slide (lo que se guarda) + un único pedido claro (guardar / seguir). |
 
-6-10 slides is the sweet spot for a teaching carousel. Fewer than 4 is usually a
-single image. See `references/slide-architecture.md` for per-formula spines.
+6-10 slides es el punto justo para un carrusel educativo. Menos de 4 suele ser
+una imagen única. Ver `references/slide-architecture.md` para las columnas de
+cada fórmula.
 
-## Steps
+## Pasos
 
-**Voice profile first (all drafts).** If `../../references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `ig-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
+**Primero el Perfil de voz (en todos los borradores).** Si `../../references/voice-profile.md` tiene `filled: yes`, cárgalo y respeta en todo el texto la huella de voz, las reglas estrictas, la variante de español y el estilo de llamada a la acción y de links del usuario. Si no está completo, menciona una vez que `ig-humanizer --mode profile` puede aprender su voz a partir de algunos posts y sigue con las reglas de voz genéricas.
 
-**Never invent the specifics.** The rules below ask for a concrete number, a date and a named entity, because that is what separates a real post from a generated one. Take them from what the user actually said in this conversation. **Do not invent a figure, a date, a client name or a result, and do not soften a vague claim into a plausible-looking number.** If the user has nothing concrete for a beat, ask them once, and if they still have nothing, drop the claim rather than decorate it. A published invented number is a retraction; a missing one is only a weaker post.
+**Nunca inventes los datos concretos.** Las reglas de abajo piden un número concreto, una fecha y una entidad con nombre, porque eso es lo que separa un post real de uno generado. Tómalos de lo que el usuario dijo en esta conversación. **No inventes una cifra, una fecha, el nombre de un cliente ni un resultado, y no conviertas una afirmación vaga en un número de aspecto creíble.** Si el usuario no tiene nada concreto para un tramo, pregúntale una vez; si sigue sin tenerlo, quita la afirmación en lugar de adornarla. Un número inventado y publicado obliga a retractarse; uno ausente solo hace un post más débil.
 
-1. **Gather inputs.** Topic, the list/framework/transformation, target audience,
-   and the goal (saves / shares / follows).
-2. **Pick the formula.** Use the goal table; suggest 2-3 that fit and let the
-   user choose.
-3. **Set the slide count.** Match it to the real content (6-10 typical). Never
-   pad to hit 10; viewers feel filler and bail.
-4. **Write slide 1.** The promise plus the loop. Big, single-idea on-image text.
-   Front-load a number if one fits.
-5. **Map the value slides.** Put the strongest point on slide 2 or 3. One point
-   per slide, each able to stand alone. Draft the on-image text for each (keep it
-   short, it has to read in 2 seconds on a 4:5 frame).
-6. **Write the payoff slide.** A one-slide recap that is worth saving on its own,
-   plus a single ask (save it / follow for more).
-7. **Write the caption.** The caption supports the carousel (it can be short),
-   restates the hook for the fold, and carries the hashtags. Hand off to
-   `ig-hashtag-strategist` or apply the 3-5 sized set.
-8. **Humanizer pass** on the on-image text and caption. Scrub 2026 AI vocab
-   by density (per slide, per caption paragraph), cap em dashes (at most one
-   per slide, about one per 100 words in the caption; never swap one for a
-   period), break stacked triads and reveal bridges. Slides are short by
-   design: never chop or pad a slide for rhythm. Canonical rules:
-   `ig-humanizer` V3.
-9. **Approval card.** Show: formula, slide-by-slide outline with each slide's
-   text, the caption, hashtag set, primary goal, and a reminder that the user
-   supplies 2-10 images (all images, no mixed media) in this order.
-10. **On approval, publish with media.** Call `lib.publish(kind="carousel",
-    draft_text=<approved caption>, target_url="https://www.instagram.com/",
-    media=[<slide image paths in order>], platforms=[<INSTAGRAM_PLATFORM_ID>],
-    scheduled_time=<iso_or_None>)`. The wrapper uploads each image in order and
-    schedules. With no media or no Publora key it returns the plan as a
-    copy-paste block plus the slide order.
+1. **Reúne los datos.** Tema, la lista / marco / transformación, audiencia
+   objetivo y el objetivo (guardados / compartidos / seguidores).
+2. **Elige la fórmula.** Usa la tabla de objetivos; propón 2-3 que encajen y
+   deja que el usuario elija.
+3. **Define la cantidad de slides.** Que coincida con el contenido real (6-10 es
+   lo típico). Nunca rellenes para llegar a 10; se nota el relleno y abandonan.
+4. **Escribe la slide 1.** La promesa más el bucle. Texto grande sobre la imagen,
+   una sola idea. Adelanta un número si encaja.
+5. **Arma las slides de valor.** Pon el punto más fuerte en la slide 2 o 3. Una
+   idea por slide, cada una se entiende sola. Redacta el texto sobre la imagen
+   de cada una (corto: tiene que leerse en 2 segundos en un formato 4:5; en
+   español el texto ocupa más, así que recorta palabras).
+6. **Escribe la slide final.** Un resumen en una slide que valga la pena
+   guardar por sí solo, más un único pedido (guárdalo / sígueme para más).
+7. **Escribe el caption.** El caption acompaña al carrusel (puede ser corto),
+   repite el gancho para el corte y lleva los hashtags. Pásalo a
+   `ig-hashtag-strategist` o aplica el set dimensionado de 3-5.
+8. **Pasada del humanizador** sobre el texto de las slides y el caption. Elimina
+   el vocabulario de IA por densidad (por slide, por párrafo del caption),
+   limita las rayas (como máximo una por slide, alrededor de una cada 100
+   palabras en el caption; nunca reemplaces una por punto), rompe tríadas
+   apiladas y puentes de revelación. Las slides son cortas por diseño: nunca
+   cortes ni rellenes una slide por ritmo. Revisa la ortografía. Reglas
+   canónicas: `ig-humanizer` V3.
+9. **Tarjeta de aprobación.** Muestra: fórmula, el esquema slide por slide con
+   el texto de cada una, el caption, el set de hashtags, el objetivo principal y
+   un recordatorio de que el usuario aporta 2-10 imágenes (todas imágenes, sin
+   mezclar formatos) en este orden.
+10. **Al aprobarse, publica con el contenido.** Llama a `lib.publish(kind="carousel",
+    draft_text=<caption aprobado>, target_url="https://www.instagram.com/",
+    media=[<rutas de las imágenes en orden>], platforms=[<INSTAGRAM_PLATFORM_ID>],
+    scheduled_time=<iso_o_None>)`. El envoltorio sube cada imagen en orden y
+    programa. Sin contenido o sin clave de Publora devuelve el plan como bloque
+    para copiar y pegar más el orden de las slides.
 
-## Hard rules
+## Reglas estrictas
 
-Global voice rules: see root `SKILL.md` Voice rules. Additional skill-specific
-rules:
+Reglas de voz globales: ver la sección de reglas de voz del `SKILL.md` raíz.
+Reglas adicionales propias de esta skill:
 
-- Slide 1 is a promise with an open loop, never a bare title.
-- Front-load value to slides 2-3; never bury the best point at the end.
-- One point per slide, readable in 2 seconds on a portrait 4:5 frame.
-- 2-10 slides only. Never pad to a round number.
-- All images, no mixed media (the API rejects an image+video carousel).
-- The last slide must earn the save with a one-slide summary and one ask.
+- La slide 1 es una promesa con un bucle abierto, nunca un título pelado.
+- El valor va adelante, en las slides 2-3; nunca entierres el mejor punto al final.
+- Una idea por slide, legible en 2 segundos en un formato vertical 4:5.
+- Solo 2-10 slides. Nunca rellenes para llegar a un número redondo.
+- Todo imágenes, sin mezclar formatos (la API rechaza un carrusel de imagen + video).
+- La última slide tiene que conseguir el guardado con un resumen en una slide y
+  un único pedido.
 
-## Anti-patterns (skill will refuse)
+## Antipatrones (la skill se niega)
 
-- A title-only slide 1 with no promise or loop.
-- A 10-slide carousel padded from a 4-point idea.
-- The strongest point saved for the final slide.
-- Three competing CTAs on the payoff slide.
-- Mixing images and a video in one carousel.
-- On-image walls of text that cannot be read in a swipe.
-- Em dashes above the cap (more than one on a slide), AI vocab clusters, stacked or hollow rule-of-three.
-- "The result?" reveals and staccato stacks added for punch.
+- Una slide 1 que es solo título, sin promesa ni bucle.
+- Un carrusel de 10 slides inflado a partir de una idea de 4 puntos.
+- El punto más fuerte guardado para la última slide.
+- Tres llamadas a la acción compitiendo en la slide final.
+- Mezclar imágenes y un video en un mismo carrusel.
+- Bloques de texto sobre la imagen que no se pueden leer al deslizar.
+- Rayas por encima del límite (más de una por slide), acumulación de vocabulario
+  de IA, tríadas apiladas o huecas.
+- Revelaciones del tipo "¿El resultado?" y ráfagas entrecortadas agregadas para
+  dar golpe.
 
-## Resources
+## Recursos
 
-- `../../references/hook-formulas.md` - the carousel formulas (IG5-IG8) with skeletons
-- `../../references/algorithm-heuristics.md` - 2026 carousel ranking and swipe-through rules
-- `../../references/hashtag-strategy.md` - the 3-5 sized hashtag recipe
-- `../../references/media-workflow.md` - uploading 2-10 images in order
-- `references/slide-architecture.md` - per-formula slide spines and on-image text rules
+- `../../references/hook-formulas.md` - las fórmulas de carrusel (IG5-IG8) con esqueletos
+- `../../references/algorithm-heuristics.md` - ranking de carruseles 2026 y reglas de deslizamiento
+- `../../references/hashtag-strategy.md` - la receta de 3-5 hashtags dimensionados
+- `../../references/media-workflow.md` - subir 2-10 imágenes en orden
+- `references/slide-architecture.md` - columnas por fórmula y reglas del texto sobre la imagen
 
-## Optional illustration
+## Ilustración opcional
 
-Offer a generated image when a visual would lift reach. Draft a prompt and call
-`lib.illustrate(prompt, kind="carousel")`, pulling brand handle/color from Voice &
-Brand Profile section 6 for a pixel-exact overlay. Show the returned `url` + `cost`,
-attach it as your Instagram media via `media_urls=[url]` in one shot (Publora fetches the hosted URL server-side): a single image posts as a photo, and the carousel planner can pass 2-10 URLs for a carousel. For a Reel cover instead, set `platformSettings.instagram.coverUrl`. Full workflow (incl. quote-cards):
-`../ig-humanizer/sub-skills/illustration.md`. No Pixfaro key -> it drafts the prompt for you to generate manually.
-## Related skills
+Ofrece una imagen generada cuando un visual pueda subir el alcance. Redacta un
+prompt y llama a `lib.illustrate(prompt, kind="carousel")`, tomando el usuario y
+el color de marca de la sección 6 del Perfil de voz y marca para una
+superposición exacta al píxel. Muestra la `url` y el `cost` devueltos y
+adjúntala como contenido de Instagram con `media_urls=[url]` en un solo paso
+(Publora descarga la URL alojada desde su servidor): una imagen se publica como
+foto, y el planificador de carruseles puede pasar 2-10 URLs para un carrusel.
+Para la portada de un reel, define `platformSettings.instagram.coverUrl`. Flujo
+completo (incluidas las tarjetas de cita): `../ig-humanizer/sub-skills/illustration.md`.
+Sin clave de Pixfaro, redacta el prompt para que generes la imagen manualmente.
+Escribe en español el texto que vaya sobre la imagen.
 
-- `ig-caption-writer` - when the idea is a single image, not a carousel
-- `ig-hashtag-strategist` - build the sized hashtag set
-- `ig-humanizer` - scrub the on-image text and caption
-- `ig-hook-extractor` - reverse-engineer a carousel you admire
+## Skills relacionadas
+
+- `ig-caption-writer` - cuando la idea es una imagen única, no un carrusel
+- `ig-hashtag-strategist` - arma el set de hashtags dimensionado
+- `ig-humanizer` - limpia el texto de las slides y el caption
+- `ig-hook-extractor` - analiza un carrusel que admiras

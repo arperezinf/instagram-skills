@@ -1,93 +1,99 @@
-# Carousel Slide Architecture
+# Arquitectura de slides del carrusel
 
-Per-formula slide spines and the on-image text rules `ig-carousel-planner` uses.
-A carousel is 2-10 slides (API limit; the native app allows 20). Design for the
-portrait 4:5 frame, which fills the most screen.
+Las columnas por fórmula y las reglas del texto sobre la imagen que usa
+`ig-carousel-planner`. Un carrusel tiene 2-10 slides (límite de la API; la app
+nativa permite 20). Diseña para el formato vertical 4:5, que ocupa la mayor
+parte de la pantalla.
 
-## The universal spine
+## La columna universal
 
-| Slide | Role | On-image text |
+| Slide | Función | Texto sobre la imagen |
 |---|---|---|
-| 1 (hook) | promise + open loop | one big idea, 6-12 words, a number if it fits |
-| 2 | strongest value | the best single point, front-loaded |
-| 3 to N-1 | one point each | short, stands alone, readable in 2 seconds |
-| N (payoff) | saveable summary + one ask | the recap on one slide, then save/follow |
+| 1 (gancho) | promesa + bucle abierto | una idea grande, 6-14 palabras, un número si encaja |
+| 2 | el valor más fuerte | el mejor punto individual, adelantado |
+| 3 a N-1 | una idea cada una | corto, se entiende solo, legible en 2 segundos |
+| N (recompensa) | resumen para guardar + un pedido | el resumen en una slide, luego guardar/seguir |
 
-Swipe-through decays with depth, so the order of value matters more than the
-count. Put the best point on slide 2 or 3, never on slide 10.
+El deslizamiento cae con la profundidad, así que el orden del valor importa más
+que la cantidad. Pon el mejor punto en la slide 2 o 3, nunca en la 10.
 
-## On-image text rules
+## Reglas del texto sobre la imagen
 
-- **One idea per slide.** If a slide needs two thoughts, split it.
-- **Readable in 2 seconds.** Big text, few words. The slide is a billboard, not
-  a paragraph. Detail goes in the caption.
-- **Number the slides** when the format is a list (slide 2 = "1.", etc.) so the
-  open loop ("most miss #4") pays off.
-- **Visual consistency.** Same font, same margins, same accent color across
-  slides so it reads as one set.
-- **Em dashes capped at one per slide** in on-image text, and only when it
-  does real work (a slide rarely needs one). The character is not a tell in
-  2026; a slide glued together by dashes is. Replace the excess with a colon
-  or a line break, never a period.
+- **Una idea por slide.** Si una slide necesita dos pensamientos, divídela.
+- **Legible en 2 segundos.** Texto grande, pocas palabras. La slide es un cartel,
+  no un párrafo. El detalle va en el caption.
+- **Numera las slides** cuando el formato es una lista (slide 2 = "1.", etc.)
+  para que el bucle abierto ("la mayoría se pierde la #4") se cumpla.
+- **Coherencia visual.** Misma tipografía, mismos márgenes y mismo color de
+  acento en todas las slides, para que se lea como un conjunto.
+- **Rayas limitadas a una por slide** en el texto sobre la imagen, y solo cuando
+  cumplen una función real (una slide casi nunca la necesita). El carácter no es
+  un indicio en 2026; una slide pegada a fuerza de rayas sí lo es. Reemplaza el
+  exceso por dos puntos o un salto de línea, nunca por punto.
+- **El español ocupa más que el inglés.** Prefiere palabras cortas y verbos
+  directos; evita nominalizaciones ("la implementación de") que alargan la línea.
 
-## IG5 - Listicle Carousel (goal: saves)
+## IG5 - Carrusel de lista (objetivo: guardados)
 
 ```
-Slide 1: {N} {things} that {payoff}. (most miss #{k})
-Slide 2: 1. {item} + one concrete example
-Slide 3: 2. {item} + example
+Slide 1: {N} {cosas} que {recompensa}. (la mayoría se pierde la #{k})
+Slide 2: 1. {elemento} + un ejemplo concreto
+Slide 3: 2. {elemento} + ejemplo
 ...
-Slide N-1: {N}. {item} + example
-Slide N: the list recapped on one slide + "save this so you use it"
+Slide N-1: {N}. {elemento} + ejemplo
+Slide N: la lista resumida en una slide + "guárdalo para usarlo"
 ```
 
-Put the most surprising item at position 1 or 2 in the list, not last.
+Pon el elemento más sorprendente en la posición 1 o 2 de la lista, no al final.
 
-## IG6 - Before/After Transformation (goal: saves, follows)
-
-```
-Slide 1: {the after, with a number or a striking visual}
-Slide 2: where it started (the before) - the open loop is the gap
-Slide 3 to N-1: the exact steps, one per slide
-Slide N: the result restated + "follow for the full {topic} system"
-```
-
-The before/after gap between slides 1 and 2 is the swipe driver. Steps must be
-concrete enough to do tomorrow.
-
-## IG7 - Myth-Buster (goal: shares)
+## IG6 - Transformación antes/después (objetivo: guardados, seguidores)
 
 ```
-Slide 1: {N} {topic} myths costing you {specific loss}
-Slide 2 to N-1: "Myth: {belief}" then "Truth: {what works}"
-Slide N: the reframe in one line + "send this to someone who still believes #1"
+Slide 1: {el después, con un número o una imagen impactante}
+Slide 2: dónde empezó (el antes): el bucle abierto es la distancia
+Slide 3 a N-1: los pasos exactos, uno por slide
+Slide N: el resultado repetido + "sígueme para ver el sistema completo de {tema}"
 ```
 
-The send prompt on the last slide is the whole point; myth-busters get sent.
+La distancia entre el antes y el después en las slides 1 y 2 es lo que impulsa
+el deslizamiento. Los pasos tienen que ser lo bastante concretos para hacerlos
+mañana.
 
-## IG8 - Steal-This Framework (goal: saves)
+## IG7 - Derriba mitos (objetivo: compartidos)
 
 ```
-Slide 1: the {named} framework I use to {result}
-Slide 2 to N-1: one part of the framework per slide, with the why
-Slide N: the whole framework on one slide (the save-bait artifact) + save prompt
+Slide 1: {N} mitos sobre {tema} que te están costando {pérdida concreta}
+Slide 2 a N-1: "Mito: {creencia}" y luego "Verdad: {lo que funciona}"
+Slide N: el replanteo en una línea + "envíaselo a alguien que todavía cree en el #1"
 ```
 
-The single-slide summary is what people save. Make it self-contained.
+La invitación a enviar en la última slide es el punto central; los derriba mitos
+se envían.
 
-## Slide count guidance
+## IG8 - Marco de trabajo para copiar (objetivo: guardados)
 
-| Content | Slides |
+```
+Slide 1: el marco {nombre} que uso para {resultado}
+Slide 2 a N-1: una parte del marco por slide, con el porqué
+Slide N: el marco completo en una slide (lo que se guarda) + invitación a guardar
+```
+
+El resumen en una sola slide es lo que la gente guarda. Haz que se entienda solo.
+
+## Guía de cantidad de slides
+
+| Contenido | Slides |
 |---|---|
-| A tight list or framework | 6-8 |
-| A richer teaching set or transformation | 8-10 |
-| Fewer than 4 real points | post as a single image instead |
+| Una lista o marco ajustado | 6-8 |
+| Un conjunto educativo más rico o una transformación | 8-10 |
+| Menos de 4 puntos reales | publícalo como imagen única |
 
-Never pad to 10. A 5-point idea is a 5-point carousel (7 slides with hook and
-payoff), not a padded 10.
+Nunca rellenes hasta 10. Una idea de 5 puntos es un carrusel de 5 puntos (7
+slides con gancho y recompensa), no uno de 10 inflado.
 
-## Caption pairing
+## Combinación con el caption
 
-The caption can be short for a carousel because the slides carry the payload. It
-should: restate the hook for the "more" fold, add one line of context, carry the
-CTA, and hold the 3-5 sized hashtags. See `../../../references/hashtag-strategy.md`.
+En un carrusel el caption puede ser corto porque las slides llevan el contenido.
+Debe: repetir el gancho para el corte de "más", agregar una línea de contexto,
+llevar la llamada a la acción y los 3-5 hashtags dimensionados. Ver
+`../../../references/hashtag-strategy.md`.

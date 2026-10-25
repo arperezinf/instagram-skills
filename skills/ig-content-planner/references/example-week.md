@@ -1,57 +1,64 @@
-# Example Week (Instagram)
+# Semana de ejemplo (Instagram)
 
-A filled-in 7-day plan for a creator launching a design course to junior
-designers and career switchers. Theme: "launching our design course". Pillar mix:
-40% Educational / 30% Story / 20% Engagement / 10% Promotion. Cadence: 6 feed
-posts + daily stories.
+Un plan de 7 días completo para una creadora que lanza un curso de diseño para
+diseñadores junior y personas que cambian de carrera. Tema: "lanzamiento de
+nuestro curso de diseño". Mezcla de pilares: 40% Educativo / 30% Historia / 20%
+Interacción / 10% Promoción. Ritmo: 6 posts de feed + historias diarias. Los
+horarios son ilustrativos (franjas de referencia) y deben ajustarse a la zona
+horaria y a las estadísticas reales de la audiencia.
 
-## 7-day calendar
+## Calendario de 7 días
 
-| Day | Format | Pillar | Formula | Angle | Goal | Time |
+| Día | Formato | Pilar | Fórmula | Enfoque | Objetivo | Horario |
 |---|---|---|---|---|---|---|
-| Mon | Reel | Educational | IG9 Pattern-Interrupt | "you are posting your portfolio in the wrong order" | shares | 12:30 PM |
-| Tue | Carousel | Educational | IG5 Listicle | "7 portfolio mistakes that cost the interview (most do #4)" | saves | 11:30 AM |
-| Wed | Story set | Engagement | poll + question stickers | "which homepage layout would you click?" | comments | 7:00 PM |
-| Thu | Carousel | Story | IG6 Before/After | "my first portfolio vs the one that got me hired" | follows | 11:00 AM |
-| Fri | Single image | Engagement | IG3 Relatable | "opening Figma to fix one spacing issue and rebuilding the whole page" | comments | 1:00 PM |
-| Sat | Reel | Educational | IG10 How-I Teardown | "how I redesign a landing page in 25 minutes" | saves | 10:00 AM |
-| Sun | Carousel | Promotion | IG8 Steal-This Framework | "the 4-part framework I teach in the course (doors open today)" | follows | 6:00 PM |
+| Lun | Reel | Educativo | IG9 Rompe el patrón | "estás ordenando tu portafolio al revés" | compartidos | 12:30 |
+| Mar | Carrusel | Educativo | IG5 Lista | "7 errores de portafolio que te cuestan la entrevista (casi todos cometen el #4)" | guardados | 11:30 |
+| Mié | Serie de historias | Interacción | stickers de encuesta + pregunta | "¿en qué página de inicio harías clic?" | comentarios | 19:00 |
+| Jue | Carrusel | Historia | IG6 Antes/después | "mi primer portafolio frente al que me consiguió el trabajo" | seguidores | 11:00 |
+| Vie | Imagen única | Interacción | IG3 Identificable | "abrir Figma para corregir un espaciado y terminar rehaciendo toda la página" | comentarios | 13:00 |
+| Sáb | Reel | Educativo | IG10 Cómo lo hice | "cómo rediseño una landing page en 25 minutos" | guardados | 10:00 |
+| Dom | Carrusel | Promoción | IG8 Marco de trabajo para copiar | "el marco de 4 partes que enseño en el curso (hoy abrimos inscripciones)" | seguidores | 18:00 |
 
-Stories run daily underneath: behind-the-scenes of building the course, a poll or
-question sticker, and a reshare of that day's or a recent feed post.
+Las historias se publican todos los días, además del feed: detrás de escena de
+la creación del curso, un sticker de encuesta o pregunta y una republicación del
+post del día o de uno reciente.
 
-## Weekly saves goal
+## Meta semanal de guardados
 
-- **Headline target:** beat last week's saves + shares.
-- Save-bait posts this week: Tue (IG5), Sat (IG10), Sun (IG8), with Thu (IG6)
-  also save-and-follow. That is 3+ save-bait, target met.
-- Send-bait posts: Mon (IG9 pattern interrupt), and Thu's before/after is
-  send-worthy. Target of 2 met.
+- **Meta principal:** superar los guardados + compartidos de la semana anterior.
+- Posts que invitan a guardar esta semana: martes (IG5), sábado (IG10), domingo
+  (IG8), y el jueves (IG6) también invita a guardar y seguir. Son 3 o más: meta
+  cumplida.
+- Posts que invitan a enviar: lunes (IG9 rompe el patrón), y el antes/después del
+  jueves también es digno de enviar. Meta de 2 cumplida.
 
-## Daily story cadence
+## Ritmo diario de historias
 
-- Mon-Sun: 2-4 frames/day.
-- At least one reshare/day of a recent feed post (pushes it to followers who
-  missed it, a send-equivalent signal).
-- Wed and the launch Sunday lean on interactive stickers (poll, question, quiz)
-  to pull taps and seed comments.
+- De lunes a domingo: 2-4 cuadros por día.
+- Al menos una republicación diaria de un post reciente del feed (lo lleva a
+  seguidores que no lo vieron, una señal equivalente a un envío).
+- El miércoles y el domingo de lanzamiento se apoyan en stickers interactivos
+  (encuesta, pregunta, quiz) para conseguir toques y generar comentarios.
 
-## Balance check
+## Control de equilibrio
 
-- [x] Format mix: 2 Reels, 3 carousels, 1 single image, daily stories
-- [x] 3+ save-bait posts (Tue, Sat, Sun) and 2 send-bait (Mon, Thu)
-- [x] 1 real first-person story post (Thu before/after)
-- [x] No pillar over 50%: Educational 3/6, Story 1/6, Engagement 2 (image + stories), Promotion 1/6
-- [x] No formula repeated more than twice
-- [x] Promotion = 1 post (Sun)
-- [x] Goal mix spread: saves (Tue, Sat, Sun), shares (Mon, Thu), comments (Wed, Fri), follows (Thu, Sun)
+- [x] Mezcla de formatos: 2 reels, 3 carruseles, 1 imagen única, historias diarias
+- [x] 3 o más posts que invitan a guardar (mar, sáb, dom) y 2 que invitan a enviar (lun, jue)
+- [x] 1 post de historia real en primera persona (antes/después del jueves)
+- [x] Ningún pilar supera el 50%: Educativo 3/6, Historia 1/6, Interacción 2 (imagen + historias), Promoción 1/6
+- [x] Ninguna fórmula se repite más de dos veces
+- [x] Promoción = 1 post (domingo)
+- [x] Objetivos repartidos: guardados (mar, sáb, dom), compartidos (lun, jue), comentarios (mié, vie), seguidores (jue, dom)
 
-## Notes
+## Notas
 
-- The launch carousel (Sun) is the only hard-promotion post; the four educational
-  and story posts before it earn the trust that makes the offer land.
-- Hashtags: rotate a 3-5 sized set per post via `ig-hashtag-strategist` (the
-  portfolio posts share niche tags like `#juniordesigner` and `#portfolioreview`;
-  the launch post adds the course's branded tag).
-- Each post still needs the user's image or video; the planner sets the angle and
-  format, the writer skills draft the caption, the user supplies the media.
+- El carrusel de lanzamiento (domingo) es el único post de promoción directa;
+  los cuatro posts educativos y de historia previos generan la confianza que
+  hace que la oferta funcione.
+- Hashtags: rota un set dimensionado de 3-5 por post con `ig-hashtag-strategist`
+  (los posts de portafolio comparten etiquetas de nicho como `#diseñadorjunior`
+  y `#revisiondeportafolio`, cuyo tamaño hay que verificar en la app; el post de
+  lanzamiento suma la etiqueta de marca del curso).
+- Cada post igual necesita la imagen o el video del usuario; el planificador
+  define el enfoque y el formato, las skills de redacción escriben el caption y
+  el usuario aporta el contenido multimedia.

@@ -1,85 +1,119 @@
-# Worked Before/After Rewrites (Instagram)
+# Reescrituras completas de antes/después (Instagram)
 
-Each example shows the AI-tell version, the humanized version, and what changed.
-
----
-
-## Example 1: a caption (single image)
-
-**Before (AI-likely):**
-> In today's fast-paced digital landscape, leveraging Instagram can fundamentally
-> transform your brand. It's not just about posting, it's about strategy. Here are
-> some game-changing tips to elevate your content and unlock your true potential.
-> What do you think? Double tap if you agree!
-> #marketing #socialmedia #instagram #growth #branding #contentcreator #digital
-> #strategy #success #entrepreneur #business #tips #viral #explore #reels (continues to 30)
-
-**After (humanized):**
-> I grew an Instagram account from 0 to 10k in 4 months posting 3 times a week.
->
-> one habit did it, and it was neither 30 hashtags nor daily posting.
->
-> I made every caption answer "would someone send this to a friend?". if the
-> answer was no, I rewrote the first line.
->
-> save this before your next post.
->
-> #bootstrappedgrowth #instagramforniches #contentstrategy #marketing
-
-**What changed:**
-- The first paragraph scored 6 markers ("in today's fast-paced", "digital
-  landscape", "leveraging", "fundamentally", "game-changing", "elevate",
-  "unlock"), so it was rewritten as a paragraph, not word-swapped. The "not
-  just X, it's Y" went on a single hit. Dead closer + bait cut.
-- Front-loaded a number with a referent (0 to 10k, 4 months, 3 posts a week)
-  into the first 125 chars (the hook now stands alone). Nothing fabricated: the
-  numbers came from the user.
-- Cut 30 hashtags to a 4-tag sized set (3 niche/mid + 1 broad).
-- Kept the lowercase-casual register and a save prompt with a reason.
-- Pass 2 check: the first draft of line 2 read "not 30 hashtags. not daily
-  posting. one thing.", which is a "No X. No Y. Just Z." stack: three
-  standalone fragments (over the 2-per-caption cap) in the negative-parallel
-  shape. Merged into one sentence with a clause that does work, in the
-  author's lowercase register. No em dash was touched (none over the cap).
+Cada ejemplo muestra la versión con indicios de IA, la versión humanizada y qué
+cambió. Los ejemplos son ilustrativos y los números se suponen aportados por el
+usuario.
 
 ---
 
-## Example 2: carousel slide 1 (on-image text)
+## Ejemplo 1: un caption (imagen única)
 
-**Before:**
-> Tips for Growing on Instagram — A Comprehensive Guide
+**Antes (probablemente IA):**
+> En el panorama digital acelerado de hoy, aprovechar Instagram puede
+> transformar fundamentalmente tu marca. No se trata solo de publicar, se trata
+> de estrategia. Aquí te dejo algunos consejos que cambian las reglas del juego
+> para potenciar tu contenido y desbloquear tu verdadero potencial.
+> ¿Qué opinas? ¡Doble toque si estás de acuerdo!
+> #marketing #redessociales #instagram #crecimiento #branding #creadordecontenido
+> #digital #estrategia #exito #emprendedor #negocios #tips #viral #explorar #reels (sigue hasta 30)
 
-**After:**
-> 7 Instagram growth mistakes that cost you reach (most do #4)
+**Después (humanizado):**
+> Hice crecer una cuenta de Instagram de 0 a 10.000 seguidores en 4 meses, publicando 3 veces por semana.
+>
+> lo logró un solo hábito, y no fueron ni los 30 hashtags ni publicar a diario.
+>
+> hice que cada caption respondiera a "¿alguien se lo enviaría a un amigo?". si
+> la respuesta era no, reescribía la primera línea.
+>
+> guárdalo antes de tu próximo post.
+>
+> #crecimientoorganico #instagramparanichos #estrategiadecontenidos #marketing
 
-**What changed:**
-- Turned a bare title into a promise (7 mistakes) + an open loop (most do #4) +
-  a stake (cost you reach). Now it earns the swipe.
-- The em dash was under the cap (one per slide) and was not the problem; it
-  went with the title-plus-subtitle structure it was gluing together. "A
-  Comprehensive Guide" was the real tell (2026 vocabulary on a slide).
+**Qué cambió:**
+- El primer párrafo sumó 7 marcadores ("panorama digital", "acelerado de hoy",
+  "aprovechar", "transformar", "fundamentalmente", "cambian las reglas del
+  juego", "potenciar", "desbloquear"), así que se reescribió como párrafo, no
+  cambiando palabra por palabra. El "No se trata solo de X, se trata de Y" salió
+  con una sola aparición. Se cortaron el cierre muerto y el cebo.
+- Se adelantó un número con referente (de 0 a 10.000, 4 meses, 3 posts por
+  semana) dentro de los primeros 125 caracteres (el gancho ahora se sostiene
+  solo). Nada inventado: los números vinieron del usuario.
+- Se redujeron los 30 hashtags a un set dimensionado de 4, en español (3 de
+  nicho/medios + 1 amplio). Sus tamaños hay que verificarlos en la app.
+- Se mantuvo el registro casual en minúscula y una invitación a guardar con una
+  razón.
+- Revisión de la Pasada 2: el primer borrador de la línea 2 decía "ni 30
+  hashtags. ni publicar a diario. un solo hábito.", que es una ráfaga del tipo
+  "Sin X. Sin Y. Solo Z.": tres fragmentos sueltos (por encima del límite de 2
+  por caption) con forma de paralelismo negativo. Se unió en una oración con una
+  cláusula que trabaja, en el registro en minúscula del autor. No se tocó
+  ninguna raya (no había ninguna por encima del límite).
 
 ---
 
-## Example 3: a Reel caption
+## Ejemplo 2: slide 1 de un carrusel (texto sobre la imagen)
 
-**Before:**
-> 🚀✨ Unlock the secrets to viral Reels! 🔥 In this video we delve deep into the
-> strategies that will fundamentally elevate your content game. 💯🙌 Don't forget
-> to like, share, and tag 3 friends! 🎯🚀
+**Antes:**
+> Consejos Para Crecer En Instagram — Una Guía Completa E Integral
 
-**After:**
-> the 3-second hook that took my Reels from 800 views to 40k.
->
-> it is not the audio. it is the first frame.
->
-> save this and watch your first second back before you post.
->
-> #reelsstrategy #shorthookwriting #contentcreator
+**Después:**
+> 7 errores al crecer en Instagram que te cuestan alcance (casi todos cometen el #4)
 
-**What changed:**
-- Cut the emoji storm (8+) to zero; the hook carries it.
-- Killed "unlock", "delve deep", "fundamentally elevate", and the "tag 3
-  friends" bait.
-- Led with a real before/after number in the first line.
-- Replaced the bait CTA with a save prompt that names the reason.
+**Qué cambió:**
+- Se convirtió un título pelado en una promesa (7 errores) + un bucle abierto
+  (casi todos cometen el #4) + lo que está en juego (te cuestan alcance). Ahora
+  consigue el deslizamiento.
+- Se quitaron las mayúsculas en cada palabra, un calco del título en inglés.
+- La raya estaba dentro del límite (una por slide) y no era el problema; se fue
+  junto con la estructura de título más subtítulo que unía. "Una Guía Completa
+  E Integral" era el verdadero indicio (vocabulario inflado en una slide).
+
+---
+
+## Ejemplo 3: caption de un reel
+
+**Antes:**
+> 🚀✨ ¡Descubre los secretos de los reels virales! 🔥 En este video nos
+> sumergimos en las estrategias que van a elevar fundamentalmente tu contenido.
+> 💯🙌 ¡No olvides dar me gusta, compartir y etiquetar a 3 amigos! 🎯🚀
+
+**Después:**
+> el gancho de 3 segundos que llevó mis reels de 800 reproducciones a 40.000.
+>
+> no está en el audio. está en el primer cuadro.
+>
+> guárdalo y mira tu primer segundo antes de publicar.
+>
+> #estrategiadereels #ganchosparareels #creadordecontenido
+
+**Qué cambió:**
+- Se cortó la lluvia de emojis (8 o más) a cero; el gancho sostiene el caption.
+- Se eliminaron "descubre los secretos", "nos sumergimos", "elevar
+  fundamentalmente" y el cebo de "etiquetar a 3 amigos", además de la
+  exclamación de vendedor.
+- Se abrió con un número real de antes/después en la primera línea.
+- Se reemplazó la llamada a la acción de cebo por una invitación a guardar que
+  nombra la razón.
+- "no está en el audio. está en el primer cuadro." son dos oraciones completas
+  con verbo, no fragmentos; quedan dentro del registro del autor.
+
+---
+
+## Ejemplo 4: calcos del inglés
+
+**Antes:**
+> Es por eso que decidí aplicar a este programa. Eventualmente, el proyecto fue
+> lanzado y hizo total sentido para mi audiencia. Qué opinas?
+
+**Después:**
+> Por eso me postulé al programa. Al final lanzamos el proyecto y mi audiencia
+> lo entendió enseguida: 212 personas se anotaron la primera semana.
+>
+> ¿Te postularías a algo así sin tener todo listo?
+
+**Qué cambió:**
+- "aplicar a" -> "postularse a"; "eventualmente" (finalmente) -> "al final";
+  "hizo sentido" -> se reescribió con un dato concreto aportado por el usuario.
+- La pasiva "fue lanzado" pasó a voz activa ("lanzamos").
+- Se agregó el signo de apertura y se cambió el cierre muerto por una pregunta
+  concreta.

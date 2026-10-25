@@ -345,12 +345,12 @@ class PubloraClient:
         """
         if not media:
             raise PubloraError(
-                "Instagram requires at least one media file. Text-only posts "
-                "are rejected at publish time."
+                "Instagram requiere al menos un archivo multimedia. Los posts solo "
+                "de texto se rechazan al publicar."
             )
         if len(media) > 10:
             raise PubloraError(
-                "Instagram carousels allow at most 10 media items."
+                "Los carruseles de Instagram admiten como máximo 10 elementos."
             )
         draft = self.create_post(
             content=content,

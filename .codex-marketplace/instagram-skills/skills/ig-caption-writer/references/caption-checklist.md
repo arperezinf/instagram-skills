@@ -1,66 +1,73 @@
-# Caption Checklist (Instagram)
+# Lista de verificación del caption (Instagram)
 
-The per-caption scrub and fit list `ig-caption-writer` applies before showing the
-approval card. Mirrors the root algorithm checklist with caption-specific items.
+La lista de limpieza y ajuste que `ig-caption-writer` aplica a cada caption
+antes de mostrar la tarjeta de aprobación. Replica la lista del algoritmo de la
+raíz, con elementos propios del caption.
 
-## Hook (the first 125 chars)
+## Gancho (los primeros 125 caracteres)
 
-- [ ] The first line lands the payoff, tension, or number on its own.
-- [ ] It makes sense without the second line (the "more" fold eats line 2+).
-- [ ] It is not a bare title ("Tips for X") but a promise ("the X that saved me 11 hours").
-- [ ] If a number fits the claim, it is in the hook.
+- [ ] La primera línea plantea la recompensa, la tensión o el número por sí sola.
+- [ ] Se entiende sin la segunda línea (el corte de "más" se come de la línea 2 en adelante).
+- [ ] No es un título pelado ("Consejos para X") sino una promesa ("el X que me ahorró 11 horas").
+- [ ] Si un número encaja con la afirmación, está en el gancho.
 
-## Body
+## Cuerpo
 
-- [ ] One idea, not three. The caption argues a single point.
-- [ ] Short lines with white space between beats; no wall of text.
-- [ ] Under 2,200 chars total.
-- [ ] Teaches or tells the story the hook promised (no bait-and-switch).
+- [ ] Una idea, no tres. El caption defiende un solo punto.
+- [ ] Líneas cortas con espacio en blanco entre tramos; sin bloques de texto.
+- [ ] Menos de 2.200 caracteres en total.
+- [ ] Enseña o cuenta la historia que prometió el gancho (sin anzuelo engañoso).
 
-## CTA
+## Llamada a la acción
 
-- [ ] One CTA, not three competing ones.
-- [ ] It names the reason ("save this for your next launch") or asks a real question.
-- [ ] No "what do you think?" / "thoughts?" dead closer.
-- [ ] No engagement bait ("double tap if", "comment YES", "tag 3 friends").
+- [ ] Una llamada a la acción, no tres compitiendo.
+- [ ] Nombra la razón ("guárdalo para tu próximo lanzamiento") o hace una pregunta real.
+- [ ] Sin cierre muerto del tipo "¿qué opinas?" / "¿ustedes qué piensan?".
+- [ ] Sin cebo de interacción ("doble toque si", "comenta SÍ", "etiqueta a 3 amigos").
 
 ## Hashtags
 
-- [ ] 3-5 sized tags (2-3 niche, 1-2 mid, 0-1 broad), not 30.
-- [ ] Every tag matches the actual content.
-- [ ] At the end of the caption or in the first comment, never mid-sentence.
+- [ ] 3-5 etiquetas dimensionadas (2-3 de nicho, 1-2 medias, 0-1 amplia), no 30.
+- [ ] Cada etiqueta coincide con el contenido real.
+- [ ] Prioridad a etiquetas en español si la audiencia es hispanohablante.
+- [ ] Al final del caption o en el primer comentario, nunca a mitad de oración.
 
-## Voice scrub
+## Limpieza de voz
 
-- [ ] Em dashes (`—`) at or under about one per 100 words (1-2 per caption).
-      A single em dash is fine (29% of human captions have one). Replace only
-      the excess, with a comma, colon, parentheses or a line break, never a
-      period. No en dash (`–`) between clauses, no double dash (`--`).
-- [ ] No cluster of 2026 AI vocab (3+ markers in one paragraph = rewrite the
-      paragraph; one is fine): significant, crucial, notably, comprehensive,
-      insights, robust, leverage, foster, landscape, nuanced, streamline,
-      elevate, empower, dive in, fundamentally, essentially, ultimately; plus
-      "-ing" clause openers and "the X-tion of" nominalisations.
-- [ ] No reveal bridge ("The result?", "Here's the thing..", "Let's talk
-      about..", "Stop X, start Y") and no "It's not X, it's Y".
-- [ ] No sincerity announcement ("real talk", "not gonna lie", "POV:" on
-      something that is not a POV) and no hedge the author did not write.
-- [ ] No staccato stack ("Short. Punchy. Done.", "No X. No Y. Just Z."), no
-      one-word line for drama, at most 2 standalone fragments. Fix only a
-      paragraph that reads machine-flat; never manufacture variance.
-- [ ] At least one odd-precision number with a named referent, or a named
-      entity, where the claim allows. A bare number does not count.
-- [ ] 0-3 emoji, placed with intent, none sprinkled.
-- [ ] At most one natural rule-of-three with concrete items; no stacked or
-      hollow triads.
+- [ ] Rayas (`—`) en una cada 100 palabras o menos (1-2 por caption). Una raya
+      sola está bien. Reemplaza solo el exceso, con coma, dos puntos, paréntesis
+      o salto de línea, nunca con punto. Sin guiones entre oraciones ni dobles
+      guiones (`--`).
+- [ ] Sin acumulación de vocabulario de IA (3 o más marcadores en un párrafo =
+      reescribir el párrafo; uno está bien): potenciar, impulsar, optimizar,
+      fomentar, crucial, fundamental, esencial, clave, significativo, robusto,
+      panorama, ecosistema, cabe destacar, en definitiva, sin lugar a dudas;
+      más aperturas con gerundio en cadena ("Buscando X, logrando Y") y
+      nominalizaciones del tipo "la implementación de la optimización de".
+- [ ] Sin puentes de revelación ("¿El resultado?", "Te cuento algo..",
+      "Hablemos de..", "Deja de X, empieza a Y") ni "No es solo X, es Y".
+- [ ] Sin anuncios de sinceridad ("hablemos claro", "no te voy a mentir", "POV:"
+      sobre algo que no es un punto de vista) ni atenuantes que el autor no
+      escribió.
+- [ ] Sin ráfagas entrecortadas ("Corto. Directo. Listo.", "Sin X. Sin Y. Solo
+      Z."), sin líneas de una palabra para dar dramatismo, como máximo 2
+      fragmentos sueltos. Corrige solo un párrafo que suene plano como máquina;
+      nunca fabriques variación.
+- [ ] Al menos un número de precisión poco redonda con un referente nombrado, o
+      una entidad con nombre, donde la afirmación lo permita. Un número pelado no
+      cuenta.
+- [ ] Ortografía correcta: tildes, ¿ ¡, mayúsculas en nombres propios.
+- [ ] 0-3 emojis, ubicados con intención, ninguno espolvoreado.
+- [ ] Como máximo una enumeración natural de tres con elementos concretos; sin
+      tríadas apiladas ni huecas.
 
-## Media
+## Contenido multimedia
 
-- [ ] The user knows which image or video to attach (Instagram needs media).
-- [ ] For a Reel, the caption supports the video; it is not the hook itself.
+- [ ] El usuario sabe qué imagen o video adjuntar (Instagram necesita contenido).
+- [ ] En un reel, el caption acompaña al video; no es el gancho en sí.
 
-## Scoring
+## Puntuación
 
-- Any hook or voice-scrub miss -> fix before the approval card.
-- CTA or hashtag miss -> flag with a one-line fix.
-- Clean -> show the approval card with the formula, char count, and primary goal.
+- Cualquier falla en el gancho o en la limpieza de voz -> corregir antes de la tarjeta de aprobación.
+- Falla en la llamada a la acción o en los hashtags -> señalar con una corrección de una línea.
+- Limpio -> mostrar la tarjeta de aprobación con la fórmula, la cantidad de caracteres y el objetivo principal.

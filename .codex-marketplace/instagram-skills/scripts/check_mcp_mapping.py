@@ -31,6 +31,8 @@ CLIENT = ROOT / "lib" / "apify_client.py"
 NORMALIZERS = (("lib.apify_client", "_post"), ("lib.apify_client", "_profile"))
 #: Input keys that are near-misses, documented so nobody sends them again.
 WARN_ABOUT = ("resultsType",)
+#: Mapping-table headers accepted (English upstream, Spanish translation).
+TABLE_HEADERS = ("| Flat field |", "| Campo plano |")
 
 
 def mentions(doc: str, name: str, extra: str = "") -> bool:
@@ -99,9 +101,10 @@ def table_for(doc: str, attr: str) -> set[str] | None:
     if not marker:
         return None
     after = doc[marker.end():]
-    if "| Flat field |" not in after:
+    header = next((h for h in TABLE_HEADERS if h in after), None)
+    if header is None:
         return None
-    body = after.split("| Flat field |", 1)[1].split(chr(10) * 2, 1)[0]
+    body = after.split(header, 1)[1].split(chr(10) * 2, 1)[0]
     return set(re.findall(r"^\| `([a-z_][a-z0-9_]*)` \|", body, re.M))
 
 
@@ -113,7 +116,7 @@ def mapping_tables(doc: str) -> list[set[str]]:
     somewhere else, and a whole-document check would pass.
     """
     tables = []
-    for chunk in doc.split("| Flat field |")[1:]:
+    for chunk in re.split("|".join(re.escape(h) for h in TABLE_HEADERS), doc)[1:]:
         body = chunk.split(chr(10) * 2, 1)[0]   # to the blank line after the table
         tables.append(set(re.findall(r"^\| `([a-z_][a-z0-9_]*)` \|", body, re.M)))
     return tables

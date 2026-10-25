@@ -1,98 +1,131 @@
-# Instagram Hashtag Strategy - 2026
+# Estrategia de hashtags en Instagram - 2026
 
-The 30-hashtag wall is dead. Instagram's own guidance and creator testing in
-2025-2026 converged on the same finding: **3 to 5 well-chosen, correctly-sized
-hashtags outperform 30 random ones.** Hashtags in 2026 act more like topic
-labels that help Instagram categorize the post than like a discovery firehose.
-Reach now comes mostly from sends, saves, and the recommendation engine, not
-from hashtag feeds.
+El muro de 30 hashtags murió. La propia recomendación de Instagram y las pruebas
+de creadores en 2025-2026 llegaron a la misma conclusión: **3 a 5 hashtags bien
+elegidos y bien dimensionados rinden más que 30 al azar.** En 2026 los hashtags
+funcionan más como etiquetas de tema que ayudan a Instagram a clasificar el post
+que como una fuente masiva de descubrimiento. Hoy el alcance llega sobre todo de
+los envíos, los guardados y el motor de recomendación, no de los feeds de
+hashtags.
 
-## The core rule: size, not volume
+## La regla central: tamaño, no volumen
 
-A hashtag's **size** is its total post count. Posting a small account into a
-giant hashtag is like dropping a flyer into a stadium: it is gone in seconds.
-The strategy is a sized mix so the post can actually rank in the smaller tags
-while still touching the bigger ones.
+El **tamaño** de un hashtag es su cantidad total de publicaciones. Publicar con
+una cuenta chica en un hashtag gigante es como tirar un volante en un estadio:
+desaparece en segundos. La estrategia es una mezcla dimensionada para que el
+post pueda posicionarse en las etiquetas más chicas y a la vez tocar las grandes.
 
-| Tier | Post count | Role | How many to use |
+| Nivel | Cantidad de posts | Función | Cuántos usar |
 |---|---|---|---|
-| **Niche** | under 50k | where a small/mid account can actually rank and stay visible for hours | 2-3 |
-| **Mid** | 50k - 500k | the sweet spot: enough audience, beatable competition | 1-2 |
-| **Broad** | 500k - 5M+ | a brief touch of a big audience; you rank for minutes, not hours | 0-1 |
+| **Nicho** | menos de 50 mil | donde una cuenta chica o mediana puede posicionarse y seguir visible durante horas | 2-3 |
+| **Medio** | 50 mil - 500 mil | el punto justo: audiencia suficiente y competencia superable | 1-2 |
+| **Amplio** | 500 mil - 5 millones o más | un roce breve con una audiencia grande; te posicionas por minutos, no por horas | 0-1 |
 
-**The 2026 default: 3-5 total.** Roughly 2-3 niche + 1-2 mid + at most 1 broad.
-Adding more past 5 does not add reach and can read as spam.
+**Lo habitual en 2026: 3-5 en total.** Aproximadamente 2-3 de nicho + 1-2
+medios + como máximo 1 amplio. Agregar más de 5 no suma alcance y puede leerse
+como spam.
 
-## Why niche wins
+## Hashtags en español
 
-- A niche tag (under 50k) has slow churn, so your post stays near the top of
-  "Recent" and "Top" for hours instead of seconds.
-- Ranking in a niche tag is achievable for a small account; ranking in a 5M tag
-  is not, so the broad tag is mostly a categorization signal.
-- Niche tags also pull a more relevant audience, which means better saves and
-  sends, which is what actually drives reach.
+- **Para una audiencia hispanohablante, prioriza hashtags en español.** Atraen a
+  la audiencia que de verdad va a leer el caption, y eso mejora guardados y
+  envíos.
+- **No traduzcas un hashtag inglés y asumas el mismo tamaño.** El equivalente en
+  español puede tener una cantidad de publicaciones muy distinta. Verifica el
+  conteo en el buscador de la app antes de asignarle un nivel.
+- **Cuidado con tildes y eñes.** Instagram trata `#diseño`, `#diseno` y
+  `#disenio` como etiquetas distintas. Revisa en la app cuál variante usa de
+  verdad tu comunidad.
+- **Mezclar idiomas está bien** si tu audiencia es bilingüe o el término técnico
+  se usa en inglés (por ejemplo `#ux`), pero no pongas hashtags en inglés solo
+  porque son más grandes: atraen a gente que no va a entender el caption.
 
-## Sizing in practice
+## Por qué gana el nicho
 
-You cannot see a tag's exact post count from inside the publishing API, so size
-tags by checking the count Instagram shows in the app's search, or by judgment:
+- Una etiqueta de nicho (menos de 50 mil) se renueva despacio, así que tu post
+  se mantiene cerca del principio de "Recientes" y "Destacados" durante horas en
+  lugar de segundos.
+- Posicionarse en una etiqueta de nicho es posible para una cuenta chica;
+  posicionarse en una de 5 millones no, así que la etiqueta amplia es sobre todo
+  una señal de clasificación.
+- Las etiquetas de nicho además atraen una audiencia más relevante, lo que
+  significa mejores guardados y envíos, que es lo que realmente impulsa el
+  alcance.
 
-- **Niche signals:** specific, long-tail, often combines two words or a
-  community name (`#notionforfreelancers`, `#uglyfoodphotography`,
-  `#bootstrappedsaas`). If it feels like only people in your exact world would
-  type it, it is niche.
-- **Mid signals:** a recognizable sub-topic (`#contentstrategy`,
-  `#indiehacker`, `#filmphotography`). Known but not universal.
-- **Broad signals:** one common word everyone uses (`#marketing`, `#fitness`,
-  `#travel`, `#food`). Treat these as labels, use at most one.
+## Dimensionar en la práctica
 
-## Building the set (the 3-5 recipe)
+Desde la API de publicación no se ve la cantidad exacta de posts de una
+etiqueta, así que dimensiona revisando el conteo que muestra el buscador de la
+app, o con criterio:
 
-1. **2-3 niche tags** that describe exactly who the post is for. These are the
-   workhorses; they earn the ranked, lasting visibility.
-2. **1-2 mid tags** that name the sub-topic. These extend reach to a warm,
-   relevant audience.
-3. **0-1 broad tag** only if one genuinely fits as a category label. Skip it if
-   nothing fits; an irrelevant broad tag dilutes the set.
-4. **Match the post.** Every tag must describe the actual content. A mismatched
-   tag (popular but off-topic) trains the recommendation engine to show your
-   post to the wrong people, which lowers engagement rate and reach.
-5. **Avoid banned or flagged tags.** Some generic tags (`#follow4follow`,
-   `#like4like`, and various others that cycle through flagged status) can
-   suppress a post. When in doubt, skip the generic engagement tags entirely.
+- **Señales de nicho:** específica, de cola larga, a menudo combina dos palabras
+  o el nombre de una comunidad (ejemplos ilustrativos: `#notionparafreelancers`,
+  `#fotografiadecomidacasera`, `#saasbootstrapped`). Si parece que solo alguien
+  de tu mundo exacto la escribiría, es de nicho.
+- **Señales de nivel medio:** un subtema reconocible (ejemplos ilustrativos:
+  `#estrategiadecontenidos`, `#emprendedordigital`, `#fotografiaanalogica`).
+  Conocida pero no universal.
+- **Señales de nivel amplio:** una palabra común que usa todo el mundo
+  (`#marketing`, `#fitness`, `#viajes`, `#comida`). Trátalas como etiquetas de
+  categoría y usa como máximo una.
 
-## Placement
+Los ejemplos de arriba muestran la forma, no un tamaño verificado: confirma el
+conteo de cada etiqueta en la app antes de usarla.
 
-- **End of the caption** or **first comment** both work; reach is the same. The
-  first comment keeps the caption clean. Never put hashtags mid-sentence.
-- **Do not** repeat the same 5-tag block on every post forever. Instagram can
-  read identical tag sets across many posts as automated behavior. Rotate sets
-  per topic.
+## Armar el set (la receta de 3-5)
 
-## Branded and campaign tags
+1. **2-3 etiquetas de nicho** que describan exactamente para quién es el post.
+   Son las que trabajan; consiguen la visibilidad posicionada y duradera.
+2. **1-2 etiquetas medias** que nombren el subtema. Extienden el alcance a una
+   audiencia tibia y relevante.
+3. **0-1 etiqueta amplia** solo si alguna encaja de verdad como etiqueta de
+   categoría. Omítela si ninguna encaja; una etiqueta amplia irrelevante diluye
+   el set.
+4. **Que coincidan con el post.** Cada etiqueta tiene que describir el contenido
+   real. Una etiqueta que no coincide (popular pero fuera de tema) entrena al
+   motor de recomendación para mostrar tu post a la gente equivocada, lo que
+   baja la tasa de interacción y el alcance.
+5. **Evita etiquetas prohibidas o marcadas.** Algunas etiquetas genéricas
+   (`#follow4follow`, `#like4like`, `#sigoatodos` y otras que entran y salen del
+   estado de marcadas) pueden suprimir un post. Ante la duda, omite por completo
+   las etiquetas genéricas de interacción.
 
-- A **branded hashtag** (your own, e.g. `#builtwithpublora`) does not drive
-  discovery on its own but builds a searchable archive and lets you collect
-  user content. Count it as one of your niche slots if it is genuinely small.
-- A **campaign hashtag** for a launch is worth one slot during the campaign.
+## Ubicación
 
-## What not to do
+- **Al final del caption** o **en el primer comentario**: las dos funcionan y el
+  alcance es el mismo. El primer comentario deja el caption limpio. Nunca pongas
+  hashtags a mitad de una oración.
+- **No** repitas el mismo bloque de 5 etiquetas en todos los posts para siempre.
+  Instagram puede interpretar sets idénticos en muchos posts como comportamiento
+  automatizado. Rota los sets según el tema.
 
-- 20-30 hashtags stuffed at the top of the caption. This is the 2026 spam tell.
-- Copy-pasting a "viral hashtag pack" of generic broad tags. They put you in an
-  unwinnable feed against millions of posts.
-- Using tags that do not match the content to chase a bigger audience. It
-  backfires by mistraining the recommendation engine.
-- Hiding 30 tags behind dots/line breaks to "look clean". Still spam, still
-  no reach benefit.
+## Etiquetas de marca y de campaña
 
-## Quick template
+- Un **hashtag de marca** (el tuyo propio, por ejemplo `#hechoconpublora`) no
+  genera descubrimiento por sí solo, pero arma un archivo que se puede buscar y
+  te permite reunir contenido de usuarios. Cuéntalo como uno de tus espacios de
+  nicho si de verdad es chico.
+- Un **hashtag de campaña** para un lanzamiento vale un espacio mientras dura la
+  campaña.
+
+## Qué no hacer
+
+- 20-30 hashtags amontonados al inicio del caption. Es el indicio de spam de
+  2026.
+- Copiar y pegar un "paquete de hashtags virales" de etiquetas amplias y
+  genéricas. Te mete en un feed imposible de ganar contra millones de posts.
+- Usar etiquetas que no coinciden con el contenido para perseguir una audiencia
+  más grande. Sale mal porque entrena mal al motor de recomendación.
+- Esconder 30 etiquetas detrás de puntos o saltos de línea para que "se vea
+  limpio". Sigue siendo spam y sigue sin dar alcance.
+
+## Plantilla rápida
 
 ```
-[caption text]
+[texto del caption]
 .
-#nicheTag1 #nicheTag2 #nicheTag3 #midTag1 #broadTagOrSkip
+#etiquetaNicho1 #etiquetaNicho2 #etiquetaNicho3 #etiquetaMedia1 #etiquetaAmpliaOOmitir
 ```
 
-3 niche, 1 mid, 1 broad (or drop the broad and run 4). Rotate the niche tags
-per post topic.
+3 de nicho, 1 media, 1 amplia (o quita la amplia y usa 4). Rota las de nicho
+según el tema de cada post.

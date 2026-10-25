@@ -1,112 +1,113 @@
-# Instagram Media Publishing Workflow
+# Flujo de publicación de contenido multimedia en Instagram
 
-Instagram requires media on every post. There is no text-only Instagram post:
-the API rejects it. So the writer skills in this bundle produce the **caption,
-hook, hashtags, and slide or shot plan**, and the **user supplies the image or
-video file**. Publishing is always a media flow.
+Instagram exige contenido multimedia en todos los posts. No existe un post de
+Instagram solo de texto: la API lo rechaza. Por eso las skills de redacción de
+este paquete producen el **caption, el gancho, los hashtags y el plan de slides
+o de tomas**, y el **usuario aporta el archivo de imagen o video**. Publicar es
+siempre un flujo multimedia.
 
-## Contents
+## Contenido
 
-- The flow (Publora tier)
-- Container rules (what the media list becomes)
-- Media limits (publish-time)
-- Manual tier (no Publora)
-- Cleaning up a failed upload
+- El flujo (nivel Publora)
+- Reglas de contenedor (en qué se convierte la lista de archivos)
+- Límites de archivos (al publicar)
+- Nivel manual (sin Publora)
+- Limpiar una subida fallida
 
-## The flow (Publora tier)
+## El flujo (nivel Publora)
 
-Instagram publishing is a three-step flow. Creating a post with a `scheduledTime`
-up front races Instagram's scheduler against the S3 upload, so the order is
-mandatory:
+Publicar en Instagram es un flujo de tres pasos. Crear un post con un
+`scheduledTime` desde el principio hace competir al programador de Instagram con
+la subida a S3, así que el orden es obligatorio:
 
 ```
-1. POST /create-post          -> create a DRAFT (no scheduledTime), get postGroupId
-2. POST /get-upload-url       -> pre-signed S3 URL for one file
-   PUT  {uploadUrl}            -> upload the file bytes to S3
-   (repeat 2 per image for a 2-10 item carousel, in slide order)
+1. POST /create-post          -> crear un BORRADOR (sin scheduledTime), obtener postGroupId
+2. POST /get-upload-url       -> URL de S3 prefirmada para un archivo
+   PUT  {uploadUrl}            -> subir los bytes del archivo a S3
+   (repetir el paso 2 por cada imagen de un carrusel de 2-10 elementos, en el orden de las slides)
 3. PUT  /update-post/:postGroupId  -> status="scheduled" + scheduledTime
 ```
 
-In this bundle, `lib/publora_client.py` wraps the whole flow in one method:
+En este paquete, `lib/publora_client.py` envuelve todo el flujo en un método:
 
 ```python
 from lib import PubloraClient
 
-client = PubloraClient()  # reads PUBLORA_API_KEY
+client = PubloraClient()  # lee PUBLORA_API_KEY
 result = client.publish_media_post(
-    content="the 3-step setup is below, steal it\n\n#niche #mid #broad",
+    content="abajo te dejo la configuración en 3 pasos, cópiala\n\n#nicho #medio #amplio",
     platforms=["instagram-11223344"],   # INSTAGRAM_PLATFORM_ID
-    media=["slide1.jpg", "slide2.jpg", "slide3.jpg"],  # local paths, in order
-    scheduled_time="2026-07-01T15:00:00.000Z",  # omit for ~now
+    media=["slide1.jpg", "slide2.jpg", "slide3.jpg"],  # rutas locales, en orden
+    scheduled_time="2026-07-01T15:00:00.000Z",  # omitir para ~ahora
 )
 # -> {"postGroupId": ..., "media": [...], "scheduled": {...}}
 ```
 
-Or call the high-level `publish()` wrapper, which routes to manual / Publora /
-diy and only auto-posts when media file paths are supplied:
+O llama al envoltorio de alto nivel `publish()`, que deriva a manual / Publora /
+diy y solo publica automáticamente cuando se pasan rutas de archivos:
 
 ```python
 from lib import publish
 
 publish(
     "carousel",
-    draft_text="<approved caption>",
+    draft_text="<caption aprobado>",
     target_url="https://www.instagram.com/",
     media=["slide1.jpg", "slide2.jpg", "slide3.jpg"],
     scheduled_time="2026-07-01T15:00:00.000Z",
 )
 ```
 
-On any failure after the draft is created, `publish_media_post` deletes the
-draft so no broken post group with an abandoned upload is left behind.
+Si algo falla después de crear el borrador, `publish_media_post` borra el
+borrador para no dejar un grupo de posts roto con una subida abandonada.
 
-## Container rules (what the media list becomes)
+## Reglas de contenedor (en qué se convierte la lista de archivos)
 
-| Media supplied | Becomes | Notes |
+| Archivos aportados | Se convierte en | Notas |
 |---|---|---|
-| 1 image (JPEG/PNG/WebP) | a single photo post | WebP auto-converts to JPEG |
-| 2-10 images | a carousel, in list order | no mixed media, all images |
-| 1 video (MP4/MOV) | a Reel by default | Story via `videoType: "STORIES"` |
-| mixed images + video | rejected | the API does not allow mixed carousels |
+| 1 imagen (JPEG/PNG/WebP) | un post de una foto | WebP se convierte automáticamente a JPEG |
+| 2-10 imágenes | un carrusel, en el orden de la lista | sin mezclar formatos, todas imágenes |
+| 1 video (MP4/MOV) | un reel por defecto | historia con `videoType: "STORIES"` |
+| imágenes + video mezclados | rechazado | la API no permite carruseles mixtos |
 
-Set the surface with `platform_settings`:
+Define la superficie con `platform_settings`:
 
 ```json
 { "platformSettings": { "instagram": { "videoType": "REELS" } } }
 ```
 
-`videoType` is `"REELS"` (default) or `"STORIES"`. The bundle sets this
-automatically for `kind="reel"` and `kind="story"`.
+`videoType` es `"REELS"` (por defecto) o `"STORIES"`. El paquete lo define
+automáticamente para `kind="reel"` y `kind="story"`.
 
-## Media limits (publish-time)
+## Límites de archivos (al publicar)
 
-| Item | Limit |
+| Elemento | Límite |
 |---|---|
-| Image formats | JPEG, PNG, WebP (WebP auto-converts to JPEG) |
-| Image max size | 8 MB |
-| Carousel items | 2-10 (API) |
-| Reel duration | up to 3 min (180s); 5-90s eligible for the Reels tab |
-| Reel/video size | 300 MB |
-| Carousel video clip | up to 60s |
-| Aspect ratio | 4:5 portrait to 1.91:1 landscape; 4:5 fills the feed best |
-| Caption | 2,200 chars (first ~125 visible) |
-| Account type | Business or Creator (personal is not supported) |
+| Formatos de imagen | JPEG, PNG, WebP (WebP se convierte a JPEG) |
+| Tamaño máximo de imagen | 8 MB |
+| Elementos de carrusel | 2-10 (API) |
+| Duración de reel | hasta 3 min (180 s); 5-90 s aptos para la pestaña Reels |
+| Tamaño de reel/video | 300 MB |
+| Clip de video en carrusel | hasta 60 s |
+| Relación de aspecto | de 4:5 vertical a 1,91:1 horizontal; 4:5 ocupa mejor el feed |
+| Caption | 2.200 caracteres (los primeros ~125 visibles) |
+| Tipo de cuenta | Empresa o Creador (las personales no son compatibles) |
 
-## Manual tier (no Publora)
+## Nivel manual (sin Publora)
 
-With no `PUBLORA_API_KEY`, or when the user has not pointed the skill at media
-files, every skill returns the approved caption as a copy-paste block plus a
-reminder to attach the media in the Instagram app. Instagram still needs the
-image or video, so the reminder is not optional.
+Sin `PUBLORA_API_KEY`, o cuando el usuario no indicó archivos a la skill, todas
+las skills devuelven el caption aprobado como bloque para copiar y pegar, más un
+recordatorio de adjuntar el contenido en la app de Instagram. Instagram igual
+necesita la imagen o el video, así que el recordatorio no es opcional.
 
-## Cleaning up a failed upload
+## Limpiar una subida fallida
 
-If a `get-upload-url` call succeeds but the S3 PUT fails, the draft holds a
-broken media reference that blocks re-scheduling. Delete the whole draft and
-start over:
+Si una llamada a `get-upload-url` funciona pero falla el PUT a S3, el borrador
+queda con una referencia rota que bloquea reprogramarlo. Borra el borrador
+completo y empieza de nuevo:
 
 ```python
 client.delete_post(post_group_id)   # DELETE /delete-post/:id
 ```
 
-`publish_media_post` already does this on failure.
+`publish_media_post` ya lo hace cuando algo falla.

@@ -1,78 +1,96 @@
-# Pre-Publish Audit Checklist (Instagram)
+# Lista de auditoría previa a publicar (Instagram)
 
-The thresholds the `--mode audit` pass applies. Mirror of the root
-`references/algorithm-heuristics.md` checklist, with the humanizer's blocker
-distinctions. V3 (2026-09): AI tells are scored by density per paragraph; em
-dashes are capped at about 1 per 100 words, not banned (29% of human captions
-use one); forced rhythm is a tell.
+Los umbrales que aplica la pasada `--mode audit`. Replica la lista de
+`references/algorithm-heuristics.md` de la raíz, con las distinciones de
+bloqueantes del humanizador. V3 (2026-09): los indicios de IA se puntúan por
+densidad por párrafo; las rayas se limitan a aproximadamente 1 cada 100
+palabras, no se prohíben; el ritmo forzado es un indicio.
 
-## Blockers (auto-fail)
+## Bloqueantes (reprobado automático)
 
-- [ ] Em dashes (`—`) at or under about 1 per 100 words (1-2 per caption; at
-      most one per carousel slide). A single em dash is never a blocker. No en
-      dash (`–`) between clauses, no double dash (`--`).
-- [ ] The first 125 chars stand alone as a hook (the "more" fold cuts the rest).
-- [ ] Caption within 2,200 chars.
-- [ ] 3-5 sized hashtags, not 20-30, never mid-sentence.
-- [ ] No engagement bait ("comment YES", "tag 3 friends", "double tap if").
-- [ ] No "In today's fast-paced world" or equivalent opener; no reveal-bridge
-      opener ("Here's the thing..", "Let's talk about..", "Stop X, start Y");
-      no sincerity announcement opener ("real talk", "not gonna lie", "POV:"
-      on something that is not a POV).
-- [ ] No "What do you think?" / "Thoughts?" / "Let that sink in." dead closer
-      (a save or send prompt with a reason is fine and wanted).
-- [ ] No paragraph with 3+ vocabulary / grammar markers (one marker per
-      paragraph is fine); no "It's not X, it's Y" negative parallelism; no
-      "The result?" reveal bridge.
-- [ ] Carousel: all images or all video (no mixed media), 2-10 slides.
-- [ ] A media plan exists (Instagram rejects text-only posts).
+- [ ] Rayas (`—`) en 1 cada 100 palabras o menos (1-2 por caption; como máximo
+      una por slide de carrusel). Una raya sola nunca es bloqueante. Sin guiones
+      entre oraciones ni dobles guiones (`--`).
+- [ ] Los primeros 125 caracteres se sostienen solos como gancho (el corte de
+      "más" oculta el resto).
+- [ ] Caption dentro de los 2.200 caracteres.
+- [ ] 3-5 hashtags dimensionados, no 20-30, nunca a mitad de oración.
+- [ ] Sin cebo de interacción ("comenta SÍ", "etiqueta a 3 amigos", "doble
+      toque si").
+- [ ] Sin apertura del tipo "En el mundo acelerado de hoy" o equivalente; sin
+      apertura con puente de revelación ("Te cuento algo..", "Hablemos de..",
+      "Deja de X, empieza a Y"); sin apertura con anuncio de sinceridad
+      ("hablemos claro", "no te voy a mentir", "POV:" sobre algo que no es un
+      punto de vista).
+- [ ] Sin cierre muerto "¿Qué opinas?" / "¿Opiniones?" / "Léelo de nuevo." (una
+      invitación a guardar o enviar con una razón está bien y se busca).
+- [ ] Ningún párrafo con 3 o más marcadores de vocabulario o gramática (un
+      marcador por párrafo está bien); sin paralelismo negativo "No es solo X,
+      es Y"; sin puente de revelación "¿El resultado?".
+- [ ] Ortografía: signos de apertura (¿ ¡) presentes y tildes correctas, salvo
+      omisión deliberada indicada en el Perfil de voz.
+- [ ] Carrusel: todo imágenes o todo video (sin mezclar formatos), 2-10 slides.
+- [ ] Existe un plan de contenido multimedia (Instagram rechaza los posts solo
+      de texto).
 
-## Warnings (flag with fix)
+## Advertencias (señalar con corrección)
 
-- [ ] Hashtag set is sized (2-3 niche, 1-2 mid, 0-1 broad), not all-broad.
-- [ ] 0-3 emoji, placed with intent, none sprinkled; no rocket/sparkles/fire
-      signature run.
-- [ ] No paragraph reads machine-flat (4+ sentences all the same length, no
-      clause doing work). Flag that paragraph only; never suggest adding
-      variance as a tactic. One-idea-per-line layout is fine.
-- [ ] No staccato stacks ("Short. Punchy. Done.", "No X. No Y. Just Z."),
-      no one-word lines for drama, at most 2 standalone fragments in the
-      caption, no long/short/long/short seesaw.
-- [ ] At least one odd-precision number WITH a named referent where the claim
-      allows (a bare number does not clear this).
-- [ ] At least one named entity.
-- [ ] At most one natural rule-of-three; no stacked or perfectly parallel
-      triads, no hollow triads without concrete items, never 3+ in a caption.
-- [ ] No hedging stack ("perhaps", "it seems", "I might be wrong but") and no
-      framed confession ("real talk, this hurt: ..."). A flat dated fact is
-      fine.
-- [ ] Only when auditing a humanizer rewrite with the original in hand, not a fresh draft: not over-scrubbed, i.e. the author's tone, reactions, lowercase register, one
-      em dash, one natural triad and their intentional emoji survived.
-- [ ] Carousel slide 1 promises + opens a loop, not a bare title.
-- [ ] Strongest carousel point is front-loaded (slide 2-3), not buried last.
-- [ ] One clear primary goal (saves / shares / comments / follows).
-- [ ] One CTA, not three; it names a reason.
+- [ ] El set de hashtags está dimensionado (2-3 de nicho, 1-2 medios, 0-1
+      amplio), no son todos amplios; prioridad al español si la audiencia es
+      hispanohablante.
+- [ ] 0-3 emojis, ubicados con intención, ninguno espolvoreado; sin la serie
+      característica de cohete/destellos/fuego.
+- [ ] Ningún párrafo suena plano como máquina (4 o más oraciones del mismo
+      largo, sin cláusula que trabaje). Señala solo ese párrafo; nunca sugieras
+      agregar variación como táctica. La diagramación de una idea por línea está
+      bien.
+- [ ] Sin ráfagas entrecortadas ("Corto. Directo. Listo.", "Sin X. Sin Y. Solo
+      Z."), sin líneas de una palabra para dar dramatismo, como máximo 2
+      fragmentos sueltos en el caption, sin vaivén largo/corto/largo/corto.
+- [ ] Al menos un número de precisión poco redonda CON un referente nombrado
+      donde la afirmación lo permita (un número pelado no cumple).
+- [ ] Al menos una entidad con nombre.
+- [ ] Como máximo una enumeración natural de tres; sin tríadas apiladas o
+      perfectamente paralelas, sin tríadas huecas sin elementos concretos, nunca
+      3 o más en un caption.
+- [ ] Sin acumulación de atenuantes ("quizás", "pareciera que", "puede que me
+      equivoque, pero") ni confesiones enmarcadas ("hablemos claro, esto dolió:
+      ..."). Un hecho fechado dicho sin rodeos está bien.
+- [ ] Sin calcos del inglés (mayúscula en cada palabra de un título, "aplicar a
+      un trabajo", "hacer sentido", pasiva con "ser" innecesaria).
+- [ ] Solo al auditar una reescritura del humanizador con el original a mano, no
+      un borrador nuevo: no hubo sobrelimpieza, es decir, sobrevivieron el tono
+      del autor, sus reacciones, su registro en minúscula, una raya, una tríada
+      natural y sus emojis intencionales.
+- [ ] La slide 1 del carrusel promete y abre un bucle, no es un título pelado.
+- [ ] El punto más fuerte del carrusel está adelante (slide 2-3), no enterrado al
+      final.
+- [ ] Un objetivo principal claro (guardados / compartidos / comentarios /
+      seguidores).
+- [ ] Una llamada a la acción, no tres; nombra una razón.
 
-## Thresholds quick reference
+## Referencia rápida de umbrales
 
-| Metric | Limit |
+| Métrica | Límite |
 |---|---|
-| Caption | 2,200 chars (hook in first ~125) |
-| Hashtags | 3-5 sized (30 is the hard cap but spammy) |
-| Emoji per caption | 0-3 |
-| Em dashes | about 1 per 100 words (1-2 per caption; 1 per slide) |
-| Vocabulary / grammar markers per paragraph | 0-2 |
-| Standalone fragments | 2 per caption |
-| Carousel slides | 2-10 |
-| Reel duration | up to 3 min; 5-90s for the Reels tab |
-| Aspect ratio | 4:5 to 1.91:1 |
+| Caption | 2.200 caracteres (gancho en los primeros ~125) |
+| Hashtags | 3-5 dimensionados (30 es el tope técnico pero es spam) |
+| Emojis por caption | 0-3 |
+| Rayas | aproximadamente 1 cada 100 palabras (1-2 por caption; 1 por slide) |
+| Marcadores de vocabulario / gramática por párrafo | 0-2 |
+| Fragmentos sueltos | 2 por caption |
+| Slides de carrusel | 2-10 |
+| Duración de reel | hasta 3 min; 5-90 s para la pestaña Reels |
+| Relación de aspecto | de 4:5 a 1,91:1 |
 
-## Scoring
+## Puntuación
 
-- Any blocker -> **FAIL**, return fixes, offer auto-rewrite via `ig-humanizer`.
-- No blockers, any warnings -> **PASS with warnings**, list each with a fix.
-- Clean -> **PASS**, add the timing note, the surface sanity check, and the
-  media reminder.
-- Report per-paragraph tell density (markers, em dashes per 100 words,
-  fragments, triads). Do not estimate a detector score: on caption-length
-  text those are noise and this skill does not promise to beat them.
+- Cualquier bloqueante -> **REPROBADO**, devuelve las correcciones y ofrece la
+  reescritura automática con `ig-humanizer`.
+- Sin bloqueantes y con advertencias -> **APROBADO con advertencias**, lista cada
+  una con su corrección.
+- Limpio -> **APROBADO**, agrega la nota de horarios, la verificación de la
+  superficie y el recordatorio de contenido multimedia.
+- Informa la densidad de indicios por párrafo (marcadores, rayas cada 100
+  palabras, fragmentos, tríadas). No estimes un puntaje de detector: en textos
+  del largo de un caption son ruido y esta skill no promete superarlos.

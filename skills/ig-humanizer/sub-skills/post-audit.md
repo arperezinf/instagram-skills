@@ -1,110 +1,129 @@
-# Instagram Post Audit
+# Auditoría de posts de Instagram
 
-Run any caption (and its carousel slide text) through the 2026 Instagram ranking
-checklist. Catches AI tells, format violations (first-125 hook, caption length,
-hashtag sizing, emoji), reach suppressors (engagement bait, mixed media), and
-structural weaknesses before publishing. This is the `ig-humanizer --mode audit`
-workflow: detection only, no rewrite.
+Pasa cualquier caption (y el texto de las slides de un carrusel) por la lista de
+verificación de ranking de Instagram 2026. Detecta indicios de IA, violaciones
+de formato (gancho de 125 caracteres, largo del caption, dimensionamiento de
+hashtags, emojis), lo que reduce el alcance (cebo de interacción, formatos
+mezclados) y debilidades estructurales antes de publicar. Es el flujo de
+`ig-humanizer --mode audit`: solo detección, sin reescritura. El informe se
+entrega en español.
 
-## When to use
+## Cuándo usarla
 
-- Before publishing a hand-written or AI-drafted caption or carousel
-- When `ig-caption-writer` or `ig-carousel-planner` finishes a draft (auto-invoked)
-- When a recent post underperformed and the user wants a post-mortem
+- Antes de publicar un caption o carrusel escrito a mano o redactado con IA
+- Cuando `ig-caption-writer` o `ig-carousel-planner` terminan un borrador (se invoca automáticamente)
+- Cuando un post reciente rindió menos de lo esperado y el usuario quiere un análisis
 
-## Input
+## Entrada
 
-- A caption, and for a carousel the slide text
-- Optional: target audience, scheduled time, the surface (image / carousel / Reel)
+- Un caption y, para un carrusel, el texto de las slides
+- Opcional: audiencia objetivo, horario programado, la superficie (imagen / carrusel / reel)
 
-## Output
+## Salida
 
-- **Pass / Fail** header
-- **Blockers** (must fix before publishing): em dash density over the cap,
-  paragraphs at 3+ AI markers, reveal bridges, a sincerity announcement as
-  the opener, engagement bait, a hook that spills past the fold, hashtag walls
-- **Warnings** (ship-risky): staccato stacks, sincerity markers or hedges
-  mid-caption (as the opener they are a blocker), missing referenced numbers,
-  generic CTA
-- **Suggested fixes** for each issue
-- **Per-paragraph tell density** (markers, em dashes per 100 words,
-  fragments, triads). No detector score: on caption-length text those are
-  noise and the skill does not promise to beat them
-- **Timing recommendation** given the audience
+- Encabezado **Aprobado / Reprobado**
+- **Bloqueantes** (hay que corregirlos antes de publicar): densidad de rayas por
+  encima del límite, párrafos con 3 o más marcadores de IA, puentes de
+  revelación, un anuncio de sinceridad como apertura, cebo de interacción, un
+  gancho que se pasa del corte, muros de hashtags, signos de apertura ausentes
+- **Advertencias** (riesgosas para publicar): ráfagas entrecortadas,
+  marcadores de sinceridad o atenuantes a mitad del caption (como apertura son
+  bloqueantes), falta de números con referente, llamada a la acción genérica,
+  calcos del inglés
+- **Correcciones sugeridas** para cada problema
+- **Densidad de indicios por párrafo** (marcadores, rayas cada 100 palabras,
+  fragmentos, tríadas). Sin puntaje de detector: en textos del largo de un
+  caption son ruido y la skill no promete superarlos
+- **Recomendación de horario** según la audiencia
 
-## Checks
+## Verificaciones
 
-### Blockers (auto-fail)
+### Bloqueantes (reprobado automático)
 
-1. Em dash density above about 1 per 100 words (1-2 per caption; more than
-   one on a carousel slide); en dash between clauses; double dash. A single em
-   dash is not a blocker.
-2. The hook needs the second line to make sense (the first 125 chars do not
-   stand alone).
-3. Caption over 2,200 chars.
-4. 20-30 hashtags, or hashtags mid-sentence.
-5. Engagement bait ("comment YES", "tag 3 friends", "double tap if you agree").
-6. Opens with "In today's fast-paced world" or similar, a reveal bridge
-   ("Here's the thing..", "Let's talk about..", "Stop X, start Y"), or a
-   sincerity announcement ("real talk", "not gonna lie", "POV:" on something
-   that is not a POV).
-7. Ends with "What do you think?", "Thoughts?", or "Let that sink in." (a
-   save/send prompt with a reason is fine).
-8. Any paragraph with 3+ vocabulary / grammar markers, or any
-   negative-parallelism / "The result?" reveal bridge (see
+1. Densidad de rayas por encima de aproximadamente 1 cada 100 palabras (1-2 por
+   caption; más de una en una slide de carrusel); guion entre oraciones; doble
+   guion. Una raya sola no es bloqueante.
+2. El gancho necesita la segunda línea para entenderse (los primeros 125
+   caracteres no se sostienen solos).
+3. Caption de más de 2.200 caracteres.
+4. 20-30 hashtags, o hashtags a mitad de oración.
+5. Cebo de interacción ("comenta SÍ", "etiqueta a 3 amigos", "doble toque si
+   estás de acuerdo").
+6. Abre con "En el mundo acelerado de hoy" o similar, un puente de revelación
+   ("Te cuento algo..", "Hablemos de..", "Deja de X, empieza a Y") o un anuncio
+   de sinceridad ("hablemos claro", "no te voy a mentir", "POV:" sobre algo que
+   no es un punto de vista).
+7. Termina con "¿Qué opinas?", "¿Opiniones?" o "Léelo de nuevo." (una invitación
+   a guardar o enviar con una razón está bien).
+8. Cualquier párrafo con 3 o más marcadores de vocabulario o gramática, o
+   cualquier paralelismo negativo / puente de revelación "¿El resultado?" (ver
    `../references/scrub-rules.md`).
-9. Carousel mixes images and video, or has more than 10 slides.
-10. No media plan (Instagram rejects text-only posts).
+9. Preguntas o exclamaciones sin signo de apertura (¿ ¡), salvo omisión
+   deliberada indicada en el Perfil de voz.
+10. El carrusel mezcla imágenes y video, o tiene más de 10 slides.
+11. No hay plan de contenido multimedia (Instagram rechaza los posts solo de texto).
 
-### Warnings (flag with a suggested fix)
+### Advertencias (señalar con una corrección sugerida)
 
-11. More than 5 hashtags, or an all-broad set a small account cannot rank in.
-12. 4+ emoji, emoji sprinkled through every line, or the rocket/sparkles/fire
-    signature run.
-13. A paragraph that reads machine-flat (4+ sentences all the same length, no
-    clause doing work). Flag that paragraph only; never suggest adding
-    variance as a tactic. One-idea-per-line layout is fine.
-13a. Staccato stacks ("Short. Punchy. Done.", "No X. No Y. Just Z."), one-word
-    lines for drama, more than 2 standalone fragments, or a long/short/long/
-    short seesaw.
-14. No odd-precision number with a named referent anywhere the claim would
-    allow one (a bare number does not clear this).
-15. No named entity (person, brand, tool).
-16. Stacked or perfectly parallel rule-of-three, a hollow triad without
-    concrete items, or 3+ triads in the caption (one natural triad passes).
-16a. Hedging stack ("perhaps", "it seems") or a sincerity marker / framed
-    confession mid-caption ("real talk, this hurt: ..."); the same marker as
-    the opener is blocker 6. A flat dated fact is fine.
-16b. Over-scrubbed (only when auditing a humanizer rewrite with the original in hand to compare against; a fresh draft that never had an em dash or a triad is not over-scrubbed): uniformly flat tone, every em dash and triad gone from a
-    long caption, the author's emoji or lowercase register gone, no reaction
-    or opinion anywhere.
-17. Carousel slide 1 is a bare title, not a promise + open loop.
-18. The strongest carousel point is buried on the last body slide.
-19. No clear primary goal: the draft chases saves, shares, comments, and follows
-    all at once. Pick one (see `../../../references/hook-formulas.md`
-    "Engagement-goal split").
-20. CTA is generic or there are three competing CTAs.
+12. Más de 5 hashtags, o un set de solo etiquetas amplias en las que una cuenta
+    chica no puede posicionarse.
+13. 4 o más emojis, emojis espolvoreados en cada línea, o la serie característica
+    de cohete/destellos/fuego.
+14. Un párrafo que suena plano como máquina (4 o más oraciones del mismo largo,
+    sin cláusula que trabaje). Señala solo ese párrafo; nunca sugieras agregar
+    variación como táctica. La diagramación de una idea por línea está bien.
+14a. Ráfagas entrecortadas ("Corto. Directo. Listo.", "Sin X. Sin Y. Solo Z."),
+    líneas de una palabra para dar dramatismo, más de 2 fragmentos sueltos o un
+    vaivén largo/corto/largo/corto.
+15. Ningún número de precisión poco redonda con referente nombrado donde la
+    afirmación lo permitiría (un número pelado no cumple).
+16. Ninguna entidad con nombre (persona, marca, herramienta).
+17. Regla de tres apilada o perfectamente paralela, una tríada hueca sin
+    elementos concretos, o 3 o más tríadas en el caption (una tríada natural
+    pasa).
+17a. Acumulación de atenuantes ("quizás", "pareciera que") o un marcador de
+    sinceridad / confesión enmarcada a mitad del caption ("hablemos claro, esto
+    dolió: ..."); el mismo marcador como apertura es el bloqueante 6. Un hecho
+    fechado dicho sin rodeos está bien.
+17b. Sobrelimpieza (solo al auditar una reescritura del humanizador con el
+    original a mano para comparar; un borrador nuevo que nunca tuvo raya ni
+    tríada no está sobrelimpiado): tono uniformemente plano, todas las rayas y
+    tríadas quitadas de un caption largo, desaparecieron los emojis o el
+    registro en minúscula del autor, sin reacción ni opinión en ninguna parte.
+17c. Calcos del inglés: mayúscula en cada palabra de un título, falsos amigos
+    ("aplicar a", "eventualmente", "hacer sentido"), pasiva con "ser" innecesaria.
+18. La slide 1 del carrusel es un título pelado, no una promesa + bucle abierto.
+19. El punto más fuerte del carrusel está enterrado en la última slide del cuerpo.
+20. No hay un objetivo principal claro: el borrador persigue guardados,
+    compartidos, comentarios y seguidores al mismo tiempo. Elige uno (ver
+    `../../../references/hook-formulas.md`, "Reparto por objetivo de
+    interacción").
+21. La llamada a la acción es genérica o hay tres compitiendo.
 
-### Info (neutral notes)
+### Información (notas neutrales)
 
-21. Suggested posting window given the audience.
-22. Surface recommendation (single image vs carousel vs Reel) given the material.
-23. Save/send opportunity: if the draft is a list/framework/how-to, note that it
-    should be structured to maximize saves; if it is a contrarian/myth payoff,
-    structure it to maximize sends.
+22. Franja de publicación sugerida según la audiencia (si no hay datos de esa
+    audiencia, recomienda revisar sus estadísticas de Instagram en lugar de
+    inventar un horario).
+23. Recomendación de superficie (imagen única, carrusel o reel) según el material.
+24. Oportunidad de guardado/envío: si el borrador es una lista, un marco o un
+    tutorial, indica que debe estructurarse para maximizar guardados; si es una
+    recompensa a contracorriente o de mito, para maximizar envíos.
 
-## Steps
+## Pasos
 
-1. Detect the surface: single image, carousel, or Reel.
-2. Measure the caption: char count, where the first 125 chars cut, hashtag count
-   and sizing, emoji count, em dashes per 100 words.
-3. Run the blocker checks. If any fail, return **FAIL** with specific fixes;
-   optionally offer to hand off to `ig-humanizer` for an auto-rewrite.
-4. If no blockers, run the warnings.
-5. Report per-paragraph tell density. Do not estimate a detector score.
-6. Return the structured report with a timing note and a media reminder.
+1. Detecta la superficie: imagen única, carrusel o reel.
+2. Mide el caption: cantidad de caracteres, dónde corta en los primeros 125,
+   cantidad y tamaño de hashtags, cantidad de emojis, rayas cada 100 palabras.
+3. Ejecuta las verificaciones bloqueantes. Si alguna falla, devuelve
+   **REPROBADO** con correcciones concretas; opcionalmente ofrece pasarlo a
+   `ig-humanizer` para una reescritura automática.
+4. Si no hay bloqueantes, ejecuta las advertencias.
+5. Informa la densidad de indicios por párrafo. No estimes un puntaje de detector.
+6. Devuelve el informe estructurado con una nota de horario y un recordatorio
+   de contenido multimedia.
 
-## Related
+## Relacionadas
 
-- `ig-humanizer` - proportional rewrite if the audit fails
-- `ig-caption-writer` / `ig-carousel-planner` - regenerate using a proven formula
+- `ig-humanizer` - reescritura proporcional si la auditoría falla
+- `ig-caption-writer` / `ig-carousel-planner` - regenerar con una fórmula probada

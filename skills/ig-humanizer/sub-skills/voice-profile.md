@@ -1,48 +1,59 @@
-# Sub-skill: Build / update the Voice & Brand Profile
+# Sub-skill: crear / actualizar el Perfil de voz y marca
 
-Builds or refreshes `../../../references/voice-profile.md` so every writing skill in
-this bundle drafts in the user's real voice instead of a generic "human" voice.
-Runs on any agent (Claude Code, Codex, OpenClaw): the core path needs only the
-user's own writing pasted in. A read token (Apify) is an optional accelerator,
-never required.
+Crea o actualiza `../../../references/voice-profile.md` para que todas las
+skills de redacción de este paquete escriban con la voz real del usuario y no
+con una voz "humana" genérica. Funciona en cualquier agente (Claude Code, Codex,
+OpenClaw): la vía principal solo necesita que el usuario pegue textos propios.
+Un token de lectura (Apify) es un acelerador opcional, nunca un requisito.
 
-## When this runs
+## Cuándo se ejecuta
 
-- User says "build my voice profile", "learn my voice", or invokes
+- El usuario dice "arma mi perfil de voz", "aprende mi voz" o invoca
   `ig-humanizer --mode profile`.
-- Also offer it the first time a writing skill runs and finds `filled: no`.
+- También ofrécelo la primera vez que una skill de redacción se ejecuta y
+  encuentra `filled: no`.
 
-## Inputs (any one is enough)
+## Entradas (cualquiera alcanza)
 
-1. **Pasted samples (portable default).** Ask for 3-6 of the user's own real
-   Instagram posts. This alone is enough; no token, no history needed.
-2. **Read-layer assisted (optional).** If a token is configured, pull the user's
-   recent activity via the bundle's read layer as extra samples, on top of pasted ones.
-3. **Manual.** The user can also just state their niche, rules, and links.
+1. **Muestras pegadas (opción portátil por defecto).** Pide 3-6 posts reales de
+   Instagram del usuario. Esto alcanza por sí solo; no hace falta token ni
+   historial.
+2. **Con la capa de lectura (opcional).** Si hay un token configurado, obtén la
+   actividad reciente del usuario con la capa de lectura del paquete como
+   muestras adicionales, además de las pegadas.
+3. **Manual.** El usuario también puede indicar directamente su nicho, sus
+   reglas y sus links.
 
-## Steps
+## Pasos
 
-1. Gather 3+ real samples of the user's writing.
-2. Extract the voice fingerprint from the samples, not from assumptions: sentence
-   rhythm, recurring openers, punctuation habits, favored vocabulary, words they
-   avoid, emoji/hashtag behavior.
-3. Infer niche, ICP, and pillars from the sample topics; confirm rather than guess.
-4. Capture hard rules and CTA/link style the samples reveal or the user states.
-5. Write `../../../references/voice-profile.md`: fill sections 1-5, copy the 2-4
-   strongest lines verbatim into "Signature examples", and set the Status block to
-   `filled: yes`, `source: <pasted|read-layer|manual>`, `updated: <today>`.
-6. Show the filled profile for approval before saving; tell the user every writing
-   skill will now match it automatically.
+1. Reúne 3 o más muestras reales de los textos del usuario.
+2. Extrae la huella de voz de las muestras, no de suposiciones: ritmo de las
+   oraciones, aperturas recurrentes, hábitos de puntuación, vocabulario
+   preferido, palabras que evita, uso de emojis y hashtags, **variante de
+   español** (neutro, rioplatense, de España, mexicano, etc.) y **forma de
+   tratamiento** (tú, vos, usted, ustedes/vosotros).
+3. Deduce nicho, cliente ideal y pilares a partir de los temas de las muestras;
+   confírmalos en lugar de adivinar.
+4. Registra las reglas estrictas y el estilo de llamada a la acción y de links
+   que revelan las muestras o que indica el usuario.
+5. Escribe `../../../references/voice-profile.md`: completa las secciones 1-5,
+   copia textualmente las 2-4 líneas más fuertes en "Ejemplos característicos"
+   y deja el bloque de Estado en `filled: yes`, `source: <pasted|read-layer|manual>`,
+   `updated: <fecha de hoy>` (mantén esas claves en inglés: los scripts las leen).
+6. Muestra el perfil completo para su aprobación antes de guardarlo; avísale al
+   usuario que todas las skills de redacción lo respetarán automáticamente.
 
-## Hard rules
+## Reglas estrictas
 
-- Build the fingerprint from the user's ACTUAL samples. Never invent a voice.
-- Preserve their quirks (a favorite phrase, an unusual rhythm). Those are the
-  point; only the generic AI-tell scrub applies to drafts later, not to the profile.
-- With only 3 samples, say it is a first pass; suggest re-running after 10+ posts.
-- Never put anything the user did not provide into the file.
+- Arma la huella a partir de las muestras REALES del usuario. Nunca inventes una voz.
+- Conserva sus particularidades (una frase favorita, un ritmo inusual, sus
+  regionalismos). Son el punto; la limpieza genérica de indicios de IA se aplica
+  después a los borradores, no al perfil.
+- Con solo 3 muestras, aclara que es una primera versión; sugiere repetirlo con
+  10 o más posts.
+- Nunca pongas en el archivo nada que el usuario no haya aportado.
 
-## Related
+## Relacionadas
 
-- The filled profile is read by this bundle's writing skills before they draft.
-- Re-run any time the user's voice or focus shifts.
+- Las skills de redacción del paquete leen el perfil completo antes de escribir.
+- Repítelo cada vez que cambie la voz o el enfoque del usuario.

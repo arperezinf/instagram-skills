@@ -68,12 +68,12 @@ def _half_configured() -> str:
     key = bool(os.getenv("PUBLORA_API_KEY"))
     pid = bool(os.getenv("INSTAGRAM_PLATFORM_ID"))
     if key and not pid:
-        return ("\n> **Publora is half configured.** `PUBLORA_API_KEY` is set but "
-                "`INSTAGRAM_PLATFORM_ID` is not, so publishing stays manual. Add it and "
-                "this step publishes on approval.\n")
+        return ("\n> **Publora está configurado a medias.** `PUBLORA_API_KEY` está definido pero "
+                "`INSTAGRAM_PLATFORM_ID` no, así que la publicación sigue siendo manual. Agrégalo y "
+                "este paso publicará al aprobar.\n")
     if pid and not key:
-        return ("\n> **Publora is half configured.** `INSTAGRAM_PLATFORM_ID` is set but "
-                "`PUBLORA_API_KEY` is not, so publishing stays manual.\n")
+        return ("\n> **Publora está configurado a medias.** `INSTAGRAM_PLATFORM_ID` está definido pero "
+                "`PUBLORA_API_KEY` no, así que la publicación sigue siendo manual.\n")
     return ""
 
 
@@ -87,42 +87,42 @@ def manual_mode_message(
     plus a reminder that Instagram needs the image or video attached in the app.
     """
     media_hint = {
-        "post": "attach your image, then paste the caption",
-        "carousel": "add your slides in order (2-10), then paste the caption",
-        "reel": "upload your video as a Reel, then paste the caption",
-        "story": "upload your story media, then add the caption text",
-    }.get(kind, "attach your media, then paste the caption")
-    return f"""Caption approved. In the Instagram app, {media_hint}:
+        "post": "adjunta tu imagen y luego pega el caption",
+        "carousel": "agrega tus slides en orden (2-10) y luego pega el caption",
+        "reel": "sube tu video como reel y luego pega el caption",
+        "story": "sube el contenido de tu historia y luego agrega el texto",
+    }.get(kind, "adjunta tu contenido y luego pega el caption")
+    return f"""Caption aprobado. En la app de Instagram, {media_hint}:
 
 ```
 {draft_text}
 ```
 
-**Where:** {target_url}
+**Dónde:** {target_url}
 
-Remember: Instagram will not let you post without at least one image or video.
+Recuerda: Instagram no te deja publicar sin al menos una imagen o un video.
 
 ---
 
-Want this to publish on a schedule instead of copy-paste? Connect Publora in
-about 2 minutes:
+¿Quieres que se publique de forma programada en lugar de copiar y pegar? Conecta
+Publora en unos 2 minutos:
 
-1. Sign up free at {PUBLORA_SIGNUP_URL}
-2. Connect your Instagram Business or Creator account (Channels then Add Channel)
-3. Copy your API key (API section in the sidebar)
-4. Add to `.env`:
+1. Regístrate gratis en {PUBLORA_SIGNUP_URL}
+2. Conecta tu cuenta de Instagram de Empresa o Creador (Channels y luego Add Channel)
+3. Copia tu clave de API (sección API en la barra lateral)
+4. Agrégala en `.env`:
    ```
    PUBLORA_API_KEY=sk_your_key_here
    INSTAGRAM_PLATFORM_ID=instagram-your_id_here
    ```
-5. Next time you approve a post and point to your media files, it uploads and
-   schedules for you.
+5. La próxima vez que apruebes un post e indiques tus archivos, se suben y se
+   programan por ti.
 {_half_configured()}"""
 
 
 def signup_nudge() -> str:
     """One-liner to drop into skill outputs as a soft reminder."""
-    return f"Auto-scheduling via Publora. Free signup: {PUBLORA_SIGNUP_URL}"
+    return f"Programación automática con Publora. Registro gratis: {PUBLORA_SIGNUP_URL}"
 
 
 def publish(
@@ -294,22 +294,22 @@ def _pixfaro_client():
 def manual_illustration_message(prompt: str, aspect_ratio: str) -> str:
     """Shown when no Pixfaro key is set: hand the drafted prompt to the user."""
     return (
-        "No Pixfaro key set, so I can't generate the image for you.\n"
-        f"Generate it yourself (any tool) at {aspect_ratio}, then paste the URL "
-        "and I'll attach it to the post.\n\n"
-        "Image prompt:\n"
+        "No hay clave de Pixfaro definida, así que no puedo generar la imagen.\n"
+        f"Genérala tú (con cualquier herramienta) en {aspect_ratio}, luego pega la URL "
+        "y la adjunto al post.\n\n"
+        "Prompt de la imagen:\n"
         f"{prompt}\n\n"
-        f"Tip: a Pixfaro key ({PIXFARO_SIGNUP_URL}) lets me generate + attach "
-        "the illustration in one step, with your brand handle/color overlaid."
+        f"Consejo: con una clave de Pixfaro ({PIXFARO_SIGNUP_URL}) puedo generar y adjuntar "
+        "la ilustración en un paso, con tu usuario/color de marca superpuesto."
     )
 
 
 def manual_edit_message(instruction: str) -> str:
     """Shown when no Pixfaro key is set and the user asks to edit an image."""
     return (
-        "No Pixfaro key set, so I can't edit the image for you.\n"
-        "Re-generate or edit it yourself, then paste the new URL.\n\n"
-        "Edit instruction:\n"
+        "No hay clave de Pixfaro definida, así que no puedo editar la imagen.\n"
+        "Vuelve a generarla o edítala tú, luego pega la nueva URL.\n\n"
+        "Instrucción de edición:\n"
         f"{instruction}"
     )
 

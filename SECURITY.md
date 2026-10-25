@@ -1,46 +1,51 @@
-# Security Policy
+# Política de seguridad
 
-## Supported Versions
+> Este repositorio es una traducción y adaptación al español de
+> [sergebulaev/instagram-skills](https://github.com/sergebulaev/instagram-skills).
+> Las vulnerabilidades del código original (`lib/`, `scripts/`) conviene
+> reportarlas también en el repositorio original.
 
-Only the latest released version of this skill bundle receives security
-updates. Install from the `main` branch or the newest tagged release.
+## Versiones con soporte
 
-| Version | Supported |
-| ------- | --------- |
-| latest release | yes |
-| older tags | no |
+Solo la última versión publicada de este paquete de skills recibe
+actualizaciones de seguridad. Instala desde la rama principal o desde la
+versión etiquetada más reciente.
 
-## Reporting a Vulnerability
+| Versión | Con soporte |
+| ------- | ----------- |
+| última versión | sí |
+| etiquetas anteriores | no |
 
-If you find a security issue in this repository (for example: a skill
-instruction that could be abused for prompt injection, a script that
-mishandles credentials, or an unsafe command pattern), please report it
-privately:
+## Reportar una vulnerabilidad
 
-- **Preferred:** open a private report via
-  [GitHub Security Advisories](https://github.com/sergebulaev/instagram-skills/security/advisories/new)
-- **Alternative:** email `s@bulaev.org` with subject `[SECURITY] instagram-skills`
+Si encuentras un problema de seguridad en este repositorio (por ejemplo: una
+instrucción de una skill que se podría abusar para inyección de prompts, un
+script que maneja mal las credenciales o un patrón de comandos inseguro),
+repórtalo en privado:
 
-Please include:
+- **Para el código y las skills originales:** abre un reporte privado en
+  [GitHub Security Advisories del repositorio original](https://github.com/sergebulaev/instagram-skills/security/advisories/new)
+  o escribe a `s@bulaev.org` con el asunto `[SECURITY] instagram-skills`.
+- **Para la traducción al español:** abre un reporte privado en
+  [GitHub Security Advisories de este fork](https://github.com/arperezinf/instagram-skills/security/advisories/new).
 
-1. A description of the issue and where it lives (file path, skill name)
-2. Steps to reproduce or a proof of concept
-3. The impact you believe it has
+Incluye:
 
-You can expect an acknowledgement within 72 hours and a fix or a public
-disclosure decision within 14 days.
+1. Una descripción del problema y dónde está (ruta del archivo, nombre de la skill)
+2. Pasos para reproducirlo o una prueba de concepto
+3. El impacto que crees que tiene
 
-## Scope notes
+## Notas de alcance
 
-- This bundle never ships hardcoded credentials. API tokens (Apify,
-  Publora) are read from environment variables or `.env` files that are
-  gitignored; see `.env.example`.
-- Scripts in `lib/` and `scripts/` perform HTTP calls only to the Apify
-  and Publora APIs and never execute shell commands built from remote
-  content.
-- The image layer sends your prompt, and any brand overlay text you set, to
-  the Pixfaro API (`api.pixfaro.com`). It runs only when `PIXFARO_TOKEN` is
-  set; without it the skills draft a prompt for you to run yourself and make
-  no request.
-- Please do not test vulnerabilities against third-party services
-  (Instagram, Apify, Publora) outside their own disclosure programs.
+- Este paquete nunca incluye credenciales escritas en el código. Los tokens de
+  API (Apify, Publora) se leen de variables de entorno o de archivos `.env` que
+  están en `.gitignore`; ver `.env.example`.
+- Los scripts de `lib/` y `scripts/` solo hacen llamadas HTTP a las API de Apify
+  y Publora, y nunca ejecutan comandos de shell construidos a partir de
+  contenido remoto.
+- La capa de imágenes envía tu prompt, y cualquier texto de superposición de
+  marca que definas, a la API de Pixfaro (`api.pixfaro.com`). Solo se ejecuta
+  cuando `PIXFARO_TOKEN` está definido; sin él, las skills redactan un prompt
+  para que lo ejecutes tú y no hacen ninguna solicitud.
+- No pruebes vulnerabilidades contra servicios de terceros (Instagram, Apify,
+  Publora) fuera de sus propios programas de divulgación.

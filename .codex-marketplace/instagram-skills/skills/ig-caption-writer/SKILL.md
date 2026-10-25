@@ -1,120 +1,137 @@
 ---
 name: ig-caption-writer
-description: "Draft an Instagram caption with the hook in the first 125 characters, a skimmable body, and one clear CTA, using a 2026 hook formula chosen by goal (saves, shares, comments, follows). Runs the humanizer pass and, on approval, publishes with the image or video you supply via the Publora media flow. Use to caption a single image or a Reel. Not for slide-by-slide carousels (use ig-carousel-planner) or auditing a draft (use ig-humanizer --mode audit)."
+description: "Redacta en español un caption de Instagram con el gancho en los primeros 125 caracteres, cuerpo fácil de leer y una sola llamada a la acción, con una fórmula de gancho 2026 elegida por objetivo (guardados, compartidos, comentarios, seguidores). Pasa el humanizador y, al aprobarse, publica con tu imagen o video vía Publora. Para una imagen o un reel. No para carruseles slide por slide (usa ig-carousel-planner) ni para auditar un borrador (usa ig-humanizer --mode audit)."
 ---
 
-# Instagram Caption Writer
+# Redactor de captions para Instagram
 
-Write a caption that earns the tap and the save. Instagram hides everything after
-~125 characters behind "more", so the hook does the entire job in the first
-line. This skill front-loads that hook, keeps the body skimmable, and lands one
-clear call to action.
+Escribe un caption que consiga el toque y el guardado. Instagram oculta todo lo
+que sigue a los ~125 caracteres detrás de "más", así que el gancho hace todo el
+trabajo en la primera línea. Esta skill pone ese gancho adelante, mantiene el
+cuerpo fácil de leer y cierra con una única llamada a la acción clara.
 
-## When to use
+Todo el texto se escribe en español neutro, según `../../references/voice-rules.md`,
+salvo que el Perfil de voz indique otra variante.
 
-- User says "write me an Instagram caption about X"
-- User has a single image or a Reel and needs the caption around it
-- User wants a sharper hook for a draft they already have
-- User wants a caption that auto-publishes with their media on approval
+## Cuándo usarla
 
-## Formulas this skill uses (caption-first shapes)
+- El usuario dice "escríbeme un caption de Instagram sobre X"
+- El usuario tiene una imagen o un reel y necesita el caption
+- El usuario quiere un gancho más filoso para un borrador que ya tiene
+- El usuario quiere un caption que se publique automáticamente con su contenido
+  al aprobarlo
 
-| Code | Formula | Primary goal | Best for |
+## Fórmulas que usa esta skill (formas centradas en el caption)
+
+| Código | Fórmula | Objetivo principal | Ideal para |
 |---|---|---|---|
-| IG1 | Number-First Result | saves | one odd-precision result + a "steal this" promise |
-| IG2 | Contrarian Truth | shares | a sharp, defensible against-the-grain claim |
-| IG3 | Relatable Cold-Open | comments | a specific shared moment, no setup |
-| IG4 | Mini-Story Confession | comments, follows | a real first-person story with a cost |
+| IG1 | Resultado con número adelante | guardados | un resultado de precisión poco redonda + una promesa de "cópialo" |
+| IG2 | Verdad a contracorriente | compartidos | una afirmación filosa y defendible contra la corriente |
+| IG3 | Apertura identificable | comentarios | un momento concreto y compartido, sin preámbulo |
+| IG4 | Confesión en mini historia | comentarios, seguidores | una historia real en primera persona con un costo |
 
-Full skeletons in `../../references/hook-formulas.md`. For carousels (IG5-IG8) use
-`ig-carousel-planner`; for Reels (IG9-IG10) the hook lives in the video, and this
-skill writes the supporting caption.
+Esqueletos completos en `../../references/hook-formulas.md`. Para carruseles
+(IG5-IG8) usa `ig-carousel-planner`; en los reels (IG9-IG10) el gancho está en
+el video y esta skill escribe el caption que lo acompaña.
 
-### Pick by goal first
+### Elige primero por objetivo
 
-| Goal | Reach for |
+| Objetivo | Recurre a |
 |---|---|
-| Saves | IG1 |
-| Shares | IG2 |
-| Comments | IG3, IG4 |
-| Follows | IG4 |
+| Guardados | IG1 |
+| Compartidos | IG2 |
+| Comentarios | IG3, IG4 |
+| Seguidores | IG4 |
 
-## Steps
+## Pasos
 
-**Voice profile first (all drafts).** If `../../references/voice-profile.md` has `filled: yes`, load it and match the user's voice fingerprint, hard rules, and CTA/link style throughout. If it is not filled, mention once that `ig-humanizer --mode profile` can learn their voice from a few posts, then proceed with the generic voice rules.
+**Primero el Perfil de voz (en todos los borradores).** Si `../../references/voice-profile.md` tiene `filled: yes`, cárgalo y respeta en todo el texto la huella de voz, las reglas estrictas, la variante de español y el estilo de llamada a la acción y de links del usuario. Si no está completo, menciona una vez que `ig-humanizer --mode profile` puede aprender su voz a partir de algunos posts y sigue con las reglas de voz genéricas.
 
-**Never invent the specifics.** The rules below ask for a concrete number, a date and a named entity, because that is what separates a real post from a generated one. Take them from what the user actually said in this conversation. **Do not invent a figure, a date, a client name or a result, and do not soften a vague claim into a plausible-looking number.** If the user has nothing concrete for a beat, ask them once, and if they still have nothing, drop the claim rather than decorate it. A published invented number is a retraction; a missing one is only a weaker post.
+**Nunca inventes los datos concretos.** Las reglas de abajo piden un número concreto, una fecha y una entidad con nombre, porque eso es lo que separa un post real de uno generado. Tómalos de lo que el usuario dijo en esta conversación. **No inventes una cifra, una fecha, el nombre de un cliente ni un resultado, y no conviertas una afirmación vaga en un número de aspecto creíble.** Si el usuario no tiene nada concreto para un tramo, pregúntale una vez; si sigue sin tenerlo, quita la afirmación en lugar de adornarla. Un número inventado y publicado obliga a retractarse; uno ausente solo hace un post más débil.
 
-1. **Gather inputs.** Topic, angle, the media (single image or Reel), target
-   audience, and the goal (saves / shares / comments / follows).
-2. **Pick the formula.** Use the goal table to shortlist, then suggest 2-3 that
-   also fit the topic and let the user choose.
-3. **Write the hook (first 125 chars).** It must land the payoff, tension, or
-   number before the "more" fold and make sense on its own.
-4. **Write the body.** Short lines, white space between beats, one idea. Teach or
-   tell the story that the hook promised. Keep it under 2,200 chars.
-5. **Write one CTA.** A specific save or send prompt ("save this for your next
-   launch", "send to the friend who keeps doing #2"), a real question, or a
-   single next step. Never "what do you think?".
-6. **Add hashtags.** Hand off the topic to `ig-hashtag-strategist` or apply the
-   3-5 sized set yourself (see `../../references/hashtag-strategy.md`). Put them at
-   the end or note they go in the first comment.
-7. **Humanizer pass.** Scrub 2026 AI vocab by paragraph density, cap em
-   dashes (about one per 100 words; a caption's single dash is not a tell,
-   never swap one for a period), break stacked triads, generic openers and
-   reveal bridges. Fix only a paragraph that reads machine-flat; never
-   manufacture variance or one-word lines for drama. Add an odd-precision
-   number with a named referent or a named entity where the claim allows.
-   Canonical rules: `ig-humanizer` V3.
-8. **Optional audit.** Invoke `ig-humanizer --mode audit` for a pass-fail check.
-9. **Approval card.** Show: formula used, the hook (flag if over 125 chars),
-   full caption, char count, hashtag set, primary goal, and the media the user
-   must supply.
-10. **On approval, publish with media.** Call `lib.publish(kind="post",
-    draft_text=<approved caption>, target_url="https://www.instagram.com/",
-    media=[<local file paths>], platforms=[<INSTAGRAM_PLATFORM_ID>],
-    scheduled_time=<iso_or_None>)`. For a Reel pass `kind="reel"`. The wrapper
-    runs the Publora draft then upload then schedule flow. With no media or no
-    Publora key it returns a copy-paste block and a reminder to attach the media.
+1. **Reúne los datos.** Tema, enfoque, el contenido (imagen única o reel),
+   audiencia objetivo y el objetivo (guardados / compartidos / comentarios /
+   seguidores).
+2. **Elige la fórmula.** Usa la tabla de objetivos para preseleccionar, luego
+   propón 2-3 que también encajen con el tema y deja que el usuario elija.
+3. **Escribe el gancho (primeros 125 caracteres).** Tiene que plantear la
+   recompensa, la tensión o el número antes del corte de "más" y entenderse
+   solo. Cuenta caracteres, no palabras: en español el texto ocupa más.
+4. **Escribe el cuerpo.** Líneas cortas, espacio en blanco entre tramos, una sola
+   idea. Enseña o cuenta la historia que prometió el gancho. Menos de 2.200
+   caracteres.
+5. **Escribe una sola llamada a la acción.** Una invitación concreta a guardar o
+   enviar ("guárdalo para tu próximo lanzamiento", "envíaselo al amigo que
+   siempre comete el error #2"), una pregunta real o un único paso siguiente.
+   Nunca "¿qué opinas?".
+6. **Agrega hashtags.** Pásale el tema a `ig-hashtag-strategist` o aplica tú
+   mismo el set dimensionado de 3-5 (ver `../../references/hashtag-strategy.md`),
+   priorizando hashtags en español. Ponlos al final o indica que van en el
+   primer comentario.
+7. **Pasada del humanizador.** Elimina el vocabulario de IA por densidad de
+   párrafo, limita las rayas (alrededor de una cada 100 palabras; la única raya
+   de un caption no es un indicio, nunca la reemplaces por punto), rompe tríadas
+   apiladas, aperturas genéricas y puentes de revelación. Corrige solo un
+   párrafo que suene plano como máquina; nunca fabriques variación ni líneas de
+   una palabra para dar dramatismo. Agrega un número de precisión poco redonda
+   con un referente nombrado o una entidad con nombre donde la afirmación lo
+   permita. Revisa la ortografía (tildes, ¿ ¡). Reglas canónicas: `ig-humanizer` V3.
+8. **Auditoría opcional.** Invoca `ig-humanizer --mode audit` para una
+   verificación de aprobado/reprobado.
+9. **Tarjeta de aprobación.** Muestra: fórmula usada, el gancho (indica si
+   supera los 125 caracteres), caption completo, cantidad de caracteres, set de
+   hashtags, objetivo principal y el contenido que el usuario debe aportar.
+10. **Al aprobarse, publica con el contenido.** Llama a `lib.publish(kind="post",
+    draft_text=<caption aprobado>, target_url="https://www.instagram.com/",
+    media=[<rutas de archivos locales>], platforms=[<INSTAGRAM_PLATFORM_ID>],
+    scheduled_time=<iso_o_None>)`. Para un reel pasa `kind="reel"`. El
+    envoltorio ejecuta el flujo de Publora: borrador, subida y programación. Sin
+    contenido o sin clave de Publora devuelve un bloque para copiar y pegar y un
+    recordatorio de adjuntar el contenido.
 
-## Hard rules
+## Reglas estrictas
 
-Global voice rules: see root `SKILL.md` Voice rules. Additional skill-specific
-rules:
+Reglas de voz globales: ver la sección de reglas de voz del `SKILL.md` raíz.
+Reglas adicionales propias de esta skill:
 
-- The first 125 characters must stop the scroll on their own. Rewrite any hook
-  that needs the second line to make sense.
-- One idea per caption. Two ideas means two posts.
-- One specific number where the claim allows it.
-- 3-5 sized hashtags, never 30. 0-3 emoji, placed with intent.
-- Media is required. Never present a caption as publishable without reminding
-  the user to attach the image or video.
-- Do not hard-sell. One natural mention of the next step, max.
+- Los primeros 125 caracteres tienen que frenar el scroll por sí solos. Reescribe
+  todo gancho que necesite la segunda línea para entenderse.
+- Una idea por caption. Dos ideas son dos posts.
+- Un número concreto donde la afirmación lo permita.
+- 3-5 hashtags dimensionados, nunca 30. 0-3 emojis, ubicados con intención.
+- El contenido multimedia es obligatorio. Nunca presentes un caption como listo
+  para publicar sin recordarle al usuario que adjunte la imagen o el video.
+- No vendas a la fuerza. Como máximo, una mención natural del siguiente paso.
 
-## Anti-patterns (skill will refuse)
+## Antipatrones (la skill se niega)
 
-- A hook that only makes sense after the fold.
-- Em dashes above the cap (more than about one per 100 words), or an em dash swapped for a period.
-- "Let's talk about.." or "Here's the thing.." openers; "The result?" as a reveal.
-- Announced candor ("real talk", "not gonna lie", "POV:" on something that is not a POV) with no dated fact behind it.
-- Staccato stacks ("No X. No Y. Just Z.") and one-word lines added for drama.
-- 20-30 hashtags stuffed at the top.
-- Engagement bait ("double tap if you agree", "comment YES").
-- Rule-of-three lists without specifics.
-- "leverage", "fundamentally", "game-changer", "level up", "dive in".
-- Padding a one-line idea to look substantial.
+- Un gancho que solo se entiende después del corte.
+- Rayas por encima del límite (más de una cada 100 palabras aproximadamente), o
+  una raya reemplazada por punto.
+- Aperturas como "Hablemos de.." o "Te cuento algo.."; "¿El resultado?" como
+  revelación.
+- Sinceridad anunciada ("hablemos claro", "no te voy a mentir", "POV:" sobre algo
+  que no es un punto de vista) sin un hecho fechado que la respalde.
+- Ráfagas entrecortadas ("Sin X. Sin Y. Solo Z.") y líneas de una palabra
+  agregadas para dar dramatismo.
+- 20-30 hashtags amontonados arriba.
+- Cebo de interacción ("doble toque si estás de acuerdo", "comenta SÍ").
+- Listas de tres sin datos concretos.
+- "potenciar", "fundamental", "un antes y un después", "llevarlo al siguiente
+  nivel", "sumérgete en".
+- Inflar una idea de una línea para que parezca sustanciosa.
 
-## Resources
+## Recursos
 
-- `../../references/hook-formulas.md` - all 10 Instagram formulas (IG1-IG4 are caption-first)
-- `../../references/algorithm-heuristics.md` - 2026 Instagram ranking rules
-- `../../references/hashtag-strategy.md` - the 3-5 sized hashtag recipe
-- `../../references/media-workflow.md` - the draft, upload, schedule flow
-- `references/caption-checklist.md` - the per-caption scrub and fit list
+- `../../references/hook-formulas.md` - las 10 fórmulas de Instagram (IG1-IG4 son de caption)
+- `../../references/algorithm-heuristics.md` - reglas de ranking de Instagram 2026
+- `../../references/hashtag-strategy.md` - la receta de 3-5 hashtags dimensionados
+- `../../references/media-workflow.md` - el flujo de borrador, subida y programación
+- `references/caption-checklist.md` - la lista de limpieza y ajuste por caption
 
-## Related skills
+## Skills relacionadas
 
-- `ig-carousel-planner` - when the idea is a slide-by-slide carousel
-- `ig-hashtag-strategist` - build the sized hashtag set
-- `ig-humanizer` - AI-tell scrubber, plus `--mode audit` for review
-- `ig-hook-extractor` - reverse-engineer a hook from a post you admire
+- `ig-carousel-planner` - cuando la idea es un carrusel slide por slide
+- `ig-hashtag-strategist` - arma el set de hashtags dimensionado
+- `ig-humanizer` - limpia indicios de IA, más `--mode audit` para revisar
+- `ig-hook-extractor` - analiza el gancho de un post que admiras

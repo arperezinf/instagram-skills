@@ -1,23 +1,23 @@
 {
   "name": "instagram-skills",
   "owner": {
-    "name": "Serge Bulaev",
-    "url": "https://github.com/sergebulaev"
+    "name": "arperezinf",
+    "url": "https://github.com/arperezinf"
   },
   "metadata": {
-    "description": "Claude Code and Codex skills for Instagram growth: caption writing with a first-125-char hook, slide-by-slide carousel planning, viral Reel and carousel hook extraction, 2026 hashtag sizing, an AI-tell humanizer with bundled pre-publish audit, and weekly content planning. Posts publish through the Publora API media flow."
+    "description": "Skills de Claude Code y Codex en español para crecer en Instagram: captions con gancho en los primeros 125 caracteres, planificación de carruseles slide por slide, análisis de ganchos virales, dimensionamiento de hashtags 2026, humanizador de indicios de IA adaptado al español con auditoría previa y planificación semanal. Los posts se publican con el flujo multimedia de la API de Publora."
   },
   "plugins": [
     {
       "name": "instagram-skills",
       "source": "./",
-      "description": "Bundle of 9 Instagram marketing skills for Claude Code and Codex with Instagram-native hook formulas, caption writing that front-loads the first 125 chars, a 10-slide carousel planner, viral hook extraction, 2026 hashtag sizing, a unified humanizer (rewrite plus pre-publish audit), cross-platform repurposing, a profile optimizer, an Apify-powered niche and profile audience insights reader, and a weekly Reels and carousel planner. Posts ship via Publora's draft, upload, schedule media flow.",
-      "version": "1.0.32",
+      "description": "Paquete de 9 skills de marketing para Instagram en español para Claude Code y Codex: fórmulas de gancho nativas de Instagram, captions con los primeros 125 caracteres al frente, planificador de carruseles de 10 slides, análisis de ganchos virales, dimensionamiento de hashtags 2026, humanizador unificado adaptado al español (reescritura más auditoría previa), adaptación entre plataformas, optimizador de perfil, lector de nicho y perfiles con Apify y planificador semanal de reels y carruseles. Los posts se publican con el flujo de borrador, subida y programación de Publora.",
+      "version": "1.0.33",
       "author": {
         "name": "Serge Bulaev",
         "url": "https://github.com/sergebulaev"
       },
-      "homepage": "https://github.com/sergebulaev/instagram-skills",
+      "homepage": "https://github.com/arperezinf/instagram-skills",
       "license": "MIT",
       "keywords": [
         "instagram",
@@ -31,7 +31,10 @@
         "reels",
         "carousel",
         "captions",
-        "hashtags"
+        "hashtags",
+        "espanol",
+        "spanish",
+        "marketing-digital"
       ],
       "category": "productivity"
     }
