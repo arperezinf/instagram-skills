@@ -84,6 +84,28 @@ def main() -> int:
         print("Frontmatter problems:\n" + "\n".join("  " + p for p in problems))
         return 1
 
+    # claude.ai rejects a plugin whose manifest description exceeds 500 chars,
+    # and the local validator does not catch it. Check every published one.
+    for rel, path in ((".claude-plugin/plugin.json", ("description",)),
+                      (".codex-plugin/plugin.json", ("description",)),
+                      (".claude-plugin/marketplace.json", ("plugins", 0, "description"))):
+        manifest = ROOT / rel
+        if not manifest.is_file():
+            continue
+        value = json.loads(manifest.read_text(encoding="utf-8"))
+        for key in path:
+            value = value[key]
+        if len(value) > 500:
+            problems.append(f"{rel}: description is {len(value)} chars (max 500)")
+    for path in docs:
+        match = FRONTMATTER.match(path.read_text(encoding="utf-8"))
+        desc = yaml.safe_load(match.group(1)).get("description", "")
+        if len(desc) > 500:
+            problems.append(f"{path.relative_to(ROOT)}: description is {len(desc)} chars (max 500)")
+    if problems:
+        print("Description length problems:\n" + "\n".join("  " + p for p in problems))
+        return 1
+
     skills = [d for d in docs if d.parent != ROOT]
 
     # Counting what happens to be there proves nothing: a bundle that loses a

@@ -1,6 +1,6 @@
 ---
 name: ig-humanizer
-description: "Quita de un caption o slide de Instagram en español los indicios de IA que notan los lectores: vocabulario inflado por densidad, puentes de revelación, ráfagas entrecortadas, tríadas apiladas, sinceridad actuada, lluvias de emojis, calcos del inglés; limita las rayas. Incluye --mode audit (gancho de 125, largo, hashtags, emojis, CTA, contenido) y --mode profile. No sirve para engañar detectores de IA. No para escribir desde cero (usa ig-caption-writer o ig-carousel-planner). Claves: humanizar, auditar."
+description: "Quita de un caption o slide de Instagram en español los indicios de IA que notan los lectores: vocabulario inflado por densidad, puentes de revelación, ráfagas entrecortadas, tríadas apiladas, sinceridad actuada, lluvias de emojis, calcos del inglés; limita las rayas. Incluye --mode audit y --mode profile. No promete engañar detectores. No para escribir desde cero (usa ig-caption-writer o ig-carousel-planner). Claves: humanizar, auditar."
 ---
 
 # Humanizador para Instagram V3 (español)

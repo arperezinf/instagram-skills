@@ -1,6 +1,6 @@
 ---
 name: instagram-marketing
-description: "Planifica, redacta, audita y publica contenido de Instagram en español. Úsala cuando el usuario quiera escribir un caption con gancho en los primeros 125 caracteres, planificar un carrusel slide por slide, analizar el gancho de un reel o carrusel viral, dimensionar hashtags al estilo 2026, quitar indicios de IA de un caption o planificar una semana de reels y carruseles. Instagram exige contenido multimedia en cada post: las skills escriben el caption y el usuario aporta la imagen o el video; se publica con el flujo de Publora."
+description: "Planifica, redacta, audita y publica contenido de Instagram en español: captions con gancho en los primeros 125 caracteres, carruseles slide por slide, análisis de ganchos virales, hashtags 2026, quitar indicios de IA y planificar la semana. Instagram exige contenido multimedia en cada post: las skills escriben el caption y el usuario aporta la imagen o el video; se publica con el flujo de Publora."
 ---
 
 # Skills de marketing para Instagram (en español)
