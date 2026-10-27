@@ -2,7 +2,7 @@
 
 Estas son las reglas de voz canónicas de todo el paquete. Todas las skills las
 heredan. Las secciones locales de "Reglas estrictas" de cada skill solo agregan
-excepciones propias del formato (largo del caption, cantidad de slides, tamaño
+excepciones propias del formato (largo de la descripción, cantidad de slides, tamaño
 de hashtags) y remiten a este archivo.
 
 ## Idioma
@@ -22,7 +22,7 @@ de hashtags) y remiten a este archivo.
 ## Reglas estrictas
 
 1. **Rayas (`—`) limitadas a aproximadamente 1 cada 100 palabras** (1-2 por
-   caption, como máximo 1 por slide de carrusel). En español la raya se usa en
+   descripción, como máximo 1 por slide de carrusel). En español la raya se usa en
    incisos y diálogos, así que no es un indicio de IA por sí sola; lo es la
    densidad. Reemplaza el exceso por coma, dos puntos, paréntesis o salto de
    línea, nunca por punto. Sin guiones (`-`) ni dobles guiones (`--`) entre
@@ -32,16 +32,16 @@ de hashtags) y remiten a este archivo.
    Instagram.
 3. **Escribe con mayúscula nombres de personas, empresas y productos** (Stripe,
    Canva, Figma). Una marca en minúscula se lee como descuido.
-4. **Las oraciones pueden empezar en minúscula** en captions de tono casual; es
+4. **Las oraciones pueden empezar en minúscula** en descripciones de tono casual; es
    propio del registro de Instagram. Los nombres propios siempre van con
    mayúscula. Si el Perfil de voz pide un registro formal, usa mayúscula inicial.
 5. **Los números concretos le ganan a los adjetivos.** "ahorré 11 horas por
    semana" es mejor que "ahorré muchísimo tiempo". "4.200 USD en 30 días" es
    mejor que "gané buen dinero". Usa el punto como separador de miles y la coma
    decimal, salvo que el Perfil de voz indique otra convención.
-6. **Una idea por caption.** Un caption que defiende tres puntos se lee como
+6. **Una idea por descripción.** Una descripción que defiende tres puntos se lee como
    artículo de blog. Elige la que justifica el guardado.
-7. **No vendas a la fuerza.** Instagram entierra los captions abiertamente
+7. **No vendas a la fuerza.** Instagram entierra las descripciones abiertamentes
    promocionales. Enseña o cuenta una historia y luego señala el siguiente paso
    una sola vez.
 
@@ -89,26 +89,26 @@ negativos, frases muertas o sinceridad actuada, no simple vocabulario:
   los ~125 caracteres detrás de "más". Si la línea 1 no consigue el toque, el
   resto no se lee.
 - **Los saltos de línea son puntuación.** El espacio en blanco entre líneas
-  cortas marca el ritmo y hace que el caption se pueda leer de un vistazo. Un
+  cortas marca el ritmo y hace que la descripción se pueda leer de un vistazo. Un
   bloque de texto se pasa de largo.
-- **Los emojis son parte del registro, usados con moderación.** 0-3 por caption,
-  ubicados para cortar texto o marcar una lista, nunca espolvoreados. Un caption
+- **Los emojis son parte del registro, usados con moderación.** 0-3 por descripción,
+  ubicados para cortar texto o marcar una lista, nunca espolvoreados. Una descripción
   con 12 emojis se lee como cuenta de spam o como IA.
 - **Los hashtags son dimensionamiento, no volumen.** En 2026, 3-5 etiquetas bien
   dimensionadas le ganan a 30 al azar (ver `hashtag-strategy.md`). Ponlos al
-  final del caption o en el primer comentario, nunca a mitad de una oración.
+  final de la descripción o en el primer comentario, nunca a mitad de una oración.
   Para audiencias hispanohablantes prioriza hashtags en español.
 
 ## Largo
 
-- **Límite del caption: 2.200 caracteres.** Solo los primeros ~125 se ven antes
+- **Límite de la descripción: 2.200 caracteres.** Solo los primeros ~125 se ven antes
   de "más", así que el gancho va adelante. El español ocupa alrededor de un 20%
   más que el inglés: recorta palabras antes que perder el gancho. La mayoría de
-  los buenos captions quedan entre 150 y 1.500 caracteres; uno largo está bien
+  las buenos descripciones quedan entre 150 y 1.500 caracteres; uno largo está bien
   cuando enseña o cuenta una historia que vale la pena.
-- **El caption de un carrusel puede ser corto** porque las slides llevan el
-  contenido. Un post de una sola imagen depende más del caption.
-- **Caption de reel: breve.** El video es el gancho; el caption agrega contexto
+- **La descripción de un carrusel puede ser corta** porque las slides llevan el
+  contenido. Un post de una sola imagen depende más de la descripción.
+- **Descripción de reel: breve.** El video es el gancho; la descripción agrega contexto
   y la razón para guardar o compartir en una o dos líneas.
 
 ## Estructura
@@ -124,14 +124,14 @@ negativos, frases muertas o sinceridad actuada, no simple vocabulario:
 
 ## Antipatrones
 
-- Caption que repite lo obvio ("El marketing es muy importante hoy en día").
+- Descripción que repite lo obvio ("El marketing es muy importante hoy en día").
 - Cebo genérico de interacción ("doble toque si estás de acuerdo", "comenta SÍ").
 - Aperturas gastadas: "Hablemos de..", "Te cuento algo..", "POV:" sobre algo que
   no es un punto de vista.
 - Tríadas apiladas o huecas ("más rápido, más barato, mejor"); una enumeración
   natural de tres elementos concretos está bien.
 - Una primera línea que necesita la línea 2 para entenderse (el corte se la come).
-- Más de 20 hashtags amontonados al inicio del caption.
+- Más de 20 hashtags amontonados al inicio de la descripción.
 - Líneas en MAYÚSCULAS para dar intensidad. La intensidad va en la elección de
   palabras.
 - Exceso de signos de exclamación (¡¡¡!!!) y de diminutivos afectados.

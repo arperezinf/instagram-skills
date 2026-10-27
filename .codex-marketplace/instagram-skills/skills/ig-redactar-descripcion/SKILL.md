@@ -1,11 +1,11 @@
 ---
-name: ig-redactar-caption
-description: "Redacta en español un caption de Instagram con el gancho en los primeros 125 caracteres, cuerpo fácil de leer y una sola llamada a la acción, con una fórmula de gancho 2026 elegida por objetivo (guardados, compartidos, comentarios, seguidores). Pasa el humanizador y, al aprobarse, publica con tu imagen o video vía Publora. Para una imagen o un reel. No para carruseles slide por slide (usa ig-planificar-carrusel) ni para auditar un borrador (usa ig-humanizar-texto --mode audit)."
+name: ig-redactar-descripcion
+description: "Redacta en español una descripción de Instagram con el gancho en los primeros 125 caracteres, cuerpo fácil de leer y una sola llamada a la acción, con una fórmula de gancho 2026 elegida por objetivo (guardados, compartidos, comentarios, seguidores). Pasa el humanizador y, al aprobarse, publica con tu imagen o video vía Publora. Para una imagen o un reel. No para carruseles slide por slide (usa ig-planificar-carrusel) ni para auditar un borrador (usa ig-humanizar-texto --mode audit)."
 ---
 
-# Redactor de captions para Instagram
+# Redactor de descripciones para Instagram
 
-Escribe un caption que consiga el toque y el guardado. Instagram oculta todo lo
+Escribe una descripción que consiga el toque y el guardado. Instagram oculta todo lo
 que sigue a los ~125 caracteres detrás de "más", así que el gancho hace todo el
 trabajo en la primera línea. Esta skill pone ese gancho adelante, mantiene el
 cuerpo fácil de leer y cierra con una única llamada a la acción clara.
@@ -29,13 +29,13 @@ salvo que el Perfil de voz indique otra variante.
 
 ## Cuándo usarla
 
-- El usuario dice "escríbeme un caption de Instagram sobre X"
-- El usuario tiene una imagen o un reel y necesita el caption
+- El usuario dice "escríbeme una descripción de Instagram sobre X"
+- El usuario tiene una imagen o un reel y necesita la descripción
 - El usuario quiere un gancho más filoso para un borrador que ya tiene
-- El usuario quiere un caption que se publique automáticamente con su contenido
+- El usuario quiere una descripción que se publique automáticamente con su contenido
   al aprobarlo
 
-## Fórmulas que usa esta skill (formas centradas en el caption)
+## Fórmulas que usa esta skill (formas centradas en la descripción)
 
 | Código | Fórmula | Objetivo principal | Ideal para |
 |---|---|---|---|
@@ -46,7 +46,7 @@ salvo que el Perfil de voz indique otra variante.
 
 Esqueletos completos en `../../references/hook-formulas.md`. Para carruseles
 (IG5-IG8) usa `ig-planificar-carrusel`; en los reels (IG9-IG10) el gancho está en
-el video y esta skill escribe el caption que lo acompaña.
+el video y esta skill escribe la descripción que lo acompaña.
 
 ### Elige primero por objetivo
 
@@ -84,7 +84,7 @@ el video y esta skill escribe el caption que lo acompaña.
    primer comentario.
 7. **Pasada del humanizador.** Elimina el vocabulario de IA por densidad de
    párrafo, limita las rayas (alrededor de una cada 100 palabras; la única raya
-   de un caption no es un indicio, nunca la reemplaces por punto), rompe tríadas
+   de una descripción no es un indicio, nunca la reemplaces por punto), rompe tríadas
    apiladas, aperturas genéricas y puentes de revelación. Corrige solo un
    párrafo que suene plano como máquina; nunca fabriques variación ni líneas de
    una palabra para dar dramatismo. Agrega un número de precisión poco redonda
@@ -93,10 +93,10 @@ el video y esta skill escribe el caption que lo acompaña.
 8. **Auditoría opcional.** Invoca `ig-humanizar-texto --mode audit` para una
    verificación de aprobado/reprobado.
 9. **Tarjeta de aprobación.** Muestra: fórmula usada, el gancho (indica si
-   supera los 125 caracteres), caption completo, cantidad de caracteres, set de
+   supera los 125 caracteres), descripción completa, cantidad de caracteres, set de
    hashtags, objetivo principal y el contenido que el usuario debe aportar.
 10. **Al aprobarse, publica con el contenido.** Llama a `lib.publish(kind="post",
-    draft_text=<caption aprobado>, target_url="https://www.instagram.com/",
+    draft_text=<descripción aprobada>, target_url="https://www.instagram.com/",
     media=[<rutas de archivos locales>], platforms=[<INSTAGRAM_PLATFORM_ID>],
     scheduled_time=<iso_o_None>)`. Para un reel pasa `kind="reel"`. El
     envoltorio ejecuta el flujo de Publora: borrador, subida y programación. Sin
@@ -110,10 +110,10 @@ Reglas adicionales propias de esta skill:
 
 - Los primeros 125 caracteres tienen que frenar el scroll por sí solos. Reescribe
   todo gancho que necesite la segunda línea para entenderse.
-- Una idea por caption. Dos ideas son dos posts.
+- Una idea por descripción. Dos ideas son dos posts.
 - Un número concreto donde la afirmación lo permita.
 - 3-5 hashtags dimensionados, nunca 30. 0-3 emojis, ubicados con intención.
-- El contenido multimedia es obligatorio. Nunca presentes un caption como listo
+- El contenido multimedia es obligatorio. Nunca presentes una descripción como lista
   para publicar sin recordarle al usuario que adjunte la imagen o el video.
 - No vendas a la fuerza. Como máximo, una mención natural del siguiente paso.
 
@@ -137,11 +137,11 @@ Reglas adicionales propias de esta skill:
 
 ## Recursos
 
-- `../../references/hook-formulas.md` - las 10 fórmulas de Instagram (IG1-IG4 son de caption)
+- `../../references/hook-formulas.md` - las 10 fórmulas de Instagram (IG1-IG4 son de descripción)
 - `../../references/algorithm-heuristics.md` - reglas de ranking de Instagram 2026
 - `../../references/hashtag-strategy.md` - la receta de 3-5 hashtags dimensionados
 - `../../references/media-workflow.md` - el flujo de borrador, subida y programación
-- `references/caption-checklist.md` - la lista de limpieza y ajuste por caption
+- `references/lista-descripcion.md` - la lista de limpieza y ajuste por descripción
 
 ## Skills relacionadas
 

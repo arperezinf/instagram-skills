@@ -6,7 +6,7 @@ usuario.
 
 ---
 
-## Ejemplo 1: un caption (imagen única)
+## Ejemplo 1: una descripción (imagen única)
 
 **Antes (probablemente IA):**
 > En el panorama digital acelerado de hoy, aprovechar Instagram puede
@@ -22,7 +22,7 @@ usuario.
 >
 > lo logró un solo hábito, y no fueron ni los 30 hashtags ni publicar a diario.
 >
-> hice que cada caption respondiera a "¿alguien se lo enviaría a un amigo?". si
+> hice que cada descripción respondiera a "¿alguien se lo enviaría a un amigo?". si
 > la respuesta era no, reescribía la primera línea.
 >
 > guárdalo antes de tu próximo post.
@@ -45,7 +45,7 @@ usuario.
 - Revisión de la Pasada 2: el primer borrador de la línea 2 decía "ni 30
   hashtags. ni publicar a diario. un solo hábito.", que es una ráfaga del tipo
   "Sin X. Sin Y. Solo Z.": tres fragmentos sueltos (por encima del límite de 2
-  por caption) con forma de paralelismo negativo. Se unió en una oración con una
+  por descripción) con forma de paralelismo negativo. Se unió en una oración con una
   cláusula que trabaja, en el registro en minúscula del autor. No se tocó
   ninguna raya (no había ninguna por encima del límite).
 
@@ -70,7 +70,7 @@ usuario.
 
 ---
 
-## Ejemplo 3: caption de un reel
+## Ejemplo 3: descripción de un reel
 
 **Antes:**
 > 🚀✨ ¡Descubre los secretos de los reels virales! 🔥 En este video nos
@@ -87,7 +87,7 @@ usuario.
 > #estrategiadereels #ganchosparareels #creadordecontenido
 
 **Qué cambió:**
-- Se cortó la lluvia de emojis (8 o más) a cero; el gancho sostiene el caption.
+- Se cortó la lluvia de emojis (8 o más) a cero; el gancho sostiene la descripción.
 - Se eliminaron "descubre los secretos", "nos sumergimos", "elevar
   fundamentalmente" y el cebo de "etiquetar a 3 amigos", además de la
   exclamación de vendedor.

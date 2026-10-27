@@ -1,6 +1,6 @@
 ---
 name: ig-adaptar-contenido
-description: "Adapta contenido existente a un post nativo de Instagram en español. Toma un post de LinkedIn, un blog, un guion de YouTube o un hilo de X y lo reconstruye: una pieza larga pasa a carrusel o caption, con nuevo gancho antes del corte de 125 caracteres, sin restos de otra plataforma, adaptado si la fuente está en otro idioma, y publicado vía Publora al aprobarse. No para escribir desde cero (usa ig-redactar-caption o ig-planificar-carrusel) ni auditar (ig-humanizar-texto --mode audit)."
+description: "Adapta contenido existente a un post nativo de Instagram en español. Toma un post de LinkedIn, un blog, un guion de YouTube o un hilo de X y lo reconstruye: una pieza larga pasa a carrusel o descripción, con nuevo gancho antes del corte de 125 caracteres, sin restos de otra plataforma, adaptado si la fuente está en otro idioma, y publicado vía Publora al aprobarse. No para escribir desde cero (usa ig-redactar-descripcion o ig-planificar-carrusel) ni auditar (ig-humanizar-texto --mode audit)."
 ---
 
 # Adaptador de contenido para Instagram
@@ -31,13 +31,13 @@ el Perfil de voz indique otra variante.
 
 ## Cuándo usarla
 
-- "Convierte este post de LinkedIn en un carrusel / caption de Instagram"
+- "Convierte este post de LinkedIn en un carrusel / descripción de Instagram"
 - "Adapta mi artículo del blog / newsletter / guion de YouTube para Instagram"
 - "Este hilo funcionó en X, adáptalo a Instagram"
 - "Tengo una idea en otro formato, hazla nativa de acá"
 - "Tengo este contenido en inglés, adáptalo en español para Instagram"
 
-No para un borrador desde cero (usa `ig-redactar-caption` para un caption,
+No para un borrador desde cero (usa `ig-redactar-descripcion` para una descripción,
 `ig-planificar-carrusel` para un carrusel slide por slide) ni para revisar un
 borrador que ya es de Instagram (usa `ig-humanizar-texto --mode audit`).
 
@@ -48,7 +48,7 @@ borrador que ya es de Instagram (usa `ig-humanizar-texto --mode audit`).
 **Nunca inventes los datos concretos.** Las reglas de abajo piden un número concreto, una fecha y una entidad con nombre, porque eso es lo que separa un post real de uno generado. Tómalos de lo que el usuario dijo en esta conversación o de la fuente. **No inventes una cifra, una fecha, el nombre de un cliente ni un resultado, y no conviertas una afirmación vaga en un número de aspecto creíble.** Si el usuario no tiene nada concreto para un tramo, pregúntale una vez; si sigue sin tenerlo, quita la afirmación en lugar de adornarla. Un número inventado y publicado obliga a retractarse; uno ausente solo hace un post más débil.
 
 1. **Toma la fuente.** Cualquier formato: un post, un párrafo, un guion, un
-   caption, una transcripción, una lista, un link para leer. Pide la fuente, el
+   descripción, una transcripción, una lista, un link para leer. Pide la fuente, el
    contenido multimedia que tiene el usuario (Instagram necesita imagen o video)
    y el objetivo (guardados / compartidos / comentarios / seguidores) si no se
    indicó.
@@ -60,7 +60,7 @@ borrador que ya es de Instagram (usa `ig-humanizar-texto --mode audit`).
    cambia ejemplos o referencias que no se entiendan en el mercado del usuario
    (avísale cuando lo hagas) y convierte formatos de cifras y fechas a la
    convención del Perfil de voz.
-4. **Elige el contenedor.** Una afirmación o un número -> un caption. Una
+4. **Elige el contenedor.** Una afirmación o un número -> una descripción. Una
    enseñanza, una lista o un proceso -> carrusel, una idea por slide (pásale la
    estructura a `ig-planificar-carrusel`, de la slide de gancho a la slide final).
    Un video largo -> un carrusel que entregue la recompensa, no un resumen.
@@ -69,7 +69,7 @@ borrador que ya es de Instagram (usa `ig-humanizar-texto --mode audit`).
    dar todo el golpe por sí sola. El gancho de la fuente casi nunca sobrevive;
    escribe una nueva primera línea con una fórmula de Instagram 2026 (ver
    `../../references/hook-formulas.md`), elegida según el objetivo.
-6. **Reajusta el formato.** Cuerpo del caption fácil de leer, líneas cortas,
+6. **Reajusta el formato.** Cuerpo de la descripción fácil de leer, líneas cortas,
    espacio en blanco entre tramos. Carrusel: una idea por slide, sin bloques.
    Corta el tejido conectivo de la fuente; Instagram premia la recompensa
    adelantada.
@@ -79,11 +79,11 @@ borrador que ya es de Instagram (usa `ig-humanizar-texto --mode audit`).
    "como escribí en LinkedIn". Un post adaptado no debería confesar que lo es.
 8. **Recordatorio de contenido multimedia.** Instagram rechaza los posts solo de
    texto. Confirma la imagen, el video o el set de slides que adjuntará el
-   usuario. Un caption sin contenido no se puede publicar.
+   usuario. Una descripción sin contenido no se puede publicar.
 9. **Hashtags al final.** Pásale el tema a `ig-elegir-hashtags` o aplica tú
    mismo un set dimensionado de 3-5 (ver `../../references/hashtag-strategy.md`),
    priorizando hashtags en español. Ponlos en un solo bloque al FINAL del
-   caption o en el primer comentario, nunca como muro en medio del texto.
+   descripción o en el primer comentario, nunca como muro en medio del texto.
 10. **Pasada del humanizador.** Aplica `ig-humanizar-texto` V3 al resultado:
     vocabulario de IA por densidad de párrafo, rayas por encima del límite
     (alrededor de una cada 100 palabras, nunca reemplazadas por punto), tríadas
@@ -92,11 +92,11 @@ borrador que ya es de Instagram (usa `ig-humanizar-texto --mode audit`).
     variación. Conserva los números reales y las entidades con nombre de la
     fuente.
 11. **Tarjeta de aprobación.** Muestra: el mapeo fuente -> Instagram (qué se
-    convirtió en qué), el contenedor (caption o carrusel de N slides), la
+    convirtió en qué), el contenedor (descripción o carrusel de N slides), la
     fórmula usada, el gancho (indica si supera los 125 caracteres), el set de
     hashtags, el contenido que debe adjuntar el usuario y el objetivo principal.
 12. **Al aprobarse.** Publica con `lib.publish(kind="post",
-    draft_text=<caption aprobado>, target_url="https://www.instagram.com/",
+    draft_text=<descripción aprobada>, target_url="https://www.instagram.com/",
     media=[<rutas de archivos locales>], platforms=[<INSTAGRAM_PLATFORM_ID>],
     scheduled_time=<iso_o_None>)`. Para un reel pasa `kind="reel"`. El
     envoltorio ejecuta el flujo de Publora: borrador, subida y programación. Sin
@@ -106,16 +106,16 @@ borrador que ya es de Instagram (usa `ig-humanizar-texto --mode audit`).
 ## Reglas de ajuste nativo (fuente -> Instagram)
 
 - **Post de LinkedIn -> Instagram:** un post largo pasa a carrusel (una idea por
-  slide) o, si es una sola afirmación filosa, a un caption. LinkedIn tolera el
+  slide) o, si es una sola afirmación filosa, a una descripción. LinkedIn tolera el
   precalentamiento; Instagram no. El gancho de LinkedIn suele ser demasiado
   largo; reescríbelo para el corte de 125 caracteres.
 - **Blog / newsletter -> carrusel:** convierte la estructura en slides, una idea
   por slide, la slide de gancho primero y la final al último. No pegues toda la
-  pieza en un caption.
+  pieza en una descripción.
 - **Guion de YouTube -> carrusel con la recompensa:** abre con la recompensa del
   video, no con su introducción. Arma el carrusel en torno a "esto es lo que
   encontré", no un resumen escena por escena.
-- **Tuit / hilo -> caption o carrusel:** un tuit pasa a caption; un hilo pasa a
+- **Tuit / hilo -> descripción o carrusel:** un tuit pasa a descripción; un hilo pasa a
   carrusel, un tuit por slide con su propia microidea. Quita los @usuarios de X
   y la numeración del hilo.
 
@@ -133,8 +133,8 @@ Reglas adicionales propias de esta skill:
   y el ritmo a partir de la columna.
 - Un número concreto donde la fuente lo ofrezca. Consérvalo.
 - 3-5 hashtags dimensionados en un solo bloque al final, nunca 30 y nunca a
-  mitad del caption.
-- El contenido multimedia es obligatorio. Nunca presentes un caption adaptado
+  mitad de la descripción.
+- El contenido multimedia es obligatorio. Nunca presentes una descripción adaptada
   como listo para publicar sin recordarle al usuario que adjunte la imagen, el
   video o las slides.
 - No vendas a la fuerza el producto del usuario. Como máximo, una mención natural.
@@ -146,8 +146,8 @@ Reglas adicionales propias de esta skill:
 - Conservar los restos de la plataforma de origen ("link en la bio",
   "suscríbete", @usuarios de X, numeración del hilo).
 - Un gancho que solo se entiende después del corte de 125 caracteres.
-- Un muro de hashtags a mitad del caption en lugar de un bloque al final.
-- Presentar un caption sin contenido multimedia como listo para publicar.
+- Un muro de hashtags a mitad de la descripción en lugar de un bloque al final.
+- Presentar una descripción sin contenido multimedia como lista para publicar.
 - Primera línea en MAYÚSCULAS para dar intensidad. La intensidad va en la
   elección de palabras.
 - Rayas por encima del límite (más de una cada 100 palabras aproximadamente), o
@@ -168,7 +168,7 @@ Reglas adicionales propias de esta skill:
 
 ## Skills relacionadas
 
-- `ig-redactar-caption` - escribe un caption nuevo desde cero
+- `ig-redactar-descripcion` - escribe una descripción nueva desde cero
 - `ig-planificar-carrusel` - estructura un carrusel slide por slide (el adaptador le pasa las piezas largas)
 - `ig-elegir-hashtags` - arma el set de hashtags dimensionado
 - `ig-humanizar-texto` - limpia indicios de IA, más `--mode audit` para revisar el resultado

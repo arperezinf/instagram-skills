@@ -35,13 +35,13 @@ def render_approval_card(
     if char_count is None:
         char_count = len(preview_text)
     fold = " (los primeros ~125 se ven antes del corte de 'más')" if char_count > 125 else ""
-    lines.append(f"**Caracteres del caption:** {char_count} / 2200{fold}")
+    lines.append(f"**Caracteres de la descripción:** {char_count} / 2200{fold}")
     if slide_count is not None:
         lines.append(f"**Slides:** {slide_count}")
     if media_note:
         lines.append(f"**Contenido que aportas:** {media_note}")
     lines.append("")
-    lines.append("**Vista previa del caption:**")
+    lines.append("**Vista previa de la descripción:**")
     lines.append("")
     for pl in preview_text.splitlines() or [""]:
         lines.append(f"> {pl}")

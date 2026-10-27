@@ -1,6 +1,6 @@
 ---
 name: ig-optimizar-perfil
-description: "Audita y reescribe en español un perfil de Instagram completo para 2026: foto, campo NOMBRE buscable con una palabra clave, @usuario, biografía (150 caracteres: valor + tema + prueba), link según el objetivo, categoría, historias destacadas, la primera cuadrícula de 9 y hasta 3 posts fijados. Se activa con pedidos como revisar mi perfil, arreglar mi bio, optimizar destacadas o auditar el perfil. Toda la decisión de seguir ocurre en el encabezado. No para captions (usa ig-redactar-caption)."
+description: "Audita y reescribe en español un perfil de Instagram completo para 2026: foto, campo NOMBRE buscable con una palabra clave, @usuario, biografía (150 caracteres: valor + tema + prueba), link según el objetivo, categoría, historias destacadas, la primera cuadrícula de 9 y hasta 3 posts fijados. Se activa con pedidos como revisar mi perfil, arreglar mi bio, optimizar destacadas o auditar el perfil. No para redactar la descripción de un post (usa ig-redactar-descripcion)."
 ---
 
 # Optimizador de perfil de Instagram
@@ -39,7 +39,7 @@ indique otra variante.
 - Cualquiera de: "revisa mi perfil de Instagram", "optimiza mis destacadas",
   "auditoría de perfil"
 
-No para escribir captions (usa `ig-redactar-caption`) ni planificar un carrusel
+No para escribir la descripción de un post (usa `ig-redactar-descripcion`) ni planificar un carrusel
 (usa `ig-planificar-carrusel`).
 
 ## Entrada
@@ -139,7 +139,7 @@ Reglas adicionales propias de esta skill:
 
 ## Skills relacionadas
 
-- `ig-redactar-caption` - escribe los captions que alojarán el perfil y la cuadrícula optimizados
+- `ig-redactar-descripcion` - escribe las descripciones que alojarán el perfil y la cuadrícula optimizados
 - `ig-extraer-gancho` - encuentra un gancho digno de fijar en un post que ya funcionó
 - `ig-planificar-semana` - planifica el ritmo que llena la cuadrícula y las destacadas
-- `ig-humanizar-texto --mode audit` - audita la biografía y los captions fijados antes de publicar
+- `ig-humanizar-texto --mode audit` - audita la biografía y las descripciones fijadas antes de publicar

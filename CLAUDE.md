@@ -13,7 +13,7 @@ Este repositorio es un fork traducido y adaptado al español de
   la documentación está en **español neutro**, con tuteo y sin regionalismos.
   Los textos que generan las skills también salen en español neutro salvo que el
   Perfil de voz del usuario indique otra variante.
-- **No se traducen**: nombres de skills (`ig-redactar-caption`, etc.), nombres de
+- **No se traducen**: nombres de skills (`ig-redactar-descripcion`, etc.), nombres de
   archivos, rutas, identificadores de código, funciones de `lib/`, nombres de
   campos de API, claves del bloque de Estado de `voice-profile.md` (`filled`,
   `source`, `updated`) y valores que leen los scripts.
@@ -66,7 +66,7 @@ Este repositorio es un fork traducido y adaptado al español de
 - **Sin rayas en ningún campo `description:`.** En el cuerpo de la prosa las
   rayas se permiten solo para separadores de tablas y divisores de listas. Sin
   rayas dentro de las líneas a completar de un esqueleto de gancho (se
-  filtrarían a los captions generados).
+  filtrarían a las descripciones generadas).
 - **Los nombres de las skills son superficie pública.** Renombrar una skill es
   una subida de versión mayor y requiere actualizar: `.codex-plugin/plugin.json`,
   `.agents/plugins/marketplace.json`, `.claude-plugin/plugin.json`,
@@ -78,7 +78,7 @@ Este repositorio es un fork traducido y adaptado al español de
 
 - Las reglas de voz canónicas están en `references/voice-rules.md` de la raíz.
   Las secciones locales de "Reglas estrictas" de cada skill solo deben contener
-  excepciones propias de la skill (largo del caption, cantidad de slides,
+  excepciones propias de la skill (largo de la descripción, cantidad de slides,
   tamaño de hashtags) y empezar con: `Reglas de voz globales: ver la sección de
   reglas de voz del SKILL.md raíz.`
 - Otras referencias de la raíz compartidas entre skills:
@@ -136,13 +136,13 @@ Este repositorio es un fork traducido y adaptado al español de
   `platforms: ["instagram-<id>"]` (un arreglo de ids en STRING) y el encabezado
   `x-publora-key`.
 - **El contenido multimedia es obligatorio.** Los posts de Instagram solo de
-  texto fallan al publicar. Las skills de redacción producen el caption; el
+  texto fallan al publicar. Las skills de redacción producen la descripción; el
   usuario aporta el contenido. `publish()` solo publica automáticamente en el
   nivel Publora cuando se pasan rutas de archivos en `media`; si no, devuelve el
-  bloque de caption para copiar con un recordatorio de contenido.
+  bloque de descripción para copiar con un recordatorio de contenido.
 - **Por defecto no se incluye una capa de lectura de posts.** No hay un actor de
   lectura de posts de Instagram barato y documentado conectado. `ig-extraer-gancho`
-  le pide al usuario que pegue el caption (y el gancho de las slides o del reel).
+  le pide al usuario que pegue la descripción (y el gancho de las slides o del reel).
   Si más adelante se agrega un actor de lectura de Instagram, condiciónalo a
   `APIFY_TOKEN` y mantén la alternativa de pegar.
 - No nombres programadores de terceros competidores en archivos versionados. El

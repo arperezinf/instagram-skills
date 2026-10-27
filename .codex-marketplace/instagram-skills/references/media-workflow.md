@@ -2,7 +2,7 @@
 
 Instagram exige contenido multimedia en todos los posts. No existe un post de
 Instagram solo de texto: la API lo rechaza. Por eso las skills de redacción de
-este paquete producen el **caption, el gancho, los hashtags y el plan de slides
+este paquete producen el **descripción, el gancho, los hashtags y el plan de slides
 o de tomas**, y el **usuario aporta el archivo de imagen o video**. Publicar es
 siempre un flujo multimedia.
 
@@ -51,7 +51,7 @@ from lib import publish
 
 publish(
     "carousel",
-    draft_text="<caption aprobado>",
+    draft_text="<descripción aprobada>",
     target_url="https://www.instagram.com/",
     media=["slide1.jpg", "slide2.jpg", "slide3.jpg"],
     scheduled_time="2026-07-01T15:00:00.000Z",
@@ -90,13 +90,13 @@ automáticamente para `kind="reel"` y `kind="story"`.
 | Tamaño de reel/video | 300 MB |
 | Clip de video en carrusel | hasta 60 s |
 | Relación de aspecto | de 4:5 vertical a 1,91:1 horizontal; 4:5 ocupa mejor el feed |
-| Caption | 2.200 caracteres (los primeros ~125 visibles) |
+| Descripción | 2.200 caracteres (los primeros ~125 visibles) |
 | Tipo de cuenta | Empresa o Creador (las personales no son compatibles) |
 
 ## Nivel manual (sin Publora)
 
 Sin `PUBLORA_API_KEY`, o cuando el usuario no indicó archivos a la skill, todas
-las skills devuelven el caption aprobado como bloque para copiar y pegar, más un
+las skills devuelven la descripción aprobada como bloque para copiar y pegar, más un
 recordatorio de adjuntar el contenido en la app de Instagram. Instagram igual
 necesita la imagen o el video, así que el recordatorio no es opcional.
 

@@ -1,6 +1,6 @@
 ---
 name: ig-planificar-semana
-description: "Genera en español un plan semanal de Instagram a partir de un tema, una audiencia y pilares de contenido. Produce una mezcla diaria de reels, carruseles, imágenes e historias, cada uno con fórmula de gancho, enfoque, horario y objetivo, más una meta semanal de guardados y compartidos (la palanca 2026), un ritmo de historias y un control de equilibrio entre objetivos. No para redactar un caption (usa ig-redactar-caption) ni un carrusel (usa ig-planificar-carrusel)."
+description: "Genera en español un plan semanal de Instagram a partir de un tema, una audiencia y pilares de contenido. Produce una mezcla diaria de reels, carruseles, imágenes e historias, cada uno con fórmula de gancho, enfoque, horario y objetivo, más una meta semanal de guardados y compartidos (la palanca 2026), un ritmo de historias y un control de equilibrio entre objetivos. No para redactar una descripción (usa ig-redactar-descripcion) ni un carrusel (usa ig-planificar-carrusel)."
 ---
 
 # Planificador de contenido para Instagram
@@ -44,7 +44,7 @@ de voz indique otra variante.
 - **Ritmo de publicación** (opcional): por defecto 4-5 posts de feed por semana
   + historias diarias
 - **Zona horaria de la audiencia** (opcional pero recomendada)
-- **Muestras de voz** (opcional): captions anteriores para calibrar la voz
+- **Muestras de voz** (opcional): descripciones anteriores para calibrar la voz
 
 ## Salida
 
@@ -160,7 +160,7 @@ Ver `references/example-week.md` para un plan de 7 días completo.
 
 ## Skills relacionadas
 
-- `ig-redactar-caption` - redacta el caption de cada imagen única del plan
+- `ig-redactar-descripcion` - redacta la descripción de cada imagen única del plan
 - `ig-planificar-carrusel` - redacta cada carrusel del plan
 - `ig-elegir-hashtags` - rota sets de hashtags dimensionados a lo largo de la semana
 - `ig-extraer-gancho` - estudia posts de la competencia mientras planificas

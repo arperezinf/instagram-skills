@@ -21,7 +21,7 @@ que la cantidad. Pon el mejor punto en la slide 2 o 3, nunca en la 10.
 
 - **Una idea por slide.** Si una slide necesita dos pensamientos, divídela.
 - **Legible en 2 segundos.** Texto grande, pocas palabras. La slide es un cartel,
-  no un párrafo. El detalle va en el caption.
+  no un párrafo. El detalle va en la descripción.
 - **Numera las slides** cuando el formato es una lista (slide 2 = "1.", etc.)
   para que el bucle abierto ("la mayoría se pierde la #4") se cumpla.
 - **Coherencia visual.** Misma tipografía, mismos márgenes y mismo color de
@@ -91,9 +91,9 @@ El resumen en una sola slide es lo que la gente guarda. Haz que se entienda solo
 Nunca rellenes hasta 10. Una idea de 5 puntos es un carrusel de 5 puntos (7
 slides con gancho y recompensa), no uno de 10 inflado.
 
-## Combinación con el caption
+## Combinación con la descripción
 
-En un carrusel el caption puede ser corto porque las slides llevan el contenido.
+En un carrusel la descripción puede ser corta porque las slides llevan el contenido.
 Debe: repetir el gancho para el corte de "más", agregar una línea de contexto,
 llevar la llamada a la acción y los 3-5 hashtags dimensionados. Ver
 `../../../references/hashtag-strategy.md`.

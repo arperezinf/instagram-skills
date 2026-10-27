@@ -57,7 +57,7 @@ un amigo concreto o lo guardaría para usarlo después?
   si") se penaliza explícitamente.
 - **Videos republicados o reciclados con la marca de agua de otra app** (un logo
   visible de otra plataforma) se suprimen en Reels.
-- **Captions hechos solo de hashtags** (20-30 etiquetas amontonadas arriba) se
+- **Descripciones hechos solo de hashtags** (20-30 etiquetas amontonadas arriba) se
   leen como spam en 2026 y no ayudan al alcance. La recomendación actual son 3-5
   etiquetas dimensionadas.
 - **Relaciones de aspecto fuera del rango 4:5 a 1,91:1** se recortan, lo que
@@ -86,7 +86,7 @@ un amigo concreto o lo guardaría para usarlo después?
 
 | Elemento | Límite |
 |---|---|
-| Caption | 2.200 caracteres (los primeros ~125 visibles antes de "más") |
+| Descripción | 2.200 caracteres (los primeros ~125 visibles antes de "más") |
 | Hashtags | 30 como máximo por post (pero en 2026 la práctica son 3-5 dimensionados) |
 | Elementos de carrusel | 2-10 (API; la app nativa permite 20) |
 | Formatos de imagen | JPEG, PNG, WebP (WebP se convierte a JPEG) |
@@ -99,7 +99,7 @@ un amigo concreto o lo guardaría para usarlo después?
 | Límite de frecuencia | ~50 posts / 24 h (algunas cuentas reportan 25) |
 
 - **Todo post requiere contenido multimedia.** Instagram rechaza los posts solo
-  de texto. Las skills de redacción producen el caption; el usuario aporta la
+  de texto. Las skills de redacción producen la descripción; el usuario aporta la
   imagen o el video.
 - Una imagen se publica como foto; 2-10 imágenes, como carrusel; un video, como
   reel por defecto (o como historia con `videoType: "STORIES"`).
@@ -167,7 +167,7 @@ un amigo concreto o lo guardaría para usarlo después?
 
 ## Lista de verificación antes de publicar
 
-- [ ] Los primeros 125 caracteres del caption frenan el scroll por sí solos.
+- [ ] Los primeros 125 caracteres de la descripción frenan el scroll por sí solos.
 - [ ] Rayas (`—`) en una cada 100 palabras o menos (nunca reemplazar una por punto); sin guiones entre oraciones ni dobles guiones (`--`).
 - [ ] Sin acumulación de vocabulario de IA (3 o más marcadores en un párrafo: potenciar, fundamental, cabe destacar, etc.).
 - [ ] Al menos un número de precisión poco redonda con un referente nombrado, cuando la afirmación lo permite.

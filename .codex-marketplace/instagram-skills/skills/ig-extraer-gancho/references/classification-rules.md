@@ -8,7 +8,7 @@ Extracción de características y heurísticas de puntaje que usa
 
 | Señal | Superficie |
 |---|---|
-| Una foto + un caption | imagen única (mirar IG1-IG4) |
+| Una foto + una descripción | imagen única (mirar IG1-IG4) |
 | 2-10 imágenes apiladas, puntos de deslizamiento | carrusel (mirar IG5-IG8) |
 | Video vertical con audio | reel (mirar IG9-IG10) |
 
@@ -17,7 +17,7 @@ puntos en la app los distinguen, así que pregúntale al usuario).
 
 ## Paso 2: extraer las características del gancho
 
-### Ganchos de caption (primeros ~125 caracteres)
+### Ganchos de descripción (primeros ~125 caracteres)
 
 | Característica en la primera línea | Fórmula |
 |---|---|
@@ -53,7 +53,7 @@ puntos en la app los distinguen, así que pregúntale al usuario).
   literalmente y sugiere la fórmula más cercana como punto de partida.
 
 Cuando encajan dos, el desempate es el **objetivo principal** (abajo) y la
-superficie: un resultado solo en caption es IG1; el mismo resultado como reel con
+superficie: un resultado solo en descripción es IG1; el mismo resultado como reel con
 pasos es IG10.
 
 ## Paso 4: nombrar el objetivo principal

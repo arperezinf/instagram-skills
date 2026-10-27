@@ -20,7 +20,7 @@
 > IA propios del español.
 
 **9 skills que convierten a Claude Code y Codex en tu equipo de contenido para
-Instagram.** Escriben captions y ganchos de reels con tu voz, dimensionan
+Instagram.** Escriben descripciones y ganchos de reels con tu voz, dimensionan
 hashtags, planifican carruseles y una semana completa de contenido, leen tu
 nicho con datos reales y optimizan tu perfil. A cada borrador se le quitan los
 indicios de IA y espera tu aprobación antes de publicar nada. Tú aportas la
@@ -28,10 +28,10 @@ imagen o el video; las skills escriben las palabras. No hace falta programar.
 
 Una vez instaladas, pídele a Claude Code o Codex cosas como:
 
-- "Escribe un caption para este reel sobre [tema]"
+- "Escribe una descripción para este reel sobre [tema]"
 - "Planifica una semana de posts de Instagram para mi [nicho]"
 - "¿Qué está funcionando en mi nicho ahora?" (lee datos reales vía Apify)
-- "Reescribe este caption para que no suene a IA"
+- "Reescribe esta descripción para que no suene a IA"
 
 La skill correcta se activa sola. Después revisas y apruebas.
 
@@ -53,7 +53,7 @@ La skill correcta se activa sola. Después revisas y apruebas.
   **en inglés**; se citan como tales y no se presentan como medidas en español.
   Donde no hay datos para audiencias hispanohablantes (por ejemplo, horarios),
   las skills lo dicen y recomiendan usar las estadísticas de tu cuenta.
-- Los nombres de las skills (`ig-redactar-caption`, etc.), la biblioteca `lib/` y
+- Los nombres de las skills (`ig-redactar-descripcion`, etc.), la biblioteca `lib/` y
   la integración con Publora, Apify y Pixfaro no cambian.
 
 ## Instalación
@@ -133,9 +133,9 @@ Usa lib/url_parser.py para analizar URLs y lib/publora_client.py para publicar.
 
 ## Qué puedes hacer
 
-**Escribir un caption:**
+**Escribir una descripción:**
 
-> "Escríbeme un caption de Instagram sobre cómo bajé mi tiempo de edición de 6 horas a 47 minutos. Gancho en la primera línea."
+> "Escríbeme una descripción de Instagram sobre cómo bajé mi tiempo de edición de 6 horas a 47 minutos. Gancho en la primera línea."
 
 **Planificar un carrusel:**
 
@@ -151,7 +151,7 @@ Usa lib/url_parser.py para analizar URLs y lib/publora_client.py para publicar.
 
 **Revisar un borrador antes de publicar:**
 
-> "Audita este caption buscando indicios de IA y el gancho de los primeros 125 caracteres: [pega tu texto]"
+> "Audita esta descripción buscando indicios de IA y el gancho de los primeros 125 caracteres: [pega tu texto]"
 
 **Planificar la semana:**
 
@@ -164,19 +164,19 @@ aprobación.
 
 | Skill | Qué hace |
 |------------------------|-----------|
-| **ig-redactar-caption** (redactor de captions) | Redacta un caption con el gancho en los primeros 125 caracteres, un cuerpo fácil de leer y una sola llamada a la acción, con una fórmula de gancho 2026 elegida por objetivo: guardados, compartidos, comentarios o seguidores |
+| **ig-redactar-descripcion** (redactor de descripciones) | Redacta una descripción con el gancho en los primeros 125 caracteres, un cuerpo fácil de leer y una sola llamada a la acción, con una fórmula de gancho 2026 elegida por objetivo: guardados, compartidos, comentarios o seguidores |
 | **ig-planificar-carrusel** (planificador de carruseles) | Planifica un carrusel slide por slide (hasta 10): una slide de gancho que abre un bucle, slides de valor adelantadas y una slide final que consigue el guardado y el seguimiento |
 | **ig-extraer-gancho** (extractor de ganchos) | Analiza el gancho de cualquier reel o carrusel viral. Lo asigna a una de las 10 fórmulas de Instagram y devuelve una plantilla en blanco para completar |
 | **ig-elegir-hashtags** (estratega de hashtags) | Arma un set dimensionado de 3-5 hashtags (nicho / medio / amplio) en el que puedas posicionarte, ajustado al post y priorizando el español. La realidad 2026, no el muro de 30 |
 | **ig-humanizar-texto** (humanizador) | Quita los indicios de IA que notan los lectores en español: vocabulario inflado por densidad, puentes de revelación, ráfagas entrecortadas, tríadas apiladas, sinceridad actuada, lluvias de emojis, calcos del inglés; limita las rayas en lugar de prohibirlas. No promete engañar a los detectores (ninguna edición lo logra de forma confiable). Incluye una auditoría previa a publicar con `--mode audit` |
 | **ig-planificar-semana** (planificador de contenido) | Crea un plan semanal con una mezcla de reels / carruseles / historias, ganchos por día, horarios, una meta de guardados y compartidos y un control de equilibrio de objetivos |
-| **ig-adaptar-contenido** (adaptador) | Convierte un post de LinkedIn, un blog, un guion de YouTube o un hilo de X (también en otro idioma) en un carrusel o caption nativo de Instagram: nuevo gancho antes del corte de 125 caracteres, sin restos de otra plataforma, nunca un copiar y pegar |
+| **ig-adaptar-contenido** (adaptador) | Convierte un post de LinkedIn, un blog, un guion de YouTube o un hilo de X (también en otro idioma) en un carrusel o descripción nativa de Instagram: nuevo gancho antes del corte de 125 caracteres, sin restos de otra plataforma, nunca un copiar y pegar |
 | **ig-optimizar-perfil** (optimizador de perfil) | Audita y reescribe el perfil completo: foto, campo NOMBRE buscable, biografía (150 caracteres), link según el objetivo, categoría, destacadas (portadas, orden, nombres), la primera cuadrícula de 9 y hasta 3 posts fijados, con tarjeta de puntuación y reescrituras antes/después |
 | **ig-analizar-audiencia** (análisis de audiencia) | Lee tu nicho y tu perfil con datos reales vía Apify: escanea un hashtag para ver los posts que circulan ahora (me gusta, comentarios, autor, formato) y obtiene estadísticas de seguidores/posts/biografía de cualquier cuenta, tuya o de un competidor. Instagram oculta quién dio me gusta o comentó, así que es descubrimiento de nicho más estadísticas de perfil, no una lista de quienes interactúan |
 
 ## Todo post de Instagram requiere contenido multimedia
 
-Instagram no permite posts solo de texto. Las skills escriben el caption, el
+Instagram no permite posts solo de texto. Las skills escriben la descripción, el
 gancho, los hashtags y el plan de slides o de tomas. **Tú aportas la imagen o el
 video.** Cuando conectas Publora e indicas tus archivos a una skill, ejecuta el
 flujo de publicación por ti:
@@ -193,7 +193,7 @@ hace los tres pasos en una llamada.
 
 ## Opcional: publicación automática con Publora
 
-Por defecto, las skills redactan el caption para que lo publiques en la app de
+Por defecto, las skills redactan la descripción para que la publiques en la app de
 Instagram con tu contenido. Si quieres que Claude Code o Codex suban tu
 contenido y programen el post directamente, conecta Publora. Lleva unos 2
 minutos.
@@ -216,13 +216,13 @@ contenido de Instagram (borrador, subida, programación) en una llamada.
    ```
 6. Instala dos paquetes de Python: `pip install requests python-dotenv`
 7. Pruébalo pidiéndole a Claude Code: "Programa un post de prueba en Instagram
-   con Publora dentro de 24 horas con esta imagen: [ruta]. Caption: 'probando la
+   con Publora dentro de 24 horas con esta imagen: [ruta]. Descripción: 'probando la
    conexión de la API, lo cancelo desde el panel'." Si Publora devuelve un
    `postGroupId`, está listo. Cancela el post en el panel de Publora antes del
    horario programado.
 
 > **Nota sobre el contenido:** Instagram rechaza los posts solo de texto. Si no
-> le indicas una imagen o video a la skill, devuelve el caption como bloque para
+> le indicas una imagen o video a la skill, devuelve la descripción como bloque para
 > copiar y pegar más un recordatorio de adjuntar el contenido en la app.
 
 ## Opcional: generar ilustraciones con Pixfaro

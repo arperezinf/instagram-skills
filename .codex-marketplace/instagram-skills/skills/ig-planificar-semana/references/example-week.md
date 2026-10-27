@@ -60,5 +60,5 @@ post del día o de uno reciente.
   y `#revisiondeportafolio`, cuyo tamaño hay que verificar en la app; el post de
   lanzamiento suma la etiqueta de marca del curso).
 - Cada post igual necesita la imagen o el video del usuario; el planificador
-  define el enfoque y el formato, las skills de redacción escriben el caption y
+  define el enfoque y el formato, las skills de redacción escriben la descripción y
   el usuario aporta el contenido multimedia.

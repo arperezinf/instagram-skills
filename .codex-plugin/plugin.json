@@ -1,7 +1,7 @@
 {
   "name": "instagram-skills",
-  "description": "9 skills de Claude Code y Codex para marketing en Instagram, en español: captions con gancho en los primeros 125 caracteres, carruseles slide por slide, análisis de ganchos virales, hashtags dimensionados 2026, humanizador de indicios de IA con auditoría previa, adaptación de contenido, optimización de perfil, análisis de nicho vía Apify y plan semanal. Publica con el flujo de borrador, subida y programación de Publora.",
-  "version": "2.0.0",
+  "description": "9 skills de Claude Code y Codex para marketing en Instagram, en español: descripciones con gancho en los primeros 125 caracteres, carruseles slide por slide, análisis de ganchos virales, hashtags dimensionados 2026, humanizador de indicios de IA con auditoría previa, adaptación de contenido, optimización de perfil, análisis de nicho vía Apify y plan semanal. Publica con el flujo de borrador, subida y programación de Publora.",
+  "version": "3.0.0",
   "author": {
     "name": "Serge Bulaev",
     "url": "https://github.com/sergebulaev"
@@ -30,7 +30,7 @@
   "interface": {
     "displayName": "Instagram Skills (español)",
     "shortDescription": "Skills de marketing para Instagram en español para Claude Code y Codex.",
-    "longDescription": "Un paquete de 9 skills de marketing para Instagram en español para Claude Code y Codex: redacción de captions, planificación de carruseles, análisis de ganchos, estrategia de hashtags, humanizador, adaptación entre plataformas, optimización de perfil, análisis de nicho y perfiles vía Apify y planificación semanal de contenido. Los posts se publican con el flujo de borrador, subida de contenido y programación de Publora.",
+    "longDescription": "Un paquete de 9 skills de marketing para Instagram en español para Claude Code y Codex: redacción de descripciones, planificación de carruseles, análisis de ganchos, estrategia de hashtags, humanizador, adaptación entre plataformas, optimización de perfil, análisis de nicho y perfiles vía Apify y planificación semanal de contenido. Los posts se publican con el flujo de borrador, subida de contenido y programación de Publora.",
     "developerName": "Serge Bulaev",
     "category": "Productivity",
     "capabilities": [
@@ -40,7 +40,7 @@
     ],
     "websiteURL": "https://github.com/arperezinf/instagram-skills",
     "defaultPrompt": [
-      "Escribe un caption de Instagram a partir de mis notas.",
+      "Escribe una descripción de Instagram a partir de mis notas.",
       "Planifica un carrusel de 10 slides sobre este tema.",
       "Planifica una semana de reels y carruseles."
     ],

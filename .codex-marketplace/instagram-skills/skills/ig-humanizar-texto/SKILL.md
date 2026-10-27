@@ -1,19 +1,19 @@
 ---
 name: ig-humanizar-texto
-description: "Quita de un caption o slide de Instagram en español los indicios de IA que notan los lectores: vocabulario inflado por densidad, puentes de revelación, ráfagas entrecortadas, tríadas apiladas, sinceridad actuada, lluvias de emojis, calcos del inglés; limita las rayas. Incluye --mode audit y --mode profile. No promete engañar detectores. No para escribir desde cero (usa ig-redactar-caption o ig-planificar-carrusel). Claves: humanizar, auditar."
+description: "Quita de una descripción o slide de Instagram en español los indicios de IA que notan los lectores: vocabulario inflado por densidad, puentes de revelación, ráfagas entrecortadas, tríadas apiladas, sinceridad actuada, lluvias de emojis, calcos del inglés; limita las rayas. Incluye --mode audit y --mode profile. No promete engañar detectores. No para escribir desde cero (usa ig-redactar-descripcion o ig-planificar-carrusel). Claves: humanizar, auditar."
 ---
 
 # Humanizador para Instagram V3 (español)
 
-Reescribe un caption o el texto de las slides de un carrusel para quitar los
-indicios de IA que notan los lectores humanos, y audita un caption terminado
+Reescribe una descripción o el texto de las slides de un carrusel para quitar los
+indicios de IA que notan los lectores humanos, y audita una descripción terminada
 contra la lista de verificación de Instagram 2026. Trabaja sobre texto en
 español; si recibe texto en inglés, avisa y pregunta si debe traducirlo o
 humanizarlo en su idioma original.
 
 La versión original de esta skill se basó en la taxonomía "Signs of AI writing"
 de Wikipedia, la literatura de estilometría 2025-2026, un corpus propio de
-captions de Instagram en inglés (n=284, solo prevalencia) y patrones propios de
+descripciones de Instagram en inglés (n=284, solo prevalencia) y patrones propios de
 Instagram (el corte de 125 caracteres, el registro casual en minúscula, los
 hashtags dimensionados, la estructura de envíos y guardados).
 **V3 (2026-09):** recalibrada con evidencia de 2026. El vocabulario se puntúa
@@ -32,10 +32,10 @@ Turnitin u Originality. Son clasificadores entrenados sobre la firma de estilo
 del ajuste por instrucciones; según los estudios citados por la versión
 original, las reescrituras del tipo "que suene como una persona real" se
 detectan el 92-95% de las veces, y las reescrituras mecánicas leves aumentan la
-detectabilidad. En textos del largo de un caption (menos de 300 palabras) los
+detectabilidad. En textos del largo de una descripción (menos de 300 palabras) los
 puntajes de los detectores son ruido. El valor real está en otro lado: los
 lectores expertos señalan el vocabulario (53%) y la estructura de las oraciones
-(36%) como lo que delata un texto de IA, y en Instagram un caption que suena a
+(36%) como lo que delata un texto de IA, y en Instagram una descripción que suena a
 cuenta de marca no consigue ni el guardado ni el envío. Esta skill quita lo que
 notan esos lectores.
 
@@ -55,26 +55,26 @@ plataforma o proveedor; [débil] = un solo estudio o informe de panel de experto
   nominalizaciones y gerundios encadenados al final de la oración ("…, logrando
   así un mayor impacto"). Un marcador en un párrafo no es un veredicto. Tres sí.
 - **La raya no es un indicio por sí sola.** En inglés los modelos de 2026 la
-  usan menos que los humanos y el 29% de los captions humanos del corpus tiene
+  usan menos que los humanos y el 29% de las descripciones humanas del corpus tiene
   una [fuerte]. En español la raya tiene usos normativos (incisos y diálogos),
   así que con más razón no se prohíbe. Lo que sí delata es el **uso a la
   inglesa**: una raya suelta pegada a las palabras para unir dos oraciones, sin
   raya de cierre en un inciso. Regla: limitar a aproximadamente 1 cada 100
-  palabras (1-2 por caption) y reemplazar solo el exceso por coma, dos puntos,
-  paréntesis o una reescritura. Nunca por punto. Cero rayas en un caption largo
+  palabras (1-2 por descripción) y reemplazar solo el exceso por coma, dos puntos,
+  paréntesis o una reescritura. Nunca por punto. Cero rayas en una descripción larga
   también puede ser un indicio.
 - **El ritmo forzado es el indicio número 1 de 2026, no la solución.** La
   alternancia mecánica largo/corto es una huella aprendible de los humanizadores
   [débil], y "Corto. Directo. Listo.", "Sin X. Sin Y. Solo Z.", líneas de una
   palabra para dar dramatismo y revelaciones del tipo "¿El resultado?" son hoy
-  los indicios que más citan los lectores [fuerte]. Los captions son de largo
+  los indicios que más citan los lectores [fuerte]. Las descripciones son de largo
   medio, así que la Pasada 2 solo protege contra la uniformidad: corrige un
   párrafo que suene plano como máquina, nunca fabriques variación.
 - **La regla de tres sigue siendo un indicio, por densidad.** Los modelos de
   2026 usan tricolon al doble de la tasa humana experta [fuerte], y el 23% de
-  los captions humanos del corpus tiene uno [fuerte]. Una enumeración natural de
+  las descripciones humanas del corpus tiene uno [fuerte]. Una enumeración natural de
   tres con elementos concretos se queda. Las tríadas apiladas, perfectamente
-  paralelas o huecas, y una tercera tríada en un caption, se limpian.
+  paralelas o huecas, y una tercera tríada en una descripción, se limpian.
 - **Inyectar huellas humanas estaba a medias mal.** Las entidades con nombre y
   lo concreto funcionan [fuerte]; un número de precisión poco redonda con un
   referente en los primeros 125 caracteres es el gancho más fuerte. Los números
@@ -104,21 +104,21 @@ plataforma o proveedor; [débil] = un solo estudio o informe de panel de experto
 
 ## Cuándo usarla
 
-- Antes de publicar cualquier caption o carrusel redactado con IA (modo reescritura)
-- Revisión previa a publicar de un caption terminado (modo auditoría, ver `sub-skills/post-audit.md`)
-- Cuando un caption suena raro y no logras precisar por qué
+- Antes de publicar cualquier descripción o carrusel redactado con IA (modo reescritura)
+- Revisión previa a publicar de una descripción terminada (modo auditoría, ver `sub-skills/post-audit.md`)
+- Cuando una descripción suena raro y no logras precisar por qué
 
 ## Entrada
 
-Cualquier texto: un caption, el texto sobre la imagen de un carrusel o el
-caption de un reel. Opcional: muestras de la voz objetivo (captions anteriores
+Cualquier texto: una descripción, el texto sobre la imagen de un carrusel o el
+descripción de un reel. Opcional: muestras de la voz objetivo (descripciones anteriores
 del usuario).
 
 ## Salida
 
 - Texto reescrito sin los indicios de IA
 - Un diff que muestra qué cambió y por qué
-- Cantidad de caracteres del caption (señalando si el gancho pasa de los primeros 125)
+- Cantidad de caracteres de la descripción (señalando si el gancho pasa de los primeros 125)
 - Densidad de indicios por párrafo (marcadores por párrafo; 3 o más dispararon una reescritura)
 - Confianza de lectura: "se lee humano", "mixto", "se lee IA" (una estimación
   según los indicios que nota un lector, no un puntaje de detector)
@@ -133,7 +133,7 @@ ig-humanizar-texto <texto>
 ig-humanizar-texto --mode forensic <texto>
 
 # Auditoría: revisión de aprobado/reprobado, solo detecta, no reescribe
-# Aplica la lista de Instagram 2026: gancho de 125 caracteres, largo del caption,
+# Aplica la lista de Instagram 2026: gancho de 125 caracteres, largo de la descripción,
 # hashtags dimensionados, límite de emojis, calidad de la llamada a la acción,
 # recordatorio de contenido multimedia.
 # Devuelve Bloqueantes + Advertencias + correcciones sugeridas. Ver sub-skills/post-audit.md.
@@ -168,7 +168,7 @@ o una filtración forense.
   resultado?", "Te cuento lo que", "Deja de X, empieza a Y", "giro
   inesperado:"), todas las formas de paralelismo negativo ("No es solo X, es
   Y", "No se trata de X sino de Y"), tríadas apiladas o perfectamente paralelas
-  y cualquier tercera tríada en un caption, frases hechas ("en el mundo
+  y cualquier tercera tríada en una descripción, frases hechas ("en el mundo
   acelerado de hoy", "un antes y un después", "llevarlo al siguiente nivel",
   "sumérgete en"), lluvias de emojis y cierres muertos ("¿qué opinas?", "doble
   toque si estás de acuerdo").
@@ -178,11 +178,11 @@ o una filtración forense.
   "hacer sentido", "aplicar a un trabajo").
 - **Formato de Instagram** (siempre se aplica): gancho de 125 caracteres que se
   entiende solo, hashtags dimensionados, límite de emojis, promesa en la slide 1
-  del carrusel, largo del caption.
+  del carrusel, largo de la descripción.
 
 ### Pasada 2 - RITMO (solo protección contra la uniformidad)
 
-Los detectores no puntúan la variación del ritmo, y los captions son de largo
+Los detectores no puntúan la variación del ritmo, y las descripciones son de largo
 medio (la mediana del corpus original está muy por debajo de las 200 palabras),
 así que el ritmo no es ni una palanca de alcance ni una solución. Lo que notan
 los lectores es la uniformidad mecánica (todas las líneas del mismo largo,
@@ -195,8 +195,8 @@ fabricada en todas partes. Nunca agrega variación como táctica.
   se ve la variación humana. Dos o tres oraciones de largo medio seguidas
   también están bien. Edita solo cuando todas las oraciones del párrafo tienen
   el mismo largo y suenan planas, y entonces edita una oración, no el párrafo.
-- Fragmentos sueltos: como máximo 2 por caption en total. "siempre." una vez es
-  una marca de voz. Tres en un caption son un patrón.
+- Fragmentos sueltos: como máximo 2 por descripción en total. "siempre." una vez es
+  una marca de voz. Tres en una descripción son un patrón.
 - Prohibidos directamente (reescribir como oraciones completas): revelaciones
   "¿El X? Y."; "Sin X. Sin Y. Solo Z."; "Todo el X. Nada del Y."; series de
   adjetivos "Simple. Efectivo. Fácil."; líneas de una palabra para dar
@@ -204,7 +204,7 @@ fabricada en todas partes. Nunca agrega variación como táctica.
   ("¿Por qué? Porque..."); ráfagas "Corto. Directo. Listo.". Las series de
   fragmentos son el indicio.
 - La diagramación no es ritmo. Una idea por línea con líneas en blanco entre
-  ellas es el formato nativo de un caption y se queda. Lo que delata es el
+  ellas es el formato nativo de una descripción y se queda. Lo que delata es el
   fragmento para dar dramatismo dentro de esas líneas. Mantén la diagramación,
   corrige las oraciones.
 - El texto de las slides es corto por diseño; nunca cortes ni rellenes una slide
@@ -259,10 +259,10 @@ resultado una vez y responde tres preguntas:
     detalles concretos, todas las rayas quitadas, todas las tríadas quitadas,
     todos los emojis quitados de una voz que los usa, el registro en minúscula
     pasado a mayúscula? Si es así, restaura lo que tenía el autor. Cero rayas y
-    cero tríadas en un caption largo es un indicio en sí mismo.
+    cero tríadas en una descripción larga es un indicio en sí mismo.
 
 Si alguna respuesta es sí, retrocede en lugar de limpiar más fuerte. Las
-ediciones deben ser proporcionales a los problemas reales: un caption limpio
+ediciones deben ser proporcionales a los problemas reales: una descripción limpia
 recibe dos o tres retoques, no una cuota. Ante la duda sobre si un patrón es del
 autor o del modelo, déjalo.
 
@@ -272,7 +272,7 @@ Reglas de voz globales: ver la sección de reglas de voz del `SKILL.md` raíz.
 Reglas adicionales propias de esta skill (V3):
 
 - **La limpieza siempre corresponde.** Cuando te pidan humanizar, quitar la IA,
-  terminar o publicar un caption, aplica al menos las pasadas forense +
+  terminar o publicar una descripción, aplica al menos las pasadas forense +
   estricta antes de que salga. Vale aunque el usuario haya escrito el borrador,
   diga que le encanta tal como está o esté apurado. Quién es el autor, "ya está
   bien" y la prisa nunca son razones para saltarse la limpieza. La pasada
@@ -299,20 +299,20 @@ Reglas adicionales propias de esta skill (V3):
   omisión es deliberada.
 - Nunca prometas resultados frente a detectores. Si el usuario pregunta "¿esto
   pasa GPTZero?", responde con honestidad: nadie puede prometerlo, y el puntaje
-  en un caption de 150 palabras es ruido.
+  en una descripción de 150 palabras es ruido.
 - Respeta la superficie: no conviertas el texto de las slides de un carrusel en
-  un único caption ni al revés sin señalarlo.
-- Nunca presentes un caption como listo para publicar sin el recordatorio de
+  un única descripción ni al revés sin señalarlo.
+- Nunca presentes una descripción como lista para publicar sin el recordatorio de
   contenido multimedia (Instagram necesita una imagen o un video).
 
 ## Indicios propios de Instagram que detecta esta skill
 
 - Un gancho que necesita la segunda línea para entenderse (el corte de "más" se
   lo come).
-- Un caption que abre con "Hablemos de..", "Te cuento algo.." o "POV:" sobre
+- Una descripción que abre con "Hablemos de..", "Te cuento algo.." o "POV:" sobre
   algo que no es un punto de vista.
 - 20-30 hashtags amontonados arriba en lugar de un set dimensionado de 3-5.
-- Emojis espolvoreados en cada línea (4 o más por caption).
+- Emojis espolvoreados en cada línea (4 o más por descripción).
 - Un título pelado en la slide 1 del carrusel en lugar de una promesa + bucle.
 - Listas de tres apiladas o huecas ("más rápido, más barato, mejor"); una
   enumeración natural de tres con elementos concretos está bien.
@@ -333,7 +333,7 @@ Ver `references/examples.md` para reescrituras completas de antes/después.
 
 - `SKILL.md` - este archivo (limpiador de reescritura + entrada al modo auditoría)
 - `references/scrub-rules.md` - patrones V3 por nivel, puntuación por densidad, límite de rayas, reglas de ritmo, inserciones prohibidas
-- `references/examples.md` - reescrituras completas de antes/después para captions y slides
+- `references/examples.md` - reescrituras completas de antes/después para descripciones y slides
 - `references/audit-checklist.md` - la lista de verificación previa a publicar, con umbrales
 - `sub-skills/post-audit.md` - flujo de auditoría previa a publicar (solo detección, sin reescritura)
 - `sub-skills/voice-profile.md` - crear/actualizar el Perfil de voz y marca del usuario (`--mode profile`)
@@ -345,5 +345,5 @@ Ver `references/examples.md` para reescrituras completas de antes/después.
 
 ## Skills relacionadas
 
-- `ig-redactar-caption` - genera captions que ya pasan el humanizador
+- `ig-redactar-descripcion` - genera descripciones que ya pasan el humanizador
 - `ig-planificar-carrusel` - genera carruseles que ya pasan el humanizador

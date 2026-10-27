@@ -1,8 +1,8 @@
-# Lista de verificación del caption (Instagram)
+# Lista de verificación de la descripción (Instagram)
 
-La lista de limpieza y ajuste que `ig-redactar-caption` aplica a cada caption
+La lista de limpieza y ajuste que `ig-redactar-descripcion` aplica a cada descripción
 antes de mostrar la tarjeta de aprobación. Replica la lista del algoritmo de la
-raíz, con elementos propios del caption.
+raíz, con elementos propios de la descripción.
 
 ## Gancho (los primeros 125 caracteres)
 
@@ -13,7 +13,7 @@ raíz, con elementos propios del caption.
 
 ## Cuerpo
 
-- [ ] Una idea, no tres. El caption defiende un solo punto.
+- [ ] Una idea, no tres. La descripción defiende un solo punto.
 - [ ] Líneas cortas con espacio en blanco entre tramos; sin bloques de texto.
 - [ ] Menos de 2.200 caracteres en total.
 - [ ] Enseña o cuenta la historia que prometió el gancho (sin anzuelo engañoso).
@@ -30,11 +30,11 @@ raíz, con elementos propios del caption.
 - [ ] 3-5 etiquetas dimensionadas (2-3 de nicho, 1-2 medias, 0-1 amplia), no 30.
 - [ ] Cada etiqueta coincide con el contenido real.
 - [ ] Prioridad a etiquetas en español si la audiencia es hispanohablante.
-- [ ] Al final del caption o en el primer comentario, nunca a mitad de oración.
+- [ ] Al final de la descripción o en el primer comentario, nunca a mitad de oración.
 
 ## Limpieza de voz
 
-- [ ] Rayas (`—`) en una cada 100 palabras o menos (1-2 por caption). Una raya
+- [ ] Rayas (`—`) en una cada 100 palabras o menos (1-2 por descripción). Una raya
       sola está bien. Reemplaza solo el exceso, con coma, dos puntos, paréntesis
       o salto de línea, nunca con punto. Sin guiones entre oraciones ni dobles
       guiones (`--`).
@@ -64,7 +64,7 @@ raíz, con elementos propios del caption.
 ## Contenido multimedia
 
 - [ ] El usuario sabe qué imagen o video adjuntar (Instagram necesita contenido).
-- [ ] En un reel, el caption acompaña al video; no es el gancho en sí.
+- [ ] En un reel, la descripción acompaña al video; no es el gancho en sí.
 
 ## Puntuación
 

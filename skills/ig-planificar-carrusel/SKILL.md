@@ -1,6 +1,6 @@
 ---
 name: ig-planificar-carrusel
-description: "Planifica en español un carrusel de Instagram slide por slide, hasta 10, con una slide de gancho que abre un bucle, slides de valor que adelantan la recompensa y una slide final que consigue guardado y seguimiento. Elige una fórmula 2026 (lista, antes/después, derriba mitos, marco de trabajo) por objetivo, redacta el texto de cada slide y el caption, y publica tus imágenes vía Publora. No para captions de una sola imagen (usa ig-redactar-caption)."
+description: "Planifica en español un carrusel de Instagram slide por slide, hasta 10, con una slide de gancho que abre un bucle, slides de valor que adelantan la recompensa y una slide final que consigue guardado y seguimiento. Elige una fórmula 2026 (lista, antes/después, derriba mitos, marco de trabajo) por objetivo, redacta el texto de cada slide y la descripción, y publica tus imágenes vía Publora. No para descripciones de una sola imagen (usa ig-redactar-descripcion)."
 ---
 
 # Planificador de carruseles para Instagram
@@ -8,7 +8,7 @@ description: "Planifica en español un carrusel de Instagram slide por slide, ha
 Planifica un carrusel que se deslice hasta el final y se guarde. Todo el juego
 está en la slide 1 (el gancho que consigue el deslizamiento) y en la última (la
 recompensa que se guarda). Esta skill arma el mapa de cada slide, escribe el
-texto sobre la imagen y redacta el caption que lo acompaña.
+texto sobre la imagen y redacta la descripción que lo acompaña.
 
 Todo el texto se escribe en español neutro, según `../../references/voice-rules.md`,
 salvo que el Perfil de voz indique otra variante.
@@ -31,7 +31,7 @@ salvo que el Perfil de voz indique otra variante.
 
 - El usuario quiere convertir un tema o unas notas en un carrusel de varias slides
 - El usuario tiene una lista, un marco de trabajo o una transformación para enseñar
-- El usuario quiere una estructura slide por slide, no solo un caption
+- El usuario quiere una estructura slide por slide, no solo una descripción
 
 ## Fórmulas que usa esta skill (formas de carrusel)
 
@@ -79,22 +79,22 @@ cada fórmula.
    español el texto ocupa más, así que recorta palabras).
 6. **Escribe la slide final.** Un resumen en una slide que valga la pena
    guardar por sí solo, más un único pedido (guárdalo / sígueme para más).
-7. **Escribe el caption.** El caption acompaña al carrusel (puede ser corto),
+7. **Escribe la descripción.** La descripción acompaña al carrusel (puede ser corta),
    repite el gancho para el corte y lleva los hashtags. Pásalo a
    `ig-elegir-hashtags` o aplica el set dimensionado de 3-5.
-8. **Pasada del humanizador** sobre el texto de las slides y el caption. Elimina
-   el vocabulario de IA por densidad (por slide, por párrafo del caption),
+8. **Pasada del humanizador** sobre el texto de las slides y la descripción. Elimina
+   el vocabulario de IA por densidad (por slide, por párrafo de la descripción),
    limita las rayas (como máximo una por slide, alrededor de una cada 100
-   palabras en el caption; nunca reemplaces una por punto), rompe tríadas
+   palabras en la descripción; nunca reemplaces una por punto), rompe tríadas
    apiladas y puentes de revelación. Las slides son cortas por diseño: nunca
    cortes ni rellenes una slide por ritmo. Revisa la ortografía. Reglas
    canónicas: `ig-humanizar-texto` V3.
 9. **Tarjeta de aprobación.** Muestra: fórmula, el esquema slide por slide con
-   el texto de cada una, el caption, el set de hashtags, el objetivo principal y
+   el texto de cada una, la descripción, el set de hashtags, el objetivo principal y
    un recordatorio de que el usuario aporta 2-10 imágenes (todas imágenes, sin
    mezclar formatos) en este orden.
 10. **Al aprobarse, publica con el contenido.** Llama a `lib.publish(kind="carousel",
-    draft_text=<caption aprobado>, target_url="https://www.instagram.com/",
+    draft_text=<descripción aprobada>, target_url="https://www.instagram.com/",
     media=[<rutas de las imágenes en orden>], platforms=[<INSTAGRAM_PLATFORM_ID>],
     scheduled_time=<iso_o_None>)`. El envoltorio sube cada imagen en orden y
     programa. Sin contenido o sin clave de Publora devuelve el plan como bloque
@@ -150,7 +150,7 @@ Escribe en español el texto que vaya sobre la imagen.
 
 ## Skills relacionadas
 
-- `ig-redactar-caption` - cuando la idea es una imagen única, no un carrusel
+- `ig-redactar-descripcion` - cuando la idea es una imagen única, no un carrusel
 - `ig-elegir-hashtags` - arma el set de hashtags dimensionado
-- `ig-humanizar-texto` - limpia el texto de las slides y el caption
+- `ig-humanizar-texto` - limpia el texto de las slides y la descripción
 - `ig-extraer-gancho` - analiza un carrusel que admiras

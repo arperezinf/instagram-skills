@@ -87,12 +87,12 @@ def manual_mode_message(
     plus a reminder that Instagram needs the image or video attached in the app.
     """
     media_hint = {
-        "post": "adjunta tu imagen y luego pega el caption",
-        "carousel": "agrega tus slides en orden (2-10) y luego pega el caption",
-        "reel": "sube tu video como reel y luego pega el caption",
+        "post": "adjunta tu imagen y luego pega la descripción",
+        "carousel": "agrega tus slides en orden (2-10) y luego pega la descripción",
+        "reel": "sube tu video como reel y luego pega la descripción",
         "story": "sube el contenido de tu historia y luego agrega el texto",
-    }.get(kind, "adjunta tu contenido y luego pega el caption")
-    return f"""Caption aprobado. En la app de Instagram, {media_hint}:
+    }.get(kind, "adjunta tu contenido y luego pega la descripción")
+    return f"""Descripción aprobada. En la app de Instagram, {media_hint}:
 
 ```
 {draft_text}

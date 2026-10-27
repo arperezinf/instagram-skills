@@ -3,7 +3,7 @@
 Instagram premia una forma distinta a la de un feed donde el post se ve
 completo. Hay tres superficies que importan, y cada una tiene su gancho:
 
-- **Gancho del caption** (imagen única o cualquier post): los primeros ~125
+- **Gancho de la descripción** (imagen única o cualquier post): los primeros ~125
   caracteres, antes del corte de "más". Tiene que conseguir el toque por sí solo.
 - **Slide 1 del carrusel:** el gancho visual. Quien lo ve decide en menos de un
   segundo si desliza. La slide 1 promete; la última cumple.
@@ -24,22 +24,22 @@ concreta tiene que ver esto". Los dos amplían el alcance mucho más que un
 | **comentarios** | respuestas e hilos bajo el post | una conversación real le indica al ranking que el post merece mostrarse |
 | **seguidores** | visitas al perfil que convierten | la señal de crecimiento; una slide final que demuestra valor consigue el seguimiento |
 
-Las fórmulas IG1-IG4 son formas **centradas en el caption** (imagen única o
+Las fórmulas IG1-IG4 son formas **centradas en la descripción** (imagen única o
 cualquier post). IG5-IG8 son formas de **carrusel** (slide por slide). IG9-IG10
 son formas de **reel**. Guardados y compartidos son las palancas subestimadas;
 diseña para ellas a propósito.
 
 > Mantén las rayas por debajo del límite en los espacios a completar (alrededor
-> de una cada 100 palabras en el caption terminado; un espacio casi nunca
-> necesita una). Un caption pegado a fuerza de rayas se lee como IA; una sola
+> de una cada 100 palabras en la descripción terminada; un espacio casi nunca
+> necesita una). Una descripción pegada a fuerza de rayas se lee como IA; una sola
 > raya no.
 
 ## Contenido
 
-- IG1 - Resultado con número adelante (caption)
-- IG2 - Verdad a contracorriente (caption)
-- IG3 - Apertura identificable (caption)
-- IG4 - Confesión en mini historia (caption)
+- IG1 - Resultado con número adelante (descripción)
+- IG2 - Verdad a contracorriente (descripción)
+- IG3 - Apertura identificable (descripción)
+- IG4 - Confesión en mini historia (descripción)
 - IG5 - Carrusel de lista (carrusel)
 - IG6 - Transformación antes/después (carrusel)
 - IG7 - Carrusel derriba mitos (carrusel)
@@ -53,9 +53,9 @@ diseña para ellas a propósito.
 
 ---
 
-## IG1 - Resultado con número adelante (caption)
+## IG1 - Resultado con número adelante (descripción)
 
-**Objetivo: guardados.** Caption de imagen única o portada de carrusel. Abre con
+**Objetivo: guardados.** Descripción de imagen única o portada de carrusel. Abre con
 un resultado concreto, de precisión poco redonda, antes del corte.
 
 ```
@@ -73,7 +73,7 @@ Abajo te dejo la configuración en 3 pasos, cópiala.
 ```
 
 **Por qué:** Un número duro en los primeros 125 caracteres frena el scroll y
-promete un método repetible, que es el tipo de caption más guardado. Las cifras
+promete un método repetible, que es el tipo de descripción más guardado. Las cifras
 impares, no redondas (47 minutos, 873 USD), se leen como medición real, no como
 impresión.
 
@@ -82,7 +82,7 @@ comentarios cuesta más alcance del que ganó el post.
 
 ---
 
-## IG2 - Verdad a contracorriente (caption)
+## IG2 - Verdad a contracorriente (descripción)
 
 **Objetivo: compartidos.** Imagen única. Una afirmación filosa y defendible que
 va contra el consejo habitual de tu nicho.
@@ -103,9 +103,9 @@ los comentarios. Publica solo las que defenderías en persona.
 
 ---
 
-## IG3 - Apertura identificable (caption)
+## IG3 - Apertura identificable (descripción)
 
-**Objetivo: comentarios.** Caption de imagen única o reel. Nombra un momento
+**Objetivo: comentarios.** Descripción de imagen única o reel. Nombra un momento
 concreto y compartido, sin preámbulo. Quien lee se ve reflejado y responde.
 
 ```
@@ -128,7 +128,7 @@ genérica desaparece. Lo concreto es todo el trabajo.
 
 ---
 
-## IG4 - Confesión en mini historia (caption)
+## IG4 - Confesión en mini historia (descripción)
 
 **Objetivo: comentarios y seguidores.** Imagen única o reel. Una historia breve
 en primera persona con un costo real o una sorpresa, que termina en lo que
@@ -311,7 +311,7 @@ y superficie.
 
 | Si la idea es... | Usa | Por qué |
 |---|---|---|
-| Un resultado, un número, un momento | imagen única + caption (IG1, IG2, IG3) | el caption lo sostiene |
+| Un resultado, un número, un momento | imagen única + descripción (IG1, IG2, IG3) | la descripción lo sostiene |
 | Una lista educativa numerada | carrusel (IG5) | un elemento por slide consigue el guardado |
 | Una transformación con pasos | carrusel (IG6) | la distancia antes/después empuja a deslizar |
 | Una creencia a corregir | carrusel (IG7) | los pares mito/verdad se envían |
@@ -320,7 +320,7 @@ y superficie.
 
 ## Microrreglas de gancho (propias de Instagram)
 
-- **Los primeros 125 caracteres sostienen el caption.** Todo lo que está después
+- **Los primeros 125 caracteres sostienen la descripción.** Todo lo que está después
   del corte de "más" es para quien ya enganchaste. En español el texto ocupa más:
   cuenta los caracteres, no las palabras.
 - **La slide 1 de un carrusel es una promesa, no un título.** "5 formas de X" le
@@ -338,7 +338,7 @@ y superficie.
 - Inflar una idea de una línea en un carrusel de 10 slides (se nota el relleno y
   abandonan).
 - Abrir la slide 1 con un título pelado y sin promesa.
-- Amontonar 30 hashtags al inicio del caption (ver `hashtag-strategy.md`).
+- Amontonar 30 hashtags al inicio de la descripción (ver `hashtag-strategy.md`).
 - Pedir interacción como cebo ("comenta SÍ", "doble toque si.."). Instagram lo
   penaliza.
 - Mezclar imágenes y videos en un mismo carrusel (la API lo rechaza).

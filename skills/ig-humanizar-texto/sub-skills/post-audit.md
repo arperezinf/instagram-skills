@@ -1,8 +1,8 @@
 # Auditoría de posts de Instagram
 
-Pasa cualquier caption (y el texto de las slides de un carrusel) por la lista de
+Pasa cualquier descripción (y el texto de las slides de un carrusel) por la lista de
 verificación de ranking de Instagram 2026. Detecta indicios de IA, violaciones
-de formato (gancho de 125 caracteres, largo del caption, dimensionamiento de
+de formato (gancho de 125 caracteres, largo de la descripción, dimensionamiento de
 hashtags, emojis), lo que reduce el alcance (cebo de interacción, formatos
 mezclados) y debilidades estructurales antes de publicar. Es el flujo de
 `ig-humanizar-texto --mode audit`: solo detección, sin reescritura. El informe se
@@ -10,13 +10,13 @@ entrega en español.
 
 ## Cuándo usarla
 
-- Antes de publicar un caption o carrusel escrito a mano o redactado con IA
-- Cuando `ig-redactar-caption` o `ig-planificar-carrusel` terminan un borrador (se invoca automáticamente)
+- Antes de publicar una descripción o carrusel escrito a mano o redactado con IA
+- Cuando `ig-redactar-descripcion` o `ig-planificar-carrusel` terminan un borrador (se invoca automáticamente)
 - Cuando un post reciente rindió menos de lo esperado y el usuario quiere un análisis
 
 ## Entrada
 
-- Un caption y, para un carrusel, el texto de las slides
+- Una descripción y, para un carrusel, el texto de las slides
 - Opcional: audiencia objetivo, horario programado, la superficie (imagen / carrusel / reel)
 
 ## Salida
@@ -27,13 +27,13 @@ entrega en español.
   revelación, un anuncio de sinceridad como apertura, cebo de interacción, un
   gancho que se pasa del corte, muros de hashtags, signos de apertura ausentes
 - **Advertencias** (riesgosas para publicar): ráfagas entrecortadas,
-  marcadores de sinceridad o atenuantes a mitad del caption (como apertura son
+  marcadores de sinceridad o atenuantes a mitad de la descripción (como apertura son
   bloqueantes), falta de números con referente, llamada a la acción genérica,
   calcos del inglés
 - **Correcciones sugeridas** para cada problema
 - **Densidad de indicios por párrafo** (marcadores, rayas cada 100 palabras,
   fragmentos, tríadas). Sin puntaje de detector: en textos del largo de un
-  caption son ruido y la skill no promete superarlos
+  descripción son ruido y la skill no promete superarlos
 - **Recomendación de horario** según la audiencia
 
 ## Verificaciones
@@ -41,11 +41,11 @@ entrega en español.
 ### Bloqueantes (reprobado automático)
 
 1. Densidad de rayas por encima de aproximadamente 1 cada 100 palabras (1-2 por
-   caption; más de una en una slide de carrusel); guion entre oraciones; doble
+   descripción; más de una en una slide de carrusel); guion entre oraciones; doble
    guion. Una raya sola no es bloqueante.
 2. El gancho necesita la segunda línea para entenderse (los primeros 125
    caracteres no se sostienen solos).
-3. Caption de más de 2.200 caracteres.
+3. Descripción de más de 2.200 caracteres.
 4. 20-30 hashtags, o hashtags a mitad de oración.
 5. Cebo de interacción ("comenta SÍ", "etiqueta a 3 amigos", "doble toque si
    estás de acuerdo").
@@ -79,16 +79,16 @@ entrega en español.
     afirmación lo permitiría (un número pelado no cumple).
 16. Ninguna entidad con nombre (persona, marca, herramienta).
 17. Regla de tres apilada o perfectamente paralela, una tríada hueca sin
-    elementos concretos, o 3 o más tríadas en el caption (una tríada natural
+    elementos concretos, o 3 o más tríadas en la descripción (una tríada natural
     pasa).
 17a. Acumulación de atenuantes ("quizás", "pareciera que") o un marcador de
-    sinceridad / confesión enmarcada a mitad del caption ("hablemos claro, esto
+    sinceridad / confesión enmarcada a mitad de la descripción ("hablemos claro, esto
     dolió: ..."); el mismo marcador como apertura es el bloqueante 6. Un hecho
     fechado dicho sin rodeos está bien.
 17b. Sobrelimpieza (solo al auditar una reescritura del humanizador con el
     original a mano para comparar; un borrador nuevo que nunca tuvo raya ni
     tríada no está sobrelimpiado): tono uniformemente plano, todas las rayas y
-    tríadas quitadas de un caption largo, desaparecieron los emojis o el
+    tríadas quitadas de una descripción larga, desaparecieron los emojis o el
     registro en minúscula del autor, sin reacción ni opinión en ninguna parte.
 17c. Calcos del inglés: mayúscula en cada palabra de un título, falsos amigos
     ("aplicar a", "eventualmente", "hacer sentido"), pasiva con "ser" innecesaria.
@@ -113,7 +113,7 @@ entrega en español.
 ## Pasos
 
 1. Detecta la superficie: imagen única, carrusel o reel.
-2. Mide el caption: cantidad de caracteres, dónde corta en los primeros 125,
+2. Mide la descripción: cantidad de caracteres, dónde corta en los primeros 125,
    cantidad y tamaño de hashtags, cantidad de emojis, rayas cada 100 palabras.
 3. Ejecuta las verificaciones bloqueantes. Si alguna falla, devuelve
    **REPROBADO** con correcciones concretas; opcionalmente ofrece pasarlo a
@@ -126,4 +126,4 @@ entrega en español.
 ## Relacionadas
 
 - `ig-humanizar-texto` - reescritura proporcional si la auditoría falla
-- `ig-redactar-caption` / `ig-planificar-carrusel` - regenerar con una fórmula probada
+- `ig-redactar-descripcion` / `ig-planificar-carrusel` - regenerar con una fórmula probada

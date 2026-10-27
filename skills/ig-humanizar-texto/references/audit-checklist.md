@@ -8,12 +8,12 @@ palabras, no se prohíben; el ritmo forzado es un indicio.
 
 ## Bloqueantes (reprobado automático)
 
-- [ ] Rayas (`—`) en 1 cada 100 palabras o menos (1-2 por caption; como máximo
+- [ ] Rayas (`—`) en 1 cada 100 palabras o menos (1-2 por descripción; como máximo
       una por slide de carrusel). Una raya sola nunca es bloqueante. Sin guiones
       entre oraciones ni dobles guiones (`--`).
 - [ ] Los primeros 125 caracteres se sostienen solos como gancho (el corte de
       "más" oculta el resto).
-- [ ] Caption dentro de los 2.200 caracteres.
+- [ ] Descripción dentro de los 2.200 caracteres.
 - [ ] 3-5 hashtags dimensionados, no 20-30, nunca a mitad de oración.
 - [ ] Sin cebo de interacción ("comenta SÍ", "etiqueta a 3 amigos", "doble
       toque si").
@@ -46,13 +46,13 @@ palabras, no se prohíben; el ritmo forzado es un indicio.
       bien.
 - [ ] Sin ráfagas entrecortadas ("Corto. Directo. Listo.", "Sin X. Sin Y. Solo
       Z."), sin líneas de una palabra para dar dramatismo, como máximo 2
-      fragmentos sueltos en el caption, sin vaivén largo/corto/largo/corto.
+      fragmentos sueltos en la descripción, sin vaivén largo/corto/largo/corto.
 - [ ] Al menos un número de precisión poco redonda CON un referente nombrado
       donde la afirmación lo permita (un número pelado no cumple).
 - [ ] Al menos una entidad con nombre.
 - [ ] Como máximo una enumeración natural de tres; sin tríadas apiladas o
       perfectamente paralelas, sin tríadas huecas sin elementos concretos, nunca
-      3 o más en un caption.
+      3 o más en una descripción.
 - [ ] Sin acumulación de atenuantes ("quizás", "pareciera que", "puede que me
       equivoque, pero") ni confesiones enmarcadas ("hablemos claro, esto dolió:
       ..."). Un hecho fechado dicho sin rodeos está bien.
@@ -73,12 +73,12 @@ palabras, no se prohíben; el ritmo forzado es un indicio.
 
 | Métrica | Límite |
 |---|---|
-| Caption | 2.200 caracteres (gancho en los primeros ~125) |
+| Descripción | 2.200 caracteres (gancho en los primeros ~125) |
 | Hashtags | 3-5 dimensionados (30 es el tope técnico pero es spam) |
-| Emojis por caption | 0-3 |
-| Rayas | aproximadamente 1 cada 100 palabras (1-2 por caption; 1 por slide) |
+| Emojis por descripción | 0-3 |
+| Rayas | aproximadamente 1 cada 100 palabras (1-2 por descripción; 1 por slide) |
 | Marcadores de vocabulario / gramática por párrafo | 0-2 |
-| Fragmentos sueltos | 2 por caption |
+| Fragmentos sueltos | 2 por descripción |
 | Slides de carrusel | 2-10 |
 | Duración de reel | hasta 3 min; 5-90 s para la pestaña Reels |
 | Relación de aspecto | de 4:5 a 1,91:1 |
@@ -93,4 +93,4 @@ palabras, no se prohíben; el ritmo forzado es un indicio.
   superficie y el recordatorio de contenido multimedia.
 - Informa la densidad de indicios por párrafo (marcadores, rayas cada 100
   palabras, fragmentos, tríadas). No estimes un puntaje de detector: en textos
-  del largo de un caption son ruido y esta skill no promete superarlos.
+  del largo de una descripción son ruido y esta skill no promete superarlos.

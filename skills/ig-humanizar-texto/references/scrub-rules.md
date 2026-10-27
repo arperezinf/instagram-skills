@@ -59,10 +59,10 @@ def score_paragraph(paragraph: str, markers: dict) -> dict:
 Reglas de aplicación:
 - Puntúa los marcadores forenses por separado: una coincidencia = borrar, sin
   umbral de densidad.
-- Los conteos por caption también importan en dos patrones: tríadas (3 o más
-  por caption = limpiar hasta dejar la primera natural; una o dos tríadas
+- Los conteos por descripción también importan en dos patrones: tríadas (3 o más
+  por descripción = limpiar hasta dejar la primera natural; una o dos tríadas
   naturales pasan, el mismo umbral que usa la auditoría) y fragmentos sueltos
-  (3 o más por caption = unirlos, ver Pasada 2).
+  (3 o más por descripción = unirlos, ver Pasada 2).
 - Nunca reemplaces una palabra por un sinónimo de la misma lista. "Potenciar"
   por "impulsar" no es una corrección.
 - Cuando reescribas un párrafo, hazlo en el registro del autor (lo casual en
@@ -87,11 +87,11 @@ cuanto aparecen.
 ### Límite de rayas (aproximadamente 1 cada 100 palabras)
 
 El carácter no es un indicio por sí solo. En inglés, según la versión original,
-los modelos de 2026 usan menos rayas que los humanos y el 29% de los captions
+los modelos de 2026 usan menos rayas que los humanos y el 29% de las descripciones
 humanos de su corpus tiene una. En español, además, la raya es normativa para
-incisos (—así—) y diálogos. Prohibirla por completo esteriliza los captions.
+incisos (—así—) y diálogos. Prohibirla por completo esteriliza las descripciones.
 Lo que sigue siendo forense es el hábito de pegar oraciones con rayas: 3 o más
-en un caption corto.
+en una descripción corta.
 
 Indicio específico del español: la **raya a la inglesa**, usada sola y sin raya
 de cierre para unir dos oraciones ("Probé todo — nada funcionó"). En un inciso
@@ -101,7 +101,7 @@ dos oraciones, reemplázala por dos puntos, coma o punto y coma.
 
 ```python
 def em_dash_excess(text: str) -> int:
-    """Devuelve cuántas rayas superan el límite (~1 cada 100 palabras, mínimo 1, máximo 2 por caption).
+    """Devuelve cuántas rayas superan el límite (~1 cada 100 palabras, mínimo 1, máximo 2 por descripción).
     0 = no tocar ninguna raya. Una slide de carrusel cuenta como unidad propia con límite 1.
     Un par de rayas que abre y cierra un mismo inciso cuenta como 1."""
     words = len(text.split())
@@ -135,7 +135,7 @@ marcadores de sinceridad se limpian con una sola aparición.
 - Guion corto (`–`) entre oraciones -> coma. Los rangos numéricos (7-9) se quedan.
 - Las rayas se manejan con `em_dash_excess()` de arriba, no se eliminan todas.
 - Signos de apertura ausentes ("Qué opinas?", "Increíble!") -> agregar ¿ ¡.
-- Exceso de signos de exclamación (¡¡¡!!! o más de 2 exclamaciones por caption)
+- Exceso de signos de exclamación (¡¡¡!!! o más de 2 exclamaciones por descripción)
   -> dejar como máximo una, salvo que sea la voz del autor.
 
 ### Vocabulario: marcadores en español (puntuados por densidad)
@@ -193,7 +193,7 @@ GRAMMAR_MARKERS = {
 
 ### Capa de modismos de modelo (puntuados por densidad)
 
-Frases que funcionan como muletillas de modelo en captions en español, muchas
+Frases que funcionan como muletillas de modelo en descripciones en español, muchas
 calcadas del inglés. Cada una cuenta como un marcador; "léelo de nuevo" y "esa
 es la verdadera historia" se limpian con una sola aparición como cierres.
 
@@ -236,12 +236,12 @@ todas sus variantes ("La pregunta no es X, es Y", "Esto no es X. Esto es Y.",
 "No solo X, sino también Y" usada como gancho). Reescribe como dos afirmaciones
 sin depender de una sustitución automática, y señálalo al usuario porque
 conservar el significado requiere criterio. En el corpus de la versión original
-ningún caption humano usaba esta forma.
+ninguna descripción humana usaba esta forma.
 
 ### Regla de tres (estricta por densidad; se permite una tríada natural)
 
 En inglés, los modelos de 2026 usan tricolon al doble de la tasa humana experta,
-y el 23% de los captions humanos del corpus tiene uno. El indicio es la tríada
+y el 23% de las descripciones humanas del corpus tiene uno. El indicio es la tríada
 apilada o perfectamente paralela, la hueca y la repetida, no la forma.
 
 ```python
@@ -287,10 +287,10 @@ def hollow(t: "re.Match", text: str) -> bool:
     return (not has_receipt()) and all_abstract
 
 def triad_action(triads: list, text: str) -> list:
-    """Se llama una vez por caption con sus tríadas (de detect_triads(text)). Limpia de inmediato toda tríada
+    """Se llama una vez por descripción con sus tríadas (de detect_triads(text)). Limpia de inmediato toda tríada
     hueca. Las tríadas naturales (concretas, no intercambiables) se deciden por densidad, con el MISMO umbral
-    que la auditoría: una o dos pasan; con 3 o más en el caption se limpia hasta dejar la PRIMERA natural.
-    El modo reescritura nunca es más duro que el modo auditoría. El umbral es por caption."""
+    que la auditoría: una o dos pasan; con 3 o más en la descripción se limpia hasta dejar la PRIMERA natural.
+    El modo reescritura nunca es más duro que el modo auditoría. El umbral es por descripción."""
     actions = []
     over_density = len(triads) >= 3
     kept_one = False
@@ -332,7 +332,7 @@ premia.
 
 ### Lluvias de emojis
 
-- 4 o más emojis en un caption, o un emoji en cada línea: reducir a 0-3 ubicados
+- 4 o más emojis en una descripción, o un emoji en cada línea: reducir a 0-3 ubicados
   con intención.
 - La firma de emojis de IA de 2024-25 (cohete, destellos, fuego, 100, manos
   levantadas seguidos) se limpia con una sola aparición como conjunto. No dejes
@@ -371,7 +371,7 @@ copió patrones del inglés. Cada uno cuenta como un marcador.
   `../../../references/hashtag-strategy.md`).
 - Un título pelado en la slide 1 del carrusel: reescribir como promesa + bucle
   abierto.
-- Un caption de más de 2.200 caracteres: ajustarlo.
+- Una descripción de más de 2.200 caracteres: ajustarlo.
 - Texto sobre la imagen de las slides: como máximo una raya por slide, y solo si
   cumple una función real; las slides son cortas.
 
@@ -380,7 +380,7 @@ copió patrones del inglés. Cada uno cuenta como un marcador.
 ## Pasada 2 - Ritmo (solo protección contra la uniformidad)
 
 Reemplaza el "ROMPER (forzar variación)" de V2. Los detectores no puntúan la
-variación del ritmo (GPTZero lo abandonó en 2023). Los captions son de largo
+variación del ritmo (GPTZero lo abandonó en 2023). Las descripciones son de largo
 medio y, en las plataformas con datos de interacción de la versión original, la
 variación del largo de las oraciones es neutra o negativa, así que el ritmo no
 es una palanca de alcance. Lo que sí notan los lectores es la uniformidad plana
@@ -422,7 +422,7 @@ def restore_rhythm(text: str) -> str:
         sents = split_sentences(p)
         lengths = [len(s.split()) for s in sents]
 
-        # 2. Limita los fragmentos sueltos a 2 por CAPTION, no por párrafo. Solo cuentan los fragmentos reales;
+        # 2. Limita los fragmentos sueltos a 2 por DESCRIPCIÓN, no por párrafo. Solo cuentan los fragmentos reales;
         #    "Funcionó. Subieron las ventas. Volvieron los clientes." son tres oraciones cortas, no tres fragmentos.
         for j, s in enumerate(sents):
             if is_standalone_fragment(s):
@@ -451,7 +451,7 @@ def restore_rhythm(text: str) -> str:
             sents[k - 1] = join_with_clause(sents[k - 1], sents[k])
             del sents[k]
 
-        # 5. Captions de una idea por línea (cada párrafo una oración) y slides de carrusel: no tocar el ritmo.
+        # 5. Descripciones de una idea por línea (cada párrafo una oración) y slides de carrusel: no tocar el ritmo.
 
         paragraphs[i] = rejoin_keeping_breaks(p, sents)   # vuelve a poner los saltos de línea propios del párrafo; la pasada edita oraciones, nunca saltos
 
@@ -459,7 +459,7 @@ def restore_rhythm(text: str) -> str:
 ```
 
 Diagramación frente a ritmo: las líneas de una oración con líneas en blanco
-entre ellas son la diagramación nativa de un caption de Instagram y esta pasada
+entre ellas son la diagramación nativa de una descripción de Instagram y esta pasada
 **no** las toca. "Hice crecer una cuenta de 0 a 10.000 en 4 meses." en su propia
 línea es diagramación. "Todavía." en su propia línea es fragmento para dar
 dramatismo. La pasada edita oraciones, nunca los saltos de línea.
@@ -490,7 +490,7 @@ SINCERITY_MARKERS = [
 - El registro casual en minúscula si así escribe el usuario
 - `..` como pausa suave y los saltos de línea simples como tramos
 - Uno o dos fragmentos usados a propósito ("siempre.") - el límite es 2 por
-  caption, no 0
+  descripción, no 0
 - Una raya cada ~100 palabras, y los incisos bien abiertos y cerrados con raya.
   No lleves la cantidad a cero
 - Una enumeración natural de tres con elementos concretos y no intercambiables
@@ -503,7 +503,7 @@ SINCERITY_MARKERS = [
 - Números concretos con referentes y entidades con nombre (agrega MÁS, nunca quites)
 - Detalles sensoriales en primera persona
 - Las reacciones y opiniones del autor, incluso una tajante. Un tono plano en
-  todo el caption es una huella del humanizador
+  todo la descripción es una huella del humanizador
 - Un único marcador común en un párrafo ("fundamental", "robusto" como término
   técnico). Uno no es un veredicto
-- Su historia real. Nunca inventes un detalle para que un caption funcione
+- Su historia real. Nunca inventes un detalle para que una descripción funcione

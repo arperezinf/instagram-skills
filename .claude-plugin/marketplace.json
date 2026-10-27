@@ -5,14 +5,14 @@
     "url": "https://github.com/arperezinf"
   },
   "metadata": {
-    "description": "Skills de Claude Code y Codex en español para crecer en Instagram: captions con gancho en los primeros 125 caracteres, planificación de carruseles slide por slide, análisis de ganchos virales, dimensionamiento de hashtags 2026, humanizador de indicios de IA adaptado al español con auditoría previa y planificación semanal. Los posts se publican con el flujo multimedia de la API de Publora."
+    "description": "Skills de Claude Code y Codex en español para crecer en Instagram: descripciones con gancho en los primeros 125 caracteres, planificación de carruseles slide por slide, análisis de ganchos virales, dimensionamiento de hashtags 2026, humanizador de indicios de IA adaptado al español con auditoría previa y planificación semanal. Los posts se publican con el flujo multimedia de la API de Publora."
   },
   "plugins": [
     {
       "name": "instagram-skills",
       "source": "./",
-      "description": "Paquete de 9 skills de marketing para Instagram en español: fórmulas de gancho, captions con los primeros 125 caracteres al frente, carruseles de 10 slides, análisis de ganchos virales, hashtags 2026, humanizador adaptado al español con auditoría, adaptación entre plataformas, optimizador de perfil, lector de nicho con Apify y plan semanal. Publica con el flujo de Publora.",
-      "version": "2.0.0",
+      "description": "Paquete de 9 skills de marketing para Instagram en español: fórmulas de gancho, descripciones con los primeros 125 caracteres al frente, carruseles de 10 slides, análisis de ganchos virales, hashtags 2026, humanizador adaptado al español con auditoría, adaptación entre plataformas, optimizador de perfil, lector de nicho con Apify y plan semanal. Publica con el flujo de Publora.",
+      "version": "3.0.0",
       "author": {
         "name": "Serge Bulaev",
         "url": "https://github.com/sergebulaev"

@@ -28,7 +28,7 @@ como spam.
 ## Hashtags en español
 
 - **Para una audiencia hispanohablante, prioriza hashtags en español.** Atraen a
-  la audiencia que de verdad va a leer el caption, y eso mejora guardados y
+  la audiencia que de verdad va a leer la descripción, y eso mejora guardados y
   envíos.
 - **No traduzcas un hashtag inglés y asumas el mismo tamaño.** El equivalente en
   español puede tener una cantidad de publicaciones muy distinta. Verifica el
@@ -38,7 +38,7 @@ como spam.
   verdad tu comunidad.
 - **Mezclar idiomas está bien** si tu audiencia es bilingüe o el término técnico
   se usa en inglés (por ejemplo `#ux`), pero no pongas hashtags en inglés solo
-  porque son más grandes: atraen a gente que no va a entender el caption.
+  porque son más grandes: atraen a gente que no va a entender la descripción.
 
 ## Por qué gana el nicho
 
@@ -92,8 +92,8 @@ conteo de cada etiqueta en la app antes de usarla.
 
 ## Ubicación
 
-- **Al final del caption** o **en el primer comentario**: las dos funcionan y el
-  alcance es el mismo. El primer comentario deja el caption limpio. Nunca pongas
+- **Al final de la descripción** o **en el primer comentario**: las dos funcionan y el
+  alcance es el mismo. El primer comentario deja la descripción limpia. Nunca pongas
   hashtags a mitad de una oración.
 - **No** repitas el mismo bloque de 5 etiquetas en todos los posts para siempre.
   Instagram puede interpretar sets idénticos en muchos posts como comportamiento
@@ -110,7 +110,7 @@ conteo de cada etiqueta en la app antes de usarla.
 
 ## Qué no hacer
 
-- 20-30 hashtags amontonados al inicio del caption. Es el indicio de spam de
+- 20-30 hashtags amontonados al inicio de la descripción. Es el indicio de spam de
   2026.
 - Copiar y pegar un "paquete de hashtags virales" de etiquetas amplias y
   genéricas. Te mete en un feed imposible de ganar contra millones de posts.
@@ -122,7 +122,7 @@ conteo de cada etiqueta en la app antes de usarla.
 ## Plantilla rápida
 
 ```
-[texto del caption]
+[texto de la descripción]
 .
 #etiquetaNicho1 #etiquetaNicho2 #etiquetaNicho3 #etiquetaMedia1 #etiquetaAmpliaOOmitir
 ```

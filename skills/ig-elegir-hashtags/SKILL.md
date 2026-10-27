@@ -1,6 +1,6 @@
 ---
 name: ig-elegir-hashtags
-description: "Arma un set dimensionado de hashtags para un post de Instagram según la realidad 2026: 3 a 5 bien elegidos le ganan a 30 al azar. Clasifica cada etiqueta como nicho (menos de 50 mil posts), media (50 a 500 mil) o amplia (más de 500 mil) y arma una mezcla de 2-3 nicho, 1-2 medias y 0-1 amplia donde una cuenta chica pueda posicionarse, priorizando el español y rotando para evitar spam. No para escribir el caption (usa ig-redactar-caption)."
+description: "Arma un set dimensionado de hashtags para un post de Instagram según la realidad 2026: 3 a 5 bien elegidos le ganan a 30 al azar. Clasifica cada etiqueta como nicho (menos de 50 mil posts), media (50 a 500 mil) o amplia (más de 500 mil) y arma una mezcla de 2-3 nicho, 1-2 medias y 0-1 amplia donde una cuenta chica pueda posicionarse, priorizando el español y rotando para evitar spam. No para escribir la descripción (usa ig-redactar-descripcion)."
 ---
 
 # Estratega de hashtags para Instagram
@@ -26,7 +26,7 @@ las amplias de millones de posts. Esta skill arma el set dimensionado.
 
 ## Cuándo usarla
 
-- El usuario tiene un caption, carrusel o reel y necesita hashtags
+- El usuario tiene una descripción, carrusel o reel y necesita hashtags
 - El usuario todavía publica 20-30 etiquetas genéricas y quiere el enfoque 2026
 - El usuario quiere etiquetas dimensionadas según dónde su cuenta puede posicionarse
 
@@ -57,7 +57,7 @@ más grandes.
 
 ## Pasos
 
-1. **Obtén el post.** El caption, el tema del carrusel o el asunto del reel, más
+1. **Obtén el post.** La descripción, el tema del carrusel o el asunto del reel, más
    la audiencia objetivo y el tamaño aproximado de la cuenta (para que la
    división nicho/medio encaje).
 2. **Extrae los temas.** Saca los 3-5 temas reales del post (el asunto, la
@@ -80,7 +80,7 @@ más grandes.
    un mismo bloque en todos los posts (sets idénticos en muchos posts se leen
    como automatización).
 8. **Entrega.** El set de 3-5, cada etiqueta con su nivel y una línea de por qué,
-   más la indicación de ubicación (final del caption o primer comentario).
+   más la indicación de ubicación (final de la descripción o primer comentario).
 
 ## Formato de salida
 
@@ -91,7 +91,7 @@ Set dimensionado (4 etiquetas):
   #productividad           medio    audiencia tibia y relevante, superable
   #notion                  amplio   etiqueta de categoría, un solo toque
 
-Ubicación: al final del caption o en el primer comentario. Rota las de nicho según el tema.
+Ubicación: al final de la descripción o en el primer comentario. Rota las de nicho según el tema.
 Verifica en el buscador de la app el conteo de cada etiqueta antes de publicar.
 ```
 
@@ -108,7 +108,7 @@ Reglas adicionales propias de esta skill:
 - Como máximo una etiqueta amplia; quítala si ninguna encaja.
 - Señala y elimina etiquetas de granja de interacción (`#follow4follow`,
   `#like4like`) y cualquier etiqueta marcada conocida.
-- Los hashtags van al final del caption o en el primer comentario, nunca a mitad
+- Los hashtags van al final de la descripción o en el primer comentario, nunca a mitad
   de una oración.
 - Rota los sets según el tema; no le des al usuario un bloque para pegar siempre.
 - Nunca presentes un conteo de posts como verificado si no lo viste; marca las
@@ -130,6 +130,6 @@ Reglas adicionales propias de esta skill:
 
 ## Skills relacionadas
 
-- `ig-redactar-caption` - escribe el caption al que se suman los hashtags
-- `ig-planificar-carrusel` - el carrusel cuyo caption lleva el set
+- `ig-redactar-descripcion` - escribe la descripción al que se suman los hashtags
+- `ig-planificar-carrusel` - el carrusel cuyo descripción lleva el set
 - `ig-planificar-semana` - rota los temas de etiquetas a lo largo de la semana

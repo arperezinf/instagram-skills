@@ -1,13 +1,13 @@
 # Desgloses completos (Instagram)
 
 Tres desgloses que muestran la salida que produce `ig-extraer-gancho`: un
-caption, un carrusel y un reel. Los captions son ilustrativos, no posts reales.
+descripción, un carrusel y un reel. Las descripciones son ilustrativos, no posts reales.
 
 ---
 
-## Ejemplo 1: caption (imagen única)
+## Ejemplo 1: descripción (imagen única)
 
-**Caption pegado (primera línea):**
+**Descripción pegada (primera línea):**
 > Borré 4.000 de mis 6.000 suscriptores de email y mi tasa de apertura se duplicó.
 
 **Desglose:**
@@ -16,7 +16,7 @@ caption, un carrusel y un reel. Los captions son ilustrativos, no posts reales.
   adelante (0,6). Los números de precisión poco redonda tiran hacia IG1, pero el
   movimiento es a contracorriente (borrar suscriptores), así que se lee
   principalmente como IG2.
-- **Superficie:** imagen única. Toda la idea entra en el caption; la imagen es
+- **Superficie:** imagen única. Toda la idea entra en la descripción; la imagen es
   un apoyo visual.
 - **Gancho (primeros 125 caracteres):** la acción a contracorriente dicha sin
   rodeos, con dos números reales (4.000 de 6.000) que la hacen pegar. Sin
