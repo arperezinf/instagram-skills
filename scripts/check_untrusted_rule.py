@@ -29,8 +29,8 @@ CITES = "references/untrusted-content.md"
 
 #: Skills whose input is content somebody else wrote.
 REQUIRED = {
-    "ig-audience-insights",
-    "ig-hook-extractor",
+    "ig-analizar-audiencia",
+    "ig-extraer-gancho",
 }
 
 #: Calls that return text somebody else wrote.

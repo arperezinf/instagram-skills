@@ -13,7 +13,7 @@ Este repositorio es un fork traducido y adaptado al español de
   la documentación está en **español neutro**, con tuteo y sin regionalismos.
   Los textos que generan las skills también salen en español neutro salvo que el
   Perfil de voz del usuario indique otra variante.
-- **No se traducen**: nombres de skills (`ig-caption-writer`, etc.), nombres de
+- **No se traducen**: nombres de skills (`ig-redactar-caption`, etc.), nombres de
   archivos, rutas, identificadores de código, funciones de `lib/`, nombres de
   campos de API, claves del bloque de Estado de `voice-profile.md` (`filled`,
   `source`, `updated`) y valores que leen los scripts.
@@ -119,7 +119,7 @@ Este repositorio es un fork traducido y adaptado al español de
 - Las referencias locales de una skill van en `skills/<skill>/references/`.
   Cítalas desde la skill como `references/X.md`. Cita las de la raíz desde las
   skills como `../../references/X.md`.
-- `ig-humanizer` tiene `sub-skills/` para el flujo de auditoría incorporado. No
+- `ig-humanizar-texto` tiene `sub-skills/` para el flujo de auditoría incorporado. No
   repitas este patrón en otras skills sin una razón clara.
 
 ## Separación de capas
@@ -141,7 +141,7 @@ Este repositorio es un fork traducido y adaptado al español de
   nivel Publora cuando se pasan rutas de archivos en `media`; si no, devuelve el
   bloque de caption para copiar con un recordatorio de contenido.
 - **Por defecto no se incluye una capa de lectura de posts.** No hay un actor de
-  lectura de posts de Instagram barato y documentado conectado. `ig-hook-extractor`
+  lectura de posts de Instagram barato y documentado conectado. `ig-extraer-gancho`
   le pide al usuario que pegue el caption (y el gancho de las slides o del reel).
   Si más adelante se agrega un actor de lectura de Instagram, condiciónalo a
   `APIFY_TOKEN` y mantén la alternativa de pegar.

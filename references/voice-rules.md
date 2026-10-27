@@ -49,7 +49,7 @@ de hashtags) y remiten a este archivo.
 
 Cuéntalos por párrafo. Uno es español normal; dos es zona gris (márcalo en el
 informe y deja las palabras); tres en un mismo párrafo se lee como IA y el
-párrafo completo se reescribe (ver `ig-humanizer` V3).
+párrafo completo se reescribe (ver `ig-humanizar-texto` V3).
 
 Marcadores típicos del texto generado por IA en español:
 - **Verbos inflados:** potenciar, impulsar, optimizar, fomentar, aprovechar al

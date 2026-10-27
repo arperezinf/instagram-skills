@@ -1,7 +1,7 @@
 # Perfil de voz y marca
 
 Tu voz, tu nicho y tus reglas en un solo lugar. Complétalo una vez (o deja que
-`ig-humanizer` lo arme a partir de algunos de tus posts reales) y todas las
+`ig-humanizar-texto` lo arme a partir de algunos de tus posts reales) y todas las
 skills de redacción de este paquete lo leerán antes de escribir, para que no
 tengas que volver a explicar quién eres en cada pedido. Este archivo es tuyo:
 edítalo con libertad. Nada de lo que pongas acá se envía a ningún lado; solo

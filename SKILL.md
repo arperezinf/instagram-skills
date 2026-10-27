@@ -17,15 +17,15 @@ se respeta esa.
 
 ## Cuándo usar este paquete
 
-- **Escribir un caption** (gancho en los primeros 125 caracteres, cuerpo, llamada a la acción) -> usa `ig-caption-writer`
-- **Planificar un carrusel** slide por slide (de la slide de gancho a la slide final) -> usa `ig-carousel-planner`
-- **Analizar el gancho** de un reel o carrusel viral -> usa `ig-hook-extractor`
-- **Dimensionar hashtags** (la realidad de 3-5 nicho/medio/amplio, no 30) -> usa `ig-hashtag-strategist`
-- **Quitar indicios de IA de un caption o auditarlo antes de publicar** -> usa `ig-humanizer` (reescritura más `--mode audit`, que incluye la subherramienta de auditoría)
-- **Planificar una semana** de reels, carruseles e historias -> usa `ig-content-planner`
-- **Adaptar contenido de otras plataformas** (un post de LinkedIn, un blog, un guion de YouTube o un hilo de X, también en otro idioma) a un carrusel o caption nativo de Instagram -> usa `ig-repurposer`
-- **Auditar y reescribir el perfil** (foto, campo NOMBRE, biografía, link, destacadas, primera cuadrícula de 9, posts fijados) -> usa `ig-profile-optimizer`
-- **Leer tu nicho y las estadísticas de perfiles con datos reales** (escanear un hashtag para ver qué funciona, sacar seguidores y posts tuyos o de un competidor) -> usa `ig-audience-insights`
+- **Escribir un caption** (gancho en los primeros 125 caracteres, cuerpo, llamada a la acción) -> usa `ig-redactar-caption`
+- **Planificar un carrusel** slide por slide (de la slide de gancho a la slide final) -> usa `ig-planificar-carrusel`
+- **Analizar el gancho** de un reel o carrusel viral -> usa `ig-extraer-gancho`
+- **Dimensionar hashtags** (la realidad de 3-5 nicho/medio/amplio, no 30) -> usa `ig-elegir-hashtags`
+- **Quitar indicios de IA de un caption o auditarlo antes de publicar** -> usa `ig-humanizar-texto` (reescritura más `--mode audit`, que incluye la subherramienta de auditoría)
+- **Planificar una semana** de reels, carruseles e historias -> usa `ig-planificar-semana`
+- **Adaptar contenido de otras plataformas** (un post de LinkedIn, un blog, un guion de YouTube o un hilo de X, también en otro idioma) a un carrusel o caption nativo de Instagram -> usa `ig-adaptar-contenido`
+- **Auditar y reescribir el perfil** (foto, campo NOMBRE, biografía, link, destacadas, primera cuadrícula de 9, posts fijados) -> usa `ig-optimizar-perfil`
+- **Leer tu nicho y las estadísticas de perfiles con datos reales** (escanear un hashtag para ver qué funciona, sacar seguidores y posts tuyos o de un competidor) -> usa `ig-analizar-audiencia`
 
 ## Patrón central
 

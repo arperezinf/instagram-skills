@@ -1,7 +1,7 @@
 {
   "name": "instagram-skills",
   "description": "9 skills de Claude Code y Codex para marketing en Instagram, en español: captions con gancho en los primeros 125 caracteres, carruseles slide por slide, análisis de ganchos virales, hashtags dimensionados 2026, humanizador de indicios de IA con auditoría previa, adaptación de contenido, optimización de perfil, análisis de nicho vía Apify y plan semanal. Publica con el flujo de borrador, subida y programación de Publora.",
-  "version": "1.0.35",
+  "version": "2.0.0",
   "author": {
     "name": "Serge Bulaev",
     "url": "https://github.com/sergebulaev"

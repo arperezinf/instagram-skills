@@ -53,7 +53,7 @@ La skill correcta se activa sola. Después revisas y apruebas.
   **en inglés**; se citan como tales y no se presentan como medidas en español.
   Donde no hay datos para audiencias hispanohablantes (por ejemplo, horarios),
   las skills lo dicen y recomiendan usar las estadísticas de tu cuenta.
-- Los nombres de las skills (`ig-caption-writer`, etc.), la biblioteca `lib/` y
+- Los nombres de las skills (`ig-redactar-caption`, etc.), la biblioteca `lib/` y
   la integración con Publora, Apify y Pixfaro no cambian.
 
 ## Instalación
@@ -164,15 +164,15 @@ aprobación.
 
 | Skill | Qué hace |
 |------------------------|-----------|
-| **ig-caption-writer** (redactor de captions) | Redacta un caption con el gancho en los primeros 125 caracteres, un cuerpo fácil de leer y una sola llamada a la acción, con una fórmula de gancho 2026 elegida por objetivo: guardados, compartidos, comentarios o seguidores |
-| **ig-carousel-planner** (planificador de carruseles) | Planifica un carrusel slide por slide (hasta 10): una slide de gancho que abre un bucle, slides de valor adelantadas y una slide final que consigue el guardado y el seguimiento |
-| **ig-hook-extractor** (extractor de ganchos) | Analiza el gancho de cualquier reel o carrusel viral. Lo asigna a una de las 10 fórmulas de Instagram y devuelve una plantilla en blanco para completar |
-| **ig-hashtag-strategist** (estratega de hashtags) | Arma un set dimensionado de 3-5 hashtags (nicho / medio / amplio) en el que puedas posicionarte, ajustado al post y priorizando el español. La realidad 2026, no el muro de 30 |
-| **ig-humanizer** (humanizador) | Quita los indicios de IA que notan los lectores en español: vocabulario inflado por densidad, puentes de revelación, ráfagas entrecortadas, tríadas apiladas, sinceridad actuada, lluvias de emojis, calcos del inglés; limita las rayas en lugar de prohibirlas. No promete engañar a los detectores (ninguna edición lo logra de forma confiable). Incluye una auditoría previa a publicar con `--mode audit` |
-| **ig-content-planner** (planificador de contenido) | Crea un plan semanal con una mezcla de reels / carruseles / historias, ganchos por día, horarios, una meta de guardados y compartidos y un control de equilibrio de objetivos |
-| **ig-repurposer** (adaptador) | Convierte un post de LinkedIn, un blog, un guion de YouTube o un hilo de X (también en otro idioma) en un carrusel o caption nativo de Instagram: nuevo gancho antes del corte de 125 caracteres, sin restos de otra plataforma, nunca un copiar y pegar |
-| **ig-profile-optimizer** (optimizador de perfil) | Audita y reescribe el perfil completo: foto, campo NOMBRE buscable, biografía (150 caracteres), link según el objetivo, categoría, destacadas (portadas, orden, nombres), la primera cuadrícula de 9 y hasta 3 posts fijados, con tarjeta de puntuación y reescrituras antes/después |
-| **ig-audience-insights** (análisis de audiencia) | Lee tu nicho y tu perfil con datos reales vía Apify: escanea un hashtag para ver los posts que circulan ahora (me gusta, comentarios, autor, formato) y obtiene estadísticas de seguidores/posts/biografía de cualquier cuenta, tuya o de un competidor. Instagram oculta quién dio me gusta o comentó, así que es descubrimiento de nicho más estadísticas de perfil, no una lista de quienes interactúan |
+| **ig-redactar-caption** (redactor de captions) | Redacta un caption con el gancho en los primeros 125 caracteres, un cuerpo fácil de leer y una sola llamada a la acción, con una fórmula de gancho 2026 elegida por objetivo: guardados, compartidos, comentarios o seguidores |
+| **ig-planificar-carrusel** (planificador de carruseles) | Planifica un carrusel slide por slide (hasta 10): una slide de gancho que abre un bucle, slides de valor adelantadas y una slide final que consigue el guardado y el seguimiento |
+| **ig-extraer-gancho** (extractor de ganchos) | Analiza el gancho de cualquier reel o carrusel viral. Lo asigna a una de las 10 fórmulas de Instagram y devuelve una plantilla en blanco para completar |
+| **ig-elegir-hashtags** (estratega de hashtags) | Arma un set dimensionado de 3-5 hashtags (nicho / medio / amplio) en el que puedas posicionarte, ajustado al post y priorizando el español. La realidad 2026, no el muro de 30 |
+| **ig-humanizar-texto** (humanizador) | Quita los indicios de IA que notan los lectores en español: vocabulario inflado por densidad, puentes de revelación, ráfagas entrecortadas, tríadas apiladas, sinceridad actuada, lluvias de emojis, calcos del inglés; limita las rayas en lugar de prohibirlas. No promete engañar a los detectores (ninguna edición lo logra de forma confiable). Incluye una auditoría previa a publicar con `--mode audit` |
+| **ig-planificar-semana** (planificador de contenido) | Crea un plan semanal con una mezcla de reels / carruseles / historias, ganchos por día, horarios, una meta de guardados y compartidos y un control de equilibrio de objetivos |
+| **ig-adaptar-contenido** (adaptador) | Convierte un post de LinkedIn, un blog, un guion de YouTube o un hilo de X (también en otro idioma) en un carrusel o caption nativo de Instagram: nuevo gancho antes del corte de 125 caracteres, sin restos de otra plataforma, nunca un copiar y pegar |
+| **ig-optimizar-perfil** (optimizador de perfil) | Audita y reescribe el perfil completo: foto, campo NOMBRE buscable, biografía (150 caracteres), link según el objetivo, categoría, destacadas (portadas, orden, nombres), la primera cuadrícula de 9 y hasta 3 posts fijados, con tarjeta de puntuación y reescrituras antes/después |
+| **ig-analizar-audiencia** (análisis de audiencia) | Lee tu nicho y tu perfil con datos reales vía Apify: escanea un hashtag para ver los posts que circulan ahora (me gusta, comentarios, autor, formato) y obtiene estadísticas de seguidores/posts/biografía de cualquier cuenta, tuya o de un competidor. Instagram oculta quién dio me gusta o comentó, así que es descubrimiento de nicho más estadísticas de perfil, no una lista de quienes interactúan |
 
 ## Todo post de Instagram requiere contenido multimedia
 
@@ -235,7 +235,7 @@ salen de la sección 6 de tu [Perfil de voz y marca](references/voice-profile.md
 
 ## Opcional: leer datos reales con Apify
 
-`ig-audience-insights` lee datos reales de Instagram con dos actores de Apify,
+`ig-analizar-audiencia` lee datos reales de Instagram con dos actores de Apify,
 sin iniciar sesión: lo que circula bajo un hashtag y las estadísticas públicas
 de un perfil.
 

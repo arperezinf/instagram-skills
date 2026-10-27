@@ -12,7 +12,7 @@
       "name": "instagram-skills",
       "source": "./",
       "description": "Paquete de 9 skills de marketing para Instagram en español: fórmulas de gancho, captions con los primeros 125 caracteres al frente, carruseles de 10 slides, análisis de ganchos virales, hashtags 2026, humanizador adaptado al español con auditoría, adaptación entre plataformas, optimizador de perfil, lector de nicho con Apify y plan semanal. Publica con el flujo de Publora.",
-      "version": "1.0.35",
+      "version": "2.0.0",
       "author": {
         "name": "Serge Bulaev",
         "url": "https://github.com/sergebulaev"

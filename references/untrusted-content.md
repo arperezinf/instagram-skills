@@ -6,7 +6,7 @@ desconocido.
 ## El problema
 
 Estas skills llevan al contexto del modelo texto que nadie de tu lado escribió:
-`ig-audience-insights` e `ig-hook-extractor`. Captions, hashtags, nombres
+`ig-analizar-audiencia` e `ig-extraer-gancho`. Captions, hashtags, nombres
 visibles y biografías llegan desde Apify tal como los escribió la persona en
 Instagram.
 
